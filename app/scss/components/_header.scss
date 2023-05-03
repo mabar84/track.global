@@ -1,0 +1,255 @@
+.header {
+  @include for-470-px {
+    padding-top: 5px;
+  }
+
+  &.header-grey {
+    background: linear-gradient(360deg, #e9e9e9 0%, rgba(238, 234, 234, 0) 71.82%);
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    @include for-470-px {
+      margin-top: 6px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    position: relative;
+  }
+
+  &__logo-img-one {
+    margin-right: 12px;
+    width: 50px;
+
+    @include for-725-px {
+      width: 24px;
+    }
+  }
+
+  &__logo-img-two {
+    width: 142px;
+
+    @include for-725-px {
+      width: 90px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    margin-right: 90px;
+
+    @include for-1000-px {
+      position: absolute;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      background-color: #ffffff;
+      top: -300px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-right: 0;
+      transition: all 0.3s ease;
+      z-index: 20;
+      padding: 70px 0 30px;
+
+      .header__menu-item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+    }
+
+    @include for-470-px {
+      padding: 55px 0 20px;
+    }
+  }
+
+  &__menu--active {
+    top: 0;
+  }
+
+  &__menu-item {
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+  }
+
+  &__menu-item-link {
+    @extend %Mont-400;
+    font-size: 14px;
+    line-height: 17px;
+    width: 100%;
+    display: block;
+    text-transform: uppercase;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -40px;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background-color: transparent;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: all 0.25s ease;
+
+      @include for-769-px {
+        top: -10px;
+      }
+
+      @include for-470-px {
+        height: 3px;
+      }
+    }
+
+    &:hover::before {
+      background-color: $accent;
+      transform: scaleX(1);
+      border-radius: 4px;
+    }
+
+    @include for-470-px {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  &__menu-item-link--active {
+    font-weight: 700;
+
+    &::before {
+      transform: scaleX(1);
+      background-color: $accent;
+    }
+  }
+
+  &__lang {
+    position: relative;
+    z-index: 100;
+  }
+
+  &__lang-box {
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    cursor: pointer;
+  }
+
+  &__lang-flag {
+    margin-right: 5px;
+    transition: margin-top 0.3s ease-in;
+  }
+
+  &__lang-flag--disabled {
+    position: absolute;
+    right: 18px;
+  }
+
+  &__lang-flag--ru {
+    display: none;
+  }
+
+  &__dropdown {
+    position: absolute;
+    padding: 5px;
+    top: 30px;
+    width: 58px;
+    height: auto;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px #e24949, 0 0 5px #e24949;
+    cursor: pointer;
+    z-index: 100;
+    display: none;
+
+    @include for-470-px {
+      top: 20px;
+      right: -8px;
+    }
+  }
+
+  &__dropdown--active {
+    display: block;
+  }
+
+  &__dropdown-item {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+
+    &:hover {
+      .header__lang-flag {
+        margin-top: -5px;
+      }
+
+      @extend %Mont-700;
+    }
+  }
+
+  &__lang-text {
+    @extend %Mont-700;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  &__hamburger-btn {
+    border: none;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    z-index: 100;
+
+    span {
+      display: block;
+      width: 23px;
+      height: 3px;
+      border-radius: 3px;
+      background-color: #000000;
+      transition: transform 0.5s, opacity 0.25s;
+
+      &:nth-child(2) {
+        margin: 4px 0;
+      }
+    }
+
+    @include for-1000-px {
+      display: flex;
+    }
+  }
+
+  &__hamburger-btn--active {
+    span {
+      &:nth-child(1) {
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+        margin: 0;
+      }
+
+      &:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+      }
+    }
+  }
+}

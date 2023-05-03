@@ -1,0 +1,21 @@
+.btn-primary {
+  display: inline-block;
+  padding: 10px 20px;
+  @extend %Mont-700;
+  color: #ffffff;
+  background-color: $accent;
+  text-transform: uppercase;
+  transition: all .3s ease-in-out;
+  min-width: 136px;
+
+  &:hover {
+    box-shadow: 0 0 20px $accent, 0 0 40px $accent;
+  }
+
+  @include for-470-px {
+    display: inline-flex;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

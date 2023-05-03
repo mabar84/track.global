@@ -1,0 +1,263 @@
+.time {
+  .container {
+    @include for-470-px {
+      padding: 0 10px;
+    }
+  }
+
+  .header {
+    background: linear-gradient(
+      360deg,
+      #e9e9e9 0%,
+      rgba(238, 234, 234, 0) 71.82%
+    );
+    padding: 10px 0;
+  }
+
+  .top__search-btn {
+    display: none;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 30px;
+
+    @include for-470-px {
+      display: none;
+    }
+  }
+
+  .delivery__tabs {
+    @include for-640-px {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .delivery__tabs-btn {
+    @include for-640-px {
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+    }
+
+    @include for-470-px {
+      &:not(:last-child) {
+        margin-right: 25px;
+      }
+    }
+  }
+
+  // .delivery__time-btn--active {
+  //   transform: scaleX(1);
+  //   border-color: $accent;
+  //   @extend %Mont-700;
+  // }
+
+  &__wrapper {
+    padding: 20px 0 50px;
+
+    @include for-769-px {
+      padding: 10px 0 30px;
+    }
+
+    @include for-470-px {
+      padding: 20px 0;
+    }
+  }
+
+  &__title {
+    @extend %Mont-700;
+    font-size: 35px;
+    line-height: 43px;
+    text-align: center;
+    margin-bottom: 40px;
+
+    @include for-769-px {
+      font-size: 25px;
+      line-height: 30px;
+      margin-bottom: 20px;
+    }
+
+    @include for-470-px {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__content {
+    padding-top: 57px;
+    display: none;
+
+    @include for-640-px {
+      padding-top: 30px;
+    }
+  }
+
+  &__content--active {
+    display: block;
+  }
+
+  &__content-item {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    display: grid;
+    grid-template-columns: minmax(220px, 426px) 510px 160px;
+    min-height: 60px;
+    position: relative;
+
+    s &:nth-child(1),
+    &:nth-child(4),
+    &:nth-child(6),
+    &:nth-child(9),
+    &:nth-child(11),
+    &:nth-child(14) {
+      background-color: #fcfcfc;
+    }
+
+    @include for-1025-px {
+      grid-template-columns: minmax(220px, 426px) minmax(250px, 510px) 160px;
+    }
+
+    @include for-769-px {
+      grid-template-columns: minmax(135px, 426px) minmax(197px, 510px) 170px;
+    }
+
+    @include for-640-px {
+      display: flex;
+      justify-content: space-between;
+      min-height: 75px;
+    }
+
+    @include for-470-px {
+      padding: 10px;
+      min-height: 68px;
+    }
+  }
+
+  &__content-item-num {
+    @extend %Mont-500;
+    font-size: 20px;
+    line-height: 24px;
+
+    @include for-1025-px {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include for-769-px {
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    @include for-470-px {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  &__content-item-num--top,
+  &__content-item-service--top,
+  &__content-item-period--top {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: -35px;
+      left: 0;
+      font-size: 14px;
+      line-height: 17px;
+      color: #979797;
+    }
+
+    @include for-769-px {
+      &::before {
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+
+    @include for-640-px {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__content-item-num--top {
+    &::before {
+      content: "Формат номера";
+    }
+  }
+
+  &__content-item-service--top {
+    &::before {
+      content: "Служба доставки";
+    }
+  }
+
+  &__content-item-period--top {
+    &::before {
+      content: "Сроки доставки";
+      right: 0;
+      text-align: right;
+    }
+  }
+
+  &__content-item-service,
+  &__content-item-day {
+    @extend %Mont-500;
+    font-size: 18px;
+    line-height: 22px;
+
+    @include for-1025-px {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    @include for-470-px {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  &__content-item-service {
+    @include for-640-px {
+      max-width: 250px;
+      text-align: right;
+    }
+
+    @include for-470-px {
+      max-width: 140px;
+    }
+  }
+
+  &__content-item-period {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include for-640-px {
+      position: absolute;
+      right: 20px;
+      bottom: 10px;
+    }
+
+    @include for-470-px {
+      right: 10px;
+    }
+  }
+
+  &__content-item-safety {
+    display: block;
+    margin-top: 1px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #979797;
+
+    @include for-769-px {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+}

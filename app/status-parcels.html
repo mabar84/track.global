@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Статусы посылок</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="js/main.min.js" defer></script>
+</head>
+
+<body>
+  <section class="status-parcels">
+    <header class="header">
+      <div class="container">
+        <nav class="header__nav">
+          <a class="header__logo" href="#">
+            <img class="header__logo-img-one" src="images/logo1.svg" alt="Логотип компании">
+            <img class="header__logo-img-two" src="images/logo2.svg" alt="Логотип компании">
+          </a>
+          <div class="header__inner">
+            <ul class="header__menu">
+              <li class="header__menu-item">
+                <a class="header__menu-item-link" href="delivery.html">все службы</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-item-link" href="shops.html">магазины</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-item-link" href="country.html">Страны</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-item-link" href="#">виджет</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-item-link" href="faq.html">FAQ</a>
+              </li>
+            </ul>
+            <div class="header__lang">
+              <div class="header__lang-box">
+                <img class="header__lang-flag header__lang-flag--disabled header__lang-flag--en" src="images/US.png"
+                  alt="флаг US">
+                <img class="header__lang-flag header__lang-flag--disabled header__lang-flag--ru" src="images/RU.png"
+                  alt="флаг RU">
+                <span class="header__lang-text">EN</span>
+              </div>
+              <ul class="header__dropdown">
+                <li class="header__dropdown-item">
+                  <img class="header__lang-flag" src="images/US.png" alt="флаг US">EN
+                </li>
+                <li class="header__dropdown-item">
+                  <img class="header__lang-flag" src="images/RU.png" alt="флаг RU">RU
+                </li>
+              </ul>
+            </div>
+            <button class="header__hamburger-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <section class="faq__wrapper">
+        <div class="container">
+          <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="index.html">Главная</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <span class="breadcrumbs__link-lats">
+                  Статусы посылок
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <h1 class="faq__title title">
+            Расшифровка статусов международных почтовых отправлений
+          </h1>
+
+          <div class="faq__inner">
+            <ul class="faq__list">
+              <li class="faq__list-item">
+                <div class="faq__list-box">
+                  <span class="faq__list-name">
+                    <div class="faq__list-plus">
+                      <span class="plus">
+                        +
+                      </span>
+                      <span class="minus">
+                        -
+                      </span>
+                    </div>
+                    Посылка возвращается отправителю
+                  </span>
+                  <div class="faq__list-text">
+                    <span>
+                      Запись означает что получатель получил почтовое отправление <a class="faq__list-item-link"
+                        href="#">подробнее</a>
+                    </span>
+                    <span>
+                  </div>
+                </div>
+              </li>
+              <li class="faq__list-item">
+                <div class="faq__list-box">
+                  <span class="faq__list-name">
+                    <div class="faq__list-plus">
+                      <span class="plus">
+                        +
+                      </span>
+                      <span class="minus">
+                        -
+                      </span>
+                    </div>
+                    Посылка возращена
+                  </span>
+                  <div class="faq__list-text">
+                    <span>
+                      Запись означает что получатель получил почтовое отправление <a class="faq__list-item-link"
+                        href="#">подробнее</a>
+                    </span>
+                    <span>
+                  </div>
+                </div>
+              </li>
+              <li class="faq__list-item  faq__list-item--active">
+                <div class="faq__list-box">
+                  <span class="faq__list-name">
+                    <div class="faq__list-plus">
+                      <span class="plus">
+                        +
+                      </span>
+                      <span class="minus">
+                        -
+                      </span>
+                    </div>
+                    Посылка доставлена
+                  </span>
+                  <div class="faq__list-text">
+                    <span>
+                      Запись означает что получатель получил почтовое отправление <a class="faq__list-item-link"
+                        href="#">подробнее</a>
+                    </span>
+                    <span>
+                  </div>
+                </div>
+              </li>
+              <li class="faq__list-item">
+                <div class="faq__list-box">
+                  <span class="faq__list-name">
+                    <div class="faq__list-plus">
+                      <span class="plus">
+                        +
+                      </span>
+                      <span class="minus">
+                        -
+                      </span>
+                    </div>
+                    Информация о посылке получена
+                  </span>
+                  <div class="faq__list-text">
+                    <span>
+                      Запись означает что получатель получил почтовое отправление <a class="faq__list-item-link"
+                        href="#">подробнее</a>
+                    </span>
+                    <span>
+                  </div>
+                </div>
+              </li>
+              <li class="faq__list-item">
+                <div class="faq__list-box">
+                  <span class="faq__list-name">
+                    <div class="faq__list-plus">
+                      <span class="plus">
+                        +
+                      </span>
+                      <span class="minus">
+                        -
+                      </span>
+                    </div>
+                    Посылка возращена
+                  </span>
+                  <div class="faq__list-text">
+                    <span>
+                      Запись означает что получатель получил почтовое отправление <a class="faq__list-item-link"
+                        href="#">подробнее</a>
+                    </span>
+                    <span>
+                  </div>
+                </div>
+              </li>
+              <li class="faq__list-item">
+                <div class="faq__list-box">
+                  <span class="faq__list-name">
+                    <div class="faq__list-plus">
+                      <span class="plus">
+                        +
+                      </span>
+                      <span class="minus">
+                        -
+                      </span>
+                    </div>
+                    Посылка возвращается отправителю
+                  </span>
+                  <div class="faq__list-text">
+                    <span>
+                      Запись означает что получатель получил почтовое отправление <a class="faq__list-item-link"
+                        href="#">подробнее</a>
+                    </span>
+                    <span>
+                  </div>
+                </div>
+              </li>
+              <li class="faq__list-item">
+                <div class="faq__list-box">
+                  <span class="faq__list-name">
+                    <div class="faq__list-plus">
+                      <span class="plus">
+                        +
+                      </span>
+                      <span class="minus">
+                        -
+                      </span>
+                    </div>
+                    Посылка возращена
+                  </span>
+                  <div class="faq__list-text">
+                    <span>
+                      Запись означает что получатель получил почтовое отправление <a class="faq__list-item-link"
+                        href="#">подробнее</a>
+                    </span>
+                    <span>
+                  </div>
+                </div>
+              </li>
+              <li class="faq__list-item">
+                <div class="faq__list-box">
+                  <span class="faq__list-name">
+                    <div class="faq__list-plus">
+                      <span class="plus">
+                        +
+                      </span>
+                      <span class="minus">
+                        -
+                      </span>
+                    </div>
+                    Информация о посылке получена
+                  </span>
+                  <div class="faq__list-text">
+                    <span>
+                      Запись означает что получатель получил почтовое отправление <a class="faq__list-item-link"
+                        href="#">подробнее</a>
+                    </span>
+                    <span>
+                  </div>
+                </div>
+              </li>
+              <li class="faq__list-item">
+                <div class="faq__list-box">
+                  <span class="faq__list-name">
+                    <div class="faq__list-plus">
+                      <span class="plus">
+                        +
+                      </span>
+                      <span class="minus">
+                        -
+                      </span>
+                    </div>
+                    Посылка возращена
+                  </span>
+                  <div class="faq__list-text">
+                    <span>
+                      Запись означает что получатель получил почтовое отправление <a class="faq__list-item-link"
+                        href="#">подробнее</a>
+                    </span>
+                    <span>
+                  </div>
+                </div>
+              </li>
+              <li class="faq__list-item">
+                <div class="faq__list-box">
+                  <span class="faq__list-name">
+                    <div class="faq__list-plus">
+                      <span class="plus">
+                        +
+                      </span>
+                      <span class="minus">
+                        -
+                      </span>
+                    </div>
+                    Посылка возвращается отправителю
+                  </span>
+                  <div class="faq__list-text">
+                    <span>
+                      Запись означает что получатель получил почтовое отправление <a class="faq__list-item-link"
+                        href="#">подробнее</a>
+                    </span>
+                    <span>
+                  </div>
+                </div>
+              </li>
+              <li class="faq__list-item">
+                <div class="faq__list-box">
+                  <span class="faq__list-name">
+                    <div class="faq__list-plus">
+                      <span class="plus">
+                        +
+                      </span>
+                      <span class="minus">
+                        -
+                      </span>
+                    </div>
+                    Посылка возращена
+                  </span>
+                  <div class="faq__list-text">
+                    <span>
+                      Запись означает что получатель получил почтовое отправление <a class="faq__list-item-link"
+                        href="#">подробнее</a>
+                    </span>
+                    <span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <button class="top__search-btn " type="submit">
+          <div class="top__btn-spiner" id="circularG">
+            <div id="circularG_1" class="circularG"></div>
+            <div id="circularG_2" class="circularG"></div>
+            <div id="circularG_3" class="circularG"></div>
+            <div id="circularG_4" class="circularG"></div>
+            <div id="circularG_5" class="circularG"></div>
+            <div id="circularG_6" class="circularG"></div>
+            <div id="circularG_7" class="circularG"></div>
+            <div id="circularG_8" class="circularG"></div>
+          </div>
+          <span class="top__btn-text">отследить</span>
+          <span class="top__btn-text--active">поиск</span>
+        </button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-top__inner">
+            <h3 class="footer-top__title">Поделитесь с друзьями
+              <span class="footer-top__subtitle">
+                ссылкой на бесплатный и полезный сервис
+              </span>
+            </h3>
+            <ul class="footer-top__socials">
+              <li class="footer-top__socials-item">
+                <a class="footer-top__socials-item-link" href="#">
+                  <svg width="20" height="36" viewBox="0 0 20 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.9565 35.0693V20.1211H17.9392L18.8873 13.9412H12.9565V9.92727C12.9565 8.23868 13.787 6.5847 16.4444 6.5847H19.1434V1.31825C19.1434 1.31825 16.6935 0.903015 14.3544 0.903015C9.46859 0.903015 6.27826 3.86496 6.27826 9.22139V13.9342H0.845703V20.1142H6.27826V35.0624H12.9565V35.0693Z"
+                      fill="url(#paint0_linear_66_2319)" />
+                    <defs>
+                      <linearGradient id="paint0_linear_66_2319" x1="24.0939" y1="29.587" x2="0.616226" y2="6.10941"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#1677F1" />
+                        <stop offset="0.1753" stop-color="#186EE9" />
+                        <stop offset="0.4604" stop-color="#1D56D3" />
+                        <stop offset="0.8179" stop-color="#262FB0" />
+                        <stop offset="1" stop-color="#2B189C" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-top__socials-item">
+                <a class="footer-top__socials-item-link" href="#">
+                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M21.3827 5.02072C20.4761 5.02072 19.7495 5.7543 19.7495 6.65396C19.7495 7.56054 20.4831 8.28718 21.3827 8.28718C22.2893 8.28718 23.016 7.55362 23.016 6.65396C23.016 5.74738 22.2824 5.02072 21.3827 5.02072Z"
+                      fill="url(#paint0_linear_66_2307)" />
+                    <path
+                      d="M14.1025 7.11761C10.3101 7.11761 7.23047 10.2041 7.23047 13.9896C7.23047 17.782 10.317 20.8616 14.1025 20.8616C17.8949 20.8616 20.9745 17.7751 20.9745 13.9896C20.9814 10.1972 17.8949 7.11761 14.1025 7.11761ZM14.1025 18.391C11.6734 18.391 9.70108 16.4187 9.70108 13.9896C9.70108 11.5605 11.6734 9.58822 14.1025 9.58822C16.5316 9.58822 18.5039 11.5605 18.5039 13.9896C18.5039 16.4187 16.5316 18.391 14.1025 18.391Z"
+                      fill="url(#paint1_linear_66_2307)" />
+                    <path
+                      d="M19.5627 27.9482H8.42079C3.79793 27.9482 0.0332031 24.1904 0.0332031 19.5675V8.4256C0.0332031 3.80274 3.79101 0.0379944 8.42079 0.0379944H19.5627C24.1856 0.0379944 27.9503 3.79582 27.9503 8.4256V19.5675C27.9503 24.1835 24.1856 27.9482 19.5627 27.9482ZM8.42079 2.66085C5.2443 2.66085 2.66298 5.24219 2.66298 8.41867V19.5606C2.66298 22.7371 5.2443 25.3184 8.42079 25.3184H19.5627C22.7392 25.3184 25.3205 22.7371 25.3205 19.5606V8.41867C25.3205 5.24219 22.7392 2.66085 19.5627 2.66085H8.42079Z"
+                      fill="url(#paint2_linear_66_2307)" />
+                    <defs>
+                      <linearGradient id="paint0_linear_66_2307" x1="7.59633" y1="-7.13001" x2="33.8418" y2="19.1154"
+                        gradientUnits="userSpaceOnUse">
+                        <stop offset="0.0011048" stop-color="#FFE185" />
+                        <stop offset="0.2094" stop-color="#FFBB36" />
+                        <stop offset="0.3765" stop-color="#FF5176" />
+                        <stop offset="0.5238" stop-color="#F63395" />
+                        <stop offset="0.7394" stop-color="#A436D2" />
+                        <stop offset="1" stop-color="#5F4EED" />
+                      </linearGradient>
+                      <linearGradient id="paint1_linear_66_2307" x1="0.290569" y1="0.175574" x2="26.5364" y2="26.4214"
+                        gradientUnits="userSpaceOnUse">
+                        <stop offset="0.0011048" stop-color="#FFE185" />
+                        <stop offset="0.2094" stop-color="#FFBB36" />
+                        <stop offset="0.3765" stop-color="#FF5176" />
+                        <stop offset="0.5238" stop-color="#F63395" />
+                        <stop offset="0.7394" stop-color="#A436D2" />
+                        <stop offset="1" stop-color="#5F4EED" />
+                      </linearGradient>
+                      <linearGradient id="paint2_linear_66_2307" x1="0.233205" y1="0.232874" x2="26.4792" y2="26.4788"
+                        gradientUnits="userSpaceOnUse">
+                        <stop offset="0.0011048" stop-color="#FFE185" />
+                        <stop offset="0.2094" stop-color="#FFBB36" />
+                        <stop offset="0.3765" stop-color="#FF5176" />
+                        <stop offset="0.5238" stop-color="#F63395" />
+                        <stop offset="0.7394" stop-color="#A436D2" />
+                        <stop offset="1" stop-color="#5F4EED" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-top__socials-item">
+                <a class="footer-top__socials-item-link" href="#">
+                  <svg width="32" height="26" viewBox="0 0 32 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M30.9236 3.57084C29.9686 3.99991 28.9098 4.26288 27.8786 4.43589C28.37 4.35285 29.0897 3.46704 29.3734 3.10718C29.8163 2.56046 30.1762 1.93762 30.3838 1.26634C30.4115 1.21097 30.4322 1.14868 30.3769 1.10716C30.3077 1.07948 30.2661 1.09333 30.2177 1.12101C29.0689 1.73693 27.8717 2.18676 26.6052 2.5051C26.5014 2.53279 26.4253 2.5051 26.3561 2.43589C26.2523 2.31825 26.1554 2.20752 26.0378 2.11063C25.5049 1.65388 24.9305 1.30095 24.2869 1.03797C23.4426 0.691948 22.5153 0.546601 21.6018 0.608885C20.7159 0.664249 19.844 0.913391 19.055 1.32862C18.2661 1.74385 17.5602 2.31133 16.9997 3.00338C16.4183 3.71618 15.9893 4.56047 15.7747 5.46013C15.5602 6.32519 15.5809 7.1764 15.7124 8.0553C15.7332 8.20063 15.7194 8.22141 15.5879 8.20064C10.6328 7.46016 6.52209 5.6885 3.17951 1.88917C3.03418 1.72308 2.95804 1.7231 2.84039 1.90303C1.38018 4.08989 2.08607 7.60545 3.91307 9.33557C4.15529 9.56394 4.40443 9.79926 4.67433 10.0069C4.57744 10.0276 3.35943 9.89612 2.27984 9.33557C2.13451 9.2456 2.06531 9.29408 2.05147 9.46017C2.03763 9.69547 2.05839 9.9169 2.09299 10.173C2.36981 12.3944 3.90614 14.4429 6.01688 15.2457C6.26601 15.3495 6.54285 15.4463 6.81275 15.4879C6.33523 15.5917 5.83695 15.6678 4.4667 15.564C4.29369 15.5294 4.23141 15.6193 4.29369 15.7785C5.32484 18.5951 7.55323 19.4325 9.22798 19.91C9.44943 19.9516 9.67781 19.9516 9.89926 20C9.88542 20.0208 9.87158 20.0208 9.85774 20.0415C9.3041 20.8858 7.38022 21.5156 6.48748 21.827C4.86118 22.3945 3.08953 22.6505 1.37326 22.4844C1.09644 22.4429 1.04108 22.4498 0.964954 22.4844C0.888829 22.5329 0.958045 22.5952 1.04109 22.6713C1.38711 22.8997 1.74696 23.1073 2.10682 23.3011C3.20026 23.8824 4.33521 24.3391 5.52553 24.6713C11.6709 26.3668 18.5983 25.1212 23.2073 20.5329C26.8336 16.9343 28.1 11.9654 28.1 6.99649C28.1 6.80272 28.3284 6.69198 28.4668 6.59509C29.408 5.88921 30.1693 5.03797 30.8752 4.08987C31.0343 3.87534 31.0343 3.68851 31.0343 3.61238C31.0343 3.59854 31.0343 3.58469 31.0343 3.58469C31.0482 3.48781 31.0413 3.51547 30.9236 3.57084Z"
+                      fill="url(#paint0_linear_66_2278)" />
+                    <defs>
+                      <linearGradient id="paint0_linear_66_2278" x1="26.2445" y1="22.4176" x2="8.27191" y2="4.44511"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#00CCFF" />
+                        <stop offset="1" stop-color="#0080FF" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-top__socials-item">
+                <a class="footer-top__socials-item-link" href="#">
+                  <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M0.181152 28.1384L2.16732 20.7336C1.04621 18.7059 0.451018 16.436 0.451018 14.1245C0.451018 6.58816 6.58255 0.449707 14.1258 0.449707C21.6691 0.449707 27.8007 6.58124 27.8007 14.1245C27.8007 21.6678 21.6691 27.7994 14.1258 27.7994C11.8629 27.7994 9.62758 27.2249 7.62757 26.1454L0.181152 28.1384ZM7.99433 23.3702L8.46491 23.6471C10.1881 24.6713 12.1466 25.218 14.1258 25.218C20.2435 25.218 25.2124 20.2422 25.2124 14.1315C25.2124 8.01378 20.2366 3.04488 14.1258 3.04488C8.00816 3.04488 3.0393 8.0207 3.0393 14.1315C3.0393 16.1522 3.59984 18.1384 4.65867 19.8824L4.94931 20.3529L3.84206 24.4844L7.99433 23.3702Z"
+                      fill="url(#paint0_linear_66_2287)" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M19.2124 16.0346C18.6518 15.6955 17.9182 15.3217 17.2539 15.5916C16.7487 15.7993 16.4234 16.5951 16.0912 17.0034C15.9251 17.211 15.7175 17.2456 15.4615 17.1418C13.5514 16.3806 12.0912 15.1072 11.0324 13.3494C10.8525 13.0795 10.887 12.8581 11.1016 12.6089C11.4199 12.2352 11.8213 11.8061 11.9044 11.3009C11.9874 10.7958 11.7521 10.2075 11.5445 9.7577C11.2746 9.1833 10.977 8.3667 10.4026 8.04144C9.86973 7.74386 9.17771 7.90994 8.70712 8.29057C7.89051 8.95493 7.50294 9.99301 7.50986 11.0242C7.50986 11.3148 7.5514 11.6055 7.62061 11.8892C7.7867 12.5674 8.09809 13.2041 8.45103 13.8061C8.71401 14.2629 9.00466 14.6989 9.31608 15.128C10.3403 16.5121 11.6068 17.7231 13.0808 18.6228C13.8144 19.0726 14.6102 19.4671 15.4269 19.737C16.3473 20.0415 17.1639 20.3598 18.1604 20.166C19.1985 19.9654 20.2228 19.3287 20.638 18.3252C20.7625 18.0276 20.8179 17.6955 20.7556 17.3841C20.6103 16.7266 19.7383 16.346 19.2124 16.0346Z"
+                      fill="url(#paint1_linear_66_2287)" />
+                    <defs>
+                      <linearGradient id="paint0_linear_66_2287" x1="22.9804" y1="27.2975" x2="3.08323" y2="7.40028"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#00FB73" />
+                        <stop offset="1" stop-color="#00B25B" />
+                      </linearGradient>
+                      <linearGradient id="paint1_linear_66_2287" x1="24.5322" y1="25.7457" x2="4.63488" y2="5.84843"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#00FB73" />
+                        <stop offset="1" stop-color="#00B25B" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-top__socials-item">
+                <a class="footer-top__socials-item-link" href="#">
+                  <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M31.0435 7.05878C31.0435 3.4117 28.0884 0.449738 24.4345 0.449738H7.54164C3.89456 0.449738 0.932617 3.40478 0.932617 7.05878V14.9204C0.932617 18.5675 3.88764 21.5294 7.54164 21.5294H24.4345C28.0815 21.5294 31.0435 18.5744 31.0435 14.9204V7.05878ZM21.1126 11.5778L13.5347 15.3287C13.2372 15.4879 12.2268 15.2734 12.2268 14.9343V7.23872C12.2268 6.89962 13.2441 6.68509 13.5417 6.85118L20.7943 10.7958C21.0988 10.9757 21.4171 11.4117 21.1126 11.5778Z"
+                      fill="url(#paint0_linear_66_2298)" />
+                    <defs>
+                      <linearGradient id="paint0_linear_66_2298" x1="29.0703" y1="20.9947" x2="1.18464" y2="-0.334742"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FF0000" />
+                        <stop offset="1" stop-color="#9B0000" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-bottom__inner">
+            <div class="footer-bottom__box">
+              <h4 class="footer-bottom__box-title">
+                Отслеживание посылок
+              </h4>
+              <div class="footer-bottom__box-inner">
+                <ul class="footer-bottom__list">
+                  <li class="footer-bottom__list-item">
+                    <a class="footer-bottom__list-item-link" href="#">
+                      Отследить посылку из Китая по трек номеру
+                    </a>
+                  </li>
+                  <li class="footer-bottom__list-item">
+                    <a class="footer-bottom__list-item-link" href="#">
+                      Отслеживание посылок с Алиекспресс
+                    </a>
+                  </li>
+                  <li class="footer-bottom__list-item">
+                    <a class="footer-bottom__list-item-link" href="#">
+                      Отслеживание посылок с Joom
+                    </a>
+                  </li>
+                  <li class="footer-bottom__list-item">
+                    <a class="footer-bottom__list-item-link" href="#">
+                      Отслеживание посылок с Пандао
+                    </a>
+                  </li>
+                  <li class="footer-bottom__list-item">
+                    <a class="footer-bottom__list-item-link" href="#">
+                      Отслеживание грузов транспортных компании
+                    </a>
+                  </li>
+                  <li class="footer-bottom__list-item">
+                    <a class="footer-bottom__list-item-link" href="#">
+                      Таможенное оформление посылок и беспошлинный лимит
+                    </a>
+                  </li>
+                </ul>
+                <ul class="footer-bottom__list">
+                  <li class="footer-bottom__list-item">
+                    <a class="footer-bottom__list-item-link" href="#">
+                      Отслеживание посылок с ASOS
+                    </a>
+                  </li>
+                  <li class="footer-bottom__list-item">
+                    <a class="footer-bottom__list-item-link" href="#">
+                      Отслеживание посылок из Англии
+                    </a>
+                  </li>
+                  <li class="footer-bottom__list-item">
+                    <a class="footer-bottom__list-item-link" href="#">
+                      Почта России отслеживание
+                    </a>
+                  </li>
+                  <li class="footer-bottom__list-item">
+                    <a class="footer-bottom__list-item-link" href="#">
+                      Отслеживание SF-Express на русском
+                    </a>
+                  </li>
+                  <li class="footer-bottom__list-item">
+                    <a class="footer-bottom__list-item-link" href="#">
+                      Отслеживание ePacket на русском
+                    </a>
+                  </li>
+                  <li class="footer-bottom__list-item">
+                    <a class="footer-bottom__list-item-link" href="#">
+                      Отслеживание Почты Малайзии POS Malaysia на русском
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-bottom__box-inner">
+              <div class="footer-bottom__box">
+                <h4 class="footer-bottom__box-title">
+                  Справочники
+                </h4>
+                <div class="footer-bottom__box-inner">
+                  <ul class="footer-bottom__list">
+                    <li class="footer-bottom__list-item">
+                      <a class="footer-bottom__list-item-link" href="#">
+                        Кнопка Отслеживания
+                      </a>
+                    </li>
+                    <li class="footer-bottom__list-item">
+                      <a class="footer-bottom__list-item-link" href="#">
+                        Коды сотрировочных центров
+                      </a>
+                    </li>
+                    <li class="footer-bottom__list-item">
+                      <a class="footer-bottom__list-item-link" href="#">
+                        Почеум моя посылка не отслеживается?
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-bottom__box">
+                <h4 class="footer-bottom__box-title">
+                  Язык
+                </h4>
+                <div class="footer-bottom__box-inner">
+                  <ul class="footer-bottom__list">
+                    <li class="footer-bottom__list-item">
+                      <a class="footer-bottom__list-item-link" href="#">
+                        English
+                      </a>
+                    </li>
+                    <li class="footer-bottom__list-item">
+                      <a class="footer-bottom__list-item-link" href="#">
+                        Русский
+                      </a>
+                    </li>
+                    <li class="footer-bottom__list-item">
+                      <a class="footer-bottom__list-item-link" href="#">
+                        Francias
+                      </a>
+                    </li>
+                    <li class="footer-bottom__list-item">
+                      <a class="footer-bottom__list-item-link" href="#">
+                        Espanol
+                      </a>
+                    </li>
+                    <li class="footer-bottom__list-item">
+                      <a class="footer-bottom__list-item-link" href="#">
+                        Portigues
+                      </a>
+                    </li>
+                    <li class="footer-bottom__list-item">
+                      <a class="footer-bottom__list-item-link" href="#">
+                        Deutsch
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="footer-bottom__bottom">
+            <li class="footer-bottom__bottom-item">
+              <a class="footer-bottom__bottom-item-link" href="#">
+                О проекте
+              </a>
+            </li>
+            <li class="footer-bottom__bottom-item">
+              <a class="footer-bottom__bottom-item-link" href="#">
+                Пользовательское соглашение
+              </a>
+            </li>
+            <li class="footer-bottom__bottom-item">
+              <a class="footer-bottom__bottom-item-link" href="#">
+                Политика конфиденциальности
+              </a>
+            </li>
+            <li class="footer-bottom__bottom-item">
+              <a class="footer-bottom__bottom-item-link" href="#">
+                (c) 2010-2022
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </section>
+</body>
+
+</html>

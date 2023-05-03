@@ -1,0 +1,297 @@
+.country {
+  .container {
+    @include for-470-px {
+      padding: 0 10px;
+    }
+  }
+
+  .top {
+    padding: 50px 0 50px;
+
+    @include for-915-px {
+      padding: 0;
+    }
+
+    @include for-769-px {
+      padding-bottom: 27px;
+    }
+
+    @include for-725-px {
+      padding-bottom: 0;
+      padding-top: 30px;
+    }
+
+    @include for-470-px {
+      padding-top: 22px;
+    }
+  }
+
+  .top__inner {
+    position: relative;
+
+    @include for-725-px {
+      flex-direction: column-reverse;
+      justify-content: start;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../images/country/top-bg.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      left: -50px;
+      bottom: -50px;
+      width: 526px;
+      height: 443px;
+
+      @include for-1170-px {
+        left: -30px;
+        width: 450px;
+        height: 400px;
+      }
+
+      @include for-1025-px {
+        left: -58px;
+        width: 390px;
+        height: 360px;
+        bottom: -10px;
+      }
+
+      @include for-915-px {
+        left: -65px;
+        width: 305px;
+        height: 320px;
+      }
+
+      @include for-769-px {
+        height: 280px;
+      }
+
+      @include for-725-px {
+        display: none;
+      }
+    }
+  }
+
+  .top__content {
+    margin-left: auto;
+    position: relative;
+    width: 580px;
+    margin-bottom: 25px;
+
+    @include for-1025-px {
+      width: 540px;
+    }
+
+    @include for-915-px {
+      width: 520px;
+    }
+
+    @include for-769-px {
+      width: 476px;
+      margin-bottom: 0;
+    }
+
+    @include for-725-px {
+      width: 100%;
+      min-height: 470px;
+    }
+
+    @include for-640-px {
+      min-height: 436px;
+    }
+
+    @include for-470-px {
+      min-height: 340px;
+    }
+
+    @include for-440-px {
+      min-height: 360px;
+    }
+
+    @include for-340-px {
+      min-height: 377px;
+    }
+  }
+
+  .top__title {
+    font-size: 35px;
+    line-height: 43px;
+
+    @include for-769-px {
+      font-size: 25px;
+      line-height: 30px;
+      margin-bottom: 9px;
+    }
+
+    @include for-470-px {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  .top__text {
+    margin-bottom: 15px;
+
+    @include for-769-px {
+      margin-bottom: 20px;
+    }
+
+    @include for-470-px {
+      margin-bottom: 10px;
+    }
+  }
+
+  .top__img-mob {
+    @include for-725-px {
+      display: block;
+      margin: 0 auto;
+      max-width: 370px;
+    }
+
+    @include for-440-px {
+      max-width: 300px;
+
+      svg {
+        width: 300px;
+        height: 200px;
+      }
+    }
+  }
+
+  .breadcrumbs {
+    margin-bottom: 30px;
+
+    @include for-470-px {
+      display: none;
+    }
+  }
+
+  &__inner {
+    padding: 10px 0 60px;
+
+    @include for-769-px {
+      padding: 10px 0 30px;
+    }
+
+    @include for-470-px {
+      padding: 20px 0;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+
+      @include for-769-px {
+        margin-bottom: 20px;
+      }
+    }
+
+    @include for-1025-px {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      column-gap: 10px;
+      row-gap: 20px;
+    }
+
+    @include for-640-px {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include for-470-px {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__list {
+    @include for-1025-px {
+    }
+
+    @include for-470-px {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__list-title {
+    @extend %Mont-700;
+    font-size: 35px;
+    line-height: 43px;
+    color: $accent;
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+
+    @include for-1025-px {
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+
+  &__item {
+    background-color: #ffffff;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__item-link {
+    padding: 15px;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @include for-1025-px {
+      padding: 10px 15px;
+    }
+
+    @include for-470-px {
+      padding: 10px;
+    }
+  }
+
+  &__item-flag {
+    width: 45px;
+    height: 34px;
+    margin-right: 15px;
+
+    @include for-769-px {
+      width: 32px;
+      height: 24px;
+    }
+
+    @include for-470-px {
+      margin-right: 10px;
+    }
+  }
+
+  &__item-name {
+    @extend %Mont-700;
+    font-size: 18px;
+    line-height: 22px;
+
+    @include for-1025-px {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include for-769-px {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}

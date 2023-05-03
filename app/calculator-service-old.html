@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рассчитать стоимость доставки</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/main.min.js" defer></script>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container">
+        <nav class="header__nav">
+            <a class="header__logo" href="#">
+                <img class="header__logo-img-one" src="images/logo1.svg" alt="Логотип компании">
+                <img class="header__logo-img-two" src="images/logo2.svg" alt="Логотип компании">
+            </a>
+            <div class="header__inner">
+                <ul class="header__menu">
+                    <li class="header__menu-item">
+                        <a class="header__menu-item-link header__menu-item-link--active" href="delivery.html">все службы</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-item-link" href="shops.html">магазины</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-item-link" href="country.html">Страны</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-item-link" href="#">виджет</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-item-link" href="faq.html">FAQ</a>
+                    </li>
+                </ul>
+                <div class="header__lang">
+                    <div class="header__lang-box">
+                        <img class="header__lang-flag header__lang-flag--disabled header__lang-flag--en" src="images/US.png"
+                             alt="флаг US">
+                        <img class="header__lang-flag header__lang-flag--disabled header__lang-flag--ru" src="images/RU.png"
+                             alt="флаг RU">
+                        <span class="header__lang-text">EN</span>
+                    </div>
+                    <ul class="header__dropdown">
+                        <li class="header__dropdown-item">
+                            <img class="header__lang-flag" src="images/US.png" alt="флаг US">EN
+                        </li>
+                        <li class="header__dropdown-item">
+                            <img class="header__lang-flag" src="images/RU.png" alt="флаг RU">RU
+                        </li>
+                    </ul>
+
+
+
+                    <!-- <div class="header__lang-img">
+                      <img class="header__lang-en" src="images/US.png" alt="флаг US">
+                      <img class="header__lang-ru" src="images/RU.png" alt="флаг RU">
+                    </div> -->
+                    <!-- <select class="header__select" id="header-lang">
+                      <option class="header__option" value="EN" selected>
+                        <img class="header__lang-en" src="images/US.png" alt="флаг US">EN
+                      </option>
+                      <option class="header__option" value="RU">
+                        <img class="header__lang-ru" src="images/RU.png" alt="флаг RU">RU
+                      </option>
+                    </select> -->
+
+
+                </div>
+                <button class="header__hamburger-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+    </div>
+    </nav>
+    </div>
+</header>
+
+
+
+<main class="main">
+    <section class="calculator">
+        <section class="top calculator__top">
+            <div class="container">
+                <div class="calculator__top-content">
+                    <h1 class="h1 calculator__top-title">
+                        рассчитать стоимость доставки боксберри
+                    </h1>
+                    <form id="calculatorForm" action="#" class="calculator-form" onsubmit="return validateForm(event, this, function () {console.log('success');}, function () {console.log('error')} )" onreset="return validateForm(event, this, function () {console.log('success');}, function () {console.log('error')}, true )" data-required-text="Заполните все обязательные поля!" data-error-placeholder="#calculatorFormError">
+                        <div id="calculatorFormError" class="calculator-form__error"></div>
+                        <div class="calculator-form__destination">
+                            <div class="calculator-form__destination-input-left">
+                                <input type="text" class="text-input calculator-form__destination-input calculator-form__destination-input_from" placeholder="Откуда*" data-required>
+                            </div>
+                            <div class="calculator-form__destination-input-right">
+                                <input type="text" class="text-input calculator-form__destination-input calculator-form__destination-input_to" placeholder="Куда*" data-required>
+                            </div>
+                            <button type="button" class="calculator-form__destination-swap-btn">
+                                <svg width="24" height="28" viewBox="0 0 24 28" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24 6.99699C23.998 6.73752 23.8954 6.48897 23.714 6.30378L23.708 6.29176L17.708 0.281204C17.5194 0.0987253 17.2668 -0.0022459 17.0046 3.62396e-05C16.7424 0.00231934 16.4916 0.107674 16.3062 0.293407C16.1208 0.479142 16.0156 0.730396 16.0133 0.993053C16.011 1.25571 16.1118 1.50876 16.294 1.69769L20.586 5.99924L1 5.99924C0.734783 5.99924 0.480429 6.10478 0.292892 6.29265C0.105356 6.48052 0 6.73532 0 7.001C0 7.26668 0.105356 7.52149 0.292892 7.70935C0.480429 7.89722 0.734783 8.00276 1 8.00276L20.586 8.00276L16.294 12.3023C16.1118 12.4912 16.011 12.7443 16.0133 13.0069C16.0156 13.2696 16.1208 13.5209 16.3062 13.7066C16.4916 13.8923 16.7424 13.9977 17.0046 14C17.2668 14.0022 17.5194 13.9013 17.708 13.7188L23.708 7.70824L23.714 7.69823C23.803 7.60787 23.8737 7.50103 23.922 7.38367C23.9735 7.26269 24 7.13252 24 7.001V6.99699Z"/>
+                                    <path d="M3.60276e-09 21.003C0.00201412 21.2625 0.104558 21.511 0.286 21.6962L0.292 21.7082L6.292 27.7188C6.4806 27.9013 6.7332 28.0022 6.9954 28C7.2576 27.9977 7.50841 27.8923 7.69382 27.7066C7.87923 27.5209 7.9844 27.2696 7.98667 27.0069C7.98895 26.7443 7.88816 26.4912 7.706 26.3023L3.414 22.0008H23C23.2652 22.0008 23.5196 21.8952 23.7071 21.7073C23.8946 21.5195 24 21.2647 24 20.999C24 20.7333 23.8946 20.4785 23.7071 20.2906C23.5196 20.1028 23.2652 19.9972 23 19.9972H3.414L7.706 15.6977C7.88816 15.5088 7.98895 15.2557 7.98667 14.9931C7.9844 14.7304 7.87923 14.4791 7.69382 14.2934C7.50841 14.1077 7.2576 14.0023 6.9954 14C6.7332 13.9978 6.4806 14.0987 6.292 14.2812L0.292 20.2918L0.286 20.3018C0.196977 20.3921 0.126334 20.499 0.0780001 20.6163C0.0265202 20.7373 -1.12881e-05 20.8675 3.60276e-09 20.999V21.003Z"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="calculator-form__specs">
+                            <div class="calculator-form__specs-weight-wrapper">
+                                <input type="text" class="text-input calculator-form__specs-weight" placeholder="вес*, кг" data-required>
+                            </div>
+                            <div class="calculator-form__specs-size">
+                                <div class="calculator-form__specs-size-item">
+                                    <input type="text" class="text-input calculator-form__specs-length" placeholder="длина*, см" data-required>
+                                </div>
+                                <div class="calculator-form__specs-size-item">
+                                    <input type="text" class="text-input calculator-form__specs-width" placeholder="ширина*, см" data-required>
+                                </div>
+                                <div class="calculator-form__specs-size-item">
+                                    <input type="text" class="text-input calculator-form__specs-height" placeholder="высота*, см" data-required>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!--<div class="calculator-form__checks">
+                            [fancycheck]
+                            <div class="calculator-form__checks-list">
+                                [checkboxes]
+                            </div>
+                        </div>-->
+                        <div class="text-center">
+                            <button type="submit" class="btn-primary calculator-form__submit">рассчитать</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="top__progress-line-bg">
+                <div class="top__progress-line" id="top__progress-line"></div>
+            </div>
+        </section>
+
+        <section class="calculator-results">
+            <div class="container">
+                <div class="mt-30a">
+                    [loading]
+                </div>
+                <div class="calculator-results__header mt-30a">
+                    <div class="calculator-results__header-sort-label">сортировать по</div>
+                    <div class="calculator-results__header-sort">
+                        <div class="settings-select data-select">
+                            <div class="settings-select__title" data-default="">Стоимость</div>
+                            <div class="settings-select__content">
+                                <input id="sort_1-1" class="settings-select__input" type="radio" name="settings_carrier"
+                                       value="Стоимость" />
+                                <label for="sort_1-1" class="settings-select__label">
+                                    Стоимость
+                                </label>
+                                <input id="sort_1-2" class="settings-select__input" type="radio" name="settings_carrier"
+                                       value="Служба" />
+                                <label for="sort_1-2" class="settings-select__label">
+                                    Служба
+                                </label>
+                                <input id="sort_1-3" class="settings-select__input" type="radio" name="settings_carrier"
+                                       value="Сроки" />
+                                <label for="sort_1-3" class="settings-select__label">
+                                    Сроки
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="calculator-results__header-clean-btn" onclick="document.querySelector('#calculatorForm').reset()">сбросить</button>
+                </div>
+                <div class="mb-60a mt-30a calculator-results__mt-30a">
+                    <div class="calculator-results">
+                        <div class="calculator-results__list-header">
+                            <div class="calculator-results__list-header-col">Стоимость, руб</div>
+                            <div class="calculator-results__list-header-col">Служба доставки, тариф</div>
+                            <div class="calculator-results__list-header-col">Сроки доставки</div>
+                        </div>
+                        <div class="calculator-results__body">
+                            <div class="calculator-results__item">
+                                <div class="calculator-results__left">380,50</div>
+                                <div class="calculator-results__center"><img class="" src="images/delivery/boxberry.png" alt="Логотип Почта России"></div>
+                                <div class="calculator-results__right">
+                                    <div class="calculator-results__name"><span class="mobile-block">Боксберри -</span> Тариф для юр лиц</div>
+                                    <div class="calculator-results__terms">
+                                        <div class="calculator-results__days">2 раб. дн.</div>
+                                        <div class="calculator-results__date">05.10.2022</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calculator-results__item">
+                                <div class="calculator-results__left">380,50</div>
+                                <div class="calculator-results__center"><img class="" src="images/delivery/boxberry.png" alt="Логотип Почта России"></div>
+                                <div class="calculator-results__right">
+                                    <div class="calculator-results__name"><span class="mobile-block">Боксберри -</span> Тариф для юр лиц</div>
+                                    <div class="calculator-results__terms">
+                                        <div class="calculator-results__days">2 раб. дн.</div>
+                                        <div class="calculator-results__date">05.10.2022</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-60a">
+                    <div class="h2 calculator-results__other-title">Подходящие варианты других служб</div>
+                    <div class="mt-30a calculator-results__mt-30a">
+                        <div class="calculator-results__list">
+                            <div class="calculator-results__list-header">
+                                <div class="calculator-results__list-header-col">Стоимость, руб</div>
+                                <div class="calculator-results__list-header-col">Служба доставки, тариф</div>
+                                <div class="calculator-results__list-header-col">Сроки доставки</div>
+                            </div>
+                            <div class="calculator-results__body">
+                                <div class="calculator-results__item">
+                                    <div class="calculator-results__left">380,50</div>
+                                    <div class="calculator-results__center"><img class="" src="images/delivery/boxberry.png" alt="Логотип Почта России"></div>
+                                    <div class="calculator-results__right">
+                                        <div class="calculator-results__name"><span class="mobile-block">Боксберри -</span> Тариф для юр лиц</div>
+                                        <div class="calculator-results__terms">
+                                            <div class="calculator-results__days">2 раб. дн.</div>
+                                            <div class="calculator-results__date">05.10.2022</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calculator-results__item">
+                                    <div class="calculator-results__left">300,50</div>
+                                    <div class="calculator-results__center"><img class="" src="images/delivery/mail.png" alt="Логотип Почта России"></div>
+                                    <div class="calculator-results__right">
+                                        <div class="calculator-results__name"><span class="mobile-block">Почта россии -</span> Тариф для юр лиц</div>
+                                        <div class="calculator-results__terms">
+                                            <div class="calculator-results__days">1 раб. дн.</div>
+                                            <div class="calculator-results__date">05.10.2022</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calculator-results__item">
+                                    <div class="calculator-results__left">300,50</div>
+                                    <div class="calculator-results__center"><img class="" src="images/delivery/mail.png" alt="Логотип Почта России"></div>
+                                    <div class="calculator-results__right">
+                                        <div class="calculator-results__name"><span class="mobile-block">Почта россии -</span> Тариф для юр лиц</div>
+                                        <div class="calculator-results__terms">
+                                            <div class="calculator-results__days">1 раб. дн.</div>
+                                            <div class="calculator-results__date">05.10.2022</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calculator-results__item">
+                                    <div class="calculator-results__left">400,50</div>
+                                    <div class="calculator-results__center"><img class="" src="images/delivery/cdek.png" alt="Логотип Почта России"></div>
+                                    <div class="calculator-results__right">
+                                        <div class="calculator-results__name"><span class="mobile-block">СДЭК -</span> Тариф для юр лиц</div>
+                                        <div class="calculator-results__terms">
+                                            <div class="calculator-results__days">5 раб. дн.</div>
+                                            <div class="calculator-results__date">05.10.2022</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container mt-30a">
+            <div class="article-border">
+                <h2 class="h3 mb-20a">Служба доставки Боксберри</h2>
+                <div class="article">
+                    <picture class="article__left-picture">
+                        <img src="images/boxberry-tmp-img.jpg" alt="" class="">
+                    </picture>
+                    <p>Boxberry с 2010 года работает на российском рынке доставки. В отделениях компании можно
+                        отправлять посылки и письма по России, Армении, Беларуси, Казахстану и Киргизии. Также компания
+                        сотрудничает со всеми крупными площадками частных объявлений и интернет-аукционами.</p>
+                    <p>Наша цель — предоставить жителям страны удобный сервис доставки отправлений, оптимальный по
+                        соотношению цены и качества.</p>
+                    <p>Boxberry с 2010 года работает на российском рынке доставки. В отделениях компании можно
+                        отправлять посылки и письма по России, Армении, Беларуси, Казахстану и Киргизии. Также компания
+                        сотрудничает со всеми крупными площадками частных объявлений и интернет-аукционами.</p>
+                    <p>Наша цель — предоставить жителям страны удобный сервис доставки отправлений, оптимальный по
+                        соотношению цены и качества.</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="mt-40a calculator-instructions">
+            <div class="container">
+                <h2 class="h2 calculator-instructions__title">Преимущества доставки Боксберри</h2>
+                <div class="mt-40a calculator-instructions__list">
+                    <div class="calculator-instructions__item">
+                        <div class="calculator-instructions__item-number">1</div>
+                        <div class="calculator-instructions__item-title">Широкая сеть отделений</div>
+                        <div class="calculator-instructions__item-text">в формате “У дома”. Количество отделений Боксьберри, в которых вы можете отправить или получить посылку - более 4000 в более чем 700 городах России и СНГ.</div>
+                    </div>
+                    <div class="calculator-instructions__item">
+                        <div class="calculator-instructions__item-number">2</div>
+                        <div class="calculator-instructions__item-title">Высокий уровень сервиса</div>
+                        <div class="calculator-instructions__item-text">собственная курьерская служба доставки и сетьотделений доставки, в том числе по франшизе - позволяют поддерживать фирменный сервис услуг доставки Боксберри на высоком уровне.</div>
+                    </div>
+                    <div class="calculator-instructions__item">
+                        <div class="calculator-instructions__item-number">3</div>
+                        <div class="calculator-instructions__item-title">Опыт в логистике с 1992 года</div>
+                        <div class="calculator-instructions__item-text">за счет принадлежности Боксберри к группе компаний “Урал-пресс”</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container mt-60a">
+            <h2 class="h2">Рассчитать стоимость доставки других служб</h2>
+            <div class="tracking__content calculator__deliverers">
+                <a class="tracking__content-item tracking__content-item--active" href="#">
+                    <img class="tracking__content-img" src="images/delivery/mail.png" alt="Логотип Почта России">
+                    <span class="tracking__content-text">
+                  Почта России
+                </span>
+                </a>
+                <a class="tracking__content-item tracking__content-item--active" href="#">
+                    <img class="tracking__content-img" src="images/delivery/cdek.png" alt="Логотип СДЭК">
+                    <span class="tracking__content-text">
+                  СДЭК
+                </span>
+                </a>
+                <a class="tracking__content-item tracking__content-item--active" href="#">
+                    <img class="tracking__content-img" src="images/delivery/pe.png" alt="Логотип Pony Express">
+                    <span class="tracking__content-text">
+                  Pony express
+                </span>
+                </a>
+                <a class="tracking__content-item tracking__content-item--active" href="#">
+                    <img class="tracking__content-img" src="images/delivery/iml.png" alt="Логотип IML">
+                    <span class="tracking__content-text">
+                  IML
+                </span>
+                </a>
+                <a class="tracking__content-item tracking__content-item--active" href="#">
+                    <img class="tracking__content-img" src="images/delivery/007ex.png" alt="Логотип 007EX">
+                    <span class="tracking__content-text">
+                  007EX
+                </span>
+                </a>
+                <a class="tracking__content-item tracking__content-item--active" href="#">
+                    <img class="tracking__content-img" src="images/delivery/hkp.png" alt="Логотип Hong Kong Post">
+                    <span class="tracking__content-text">
+                  Hong Kong Post
+                </span>
+                </a>
+                <a class="tracking__content-item tracking__content-item--active" href="#">
+                    <img class="tracking__content-img" src="images/delivery/sp.png" alt="Логотип Singapore Post">
+                    <span class="tracking__content-text">
+                  Singapore Post
+                </span>
+                </a>
+                <a class="tracking__content-item tracking__content-item--active" href="#">
+                    <img class="tracking__content-img" src="images/delivery/boxberry.png" alt="Логотип Boxberry">
+                    <span class="tracking__content-text">
+                  Boxberry
+                </span>
+                </a>
+                <a class="tracking__content-item tracking__content-item--active" href="#">
+                    <img class="tracking__content-img" src="images/delivery/pe.png" alt="Логотип SF-Express">
+                    <span class="tracking__content-text">
+                  SF-Express
+                </span>
+                </a>
+                <a class="tracking__content-item tracking__content-item--active" href="#">
+                    <img class="tracking__content-img" src="images/delivery/china-post.png" alt="Логотип China Post">
+                    <span class="tracking__content-text">
+                  China Post
+                </span>
+                </a>
+            </div>
+            <div class="text-center">
+                <a class="tracking__link" href="#">
+                    Показать все 234 службы
+                </a>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-top__inner">
+                <h3 class="footer-top__title">Поделитесь с друзьями
+                    <span class="footer-top__subtitle">
+              ссылкой на бесплатный и полезный сервис
+            </span>
+                </h3>
+                <ul class="footer-top__socials">
+                    <li class="footer-top__socials-item">
+                        <a class="footer-top__socials-item-link" href="#">
+                            <svg width="20" height="36" viewBox="0 0 20 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                        d="M12.9565 35.0693V20.1211H17.9392L18.8873 13.9412H12.9565V9.92727C12.9565 8.23868 13.787 6.5847 16.4444 6.5847H19.1434V1.31825C19.1434 1.31825 16.6935 0.903015 14.3544 0.903015C9.46859 0.903015 6.27826 3.86496 6.27826 9.22139V13.9342H0.845703V20.1142H6.27826V35.0624H12.9565V35.0693Z"
+                                        fill="url(#paint0_linear_66_2319)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_66_2319" x1="24.0939" y1="29.587" x2="0.616226" y2="6.10941"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#1677F1" />
+                                        <stop offset="0.1753" stop-color="#186EE9" />
+                                        <stop offset="0.4604" stop-color="#1D56D3" />
+                                        <stop offset="0.8179" stop-color="#262FB0" />
+                                        <stop offset="1" stop-color="#2B189C" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer-top__socials-item">
+                        <a class="footer-top__socials-item-link" href="#">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                        d="M21.3827 5.02072C20.4761 5.02072 19.7495 5.7543 19.7495 6.65396C19.7495 7.56054 20.4831 8.28718 21.3827 8.28718C22.2893 8.28718 23.016 7.55362 23.016 6.65396C23.016 5.74738 22.2824 5.02072 21.3827 5.02072Z"
+                                        fill="url(#paint0_linear_66_2307)" />
+                                <path
+                                        d="M14.1025 7.11761C10.3101 7.11761 7.23047 10.2041 7.23047 13.9896C7.23047 17.782 10.317 20.8616 14.1025 20.8616C17.8949 20.8616 20.9745 17.7751 20.9745 13.9896C20.9814 10.1972 17.8949 7.11761 14.1025 7.11761ZM14.1025 18.391C11.6734 18.391 9.70108 16.4187 9.70108 13.9896C9.70108 11.5605 11.6734 9.58822 14.1025 9.58822C16.5316 9.58822 18.5039 11.5605 18.5039 13.9896C18.5039 16.4187 16.5316 18.391 14.1025 18.391Z"
+                                        fill="url(#paint1_linear_66_2307)" />
+                                <path
+                                        d="M19.5627 27.9482H8.42079C3.79793 27.9482 0.0332031 24.1904 0.0332031 19.5675V8.4256C0.0332031 3.80274 3.79101 0.0379944 8.42079 0.0379944H19.5627C24.1856 0.0379944 27.9503 3.79582 27.9503 8.4256V19.5675C27.9503 24.1835 24.1856 27.9482 19.5627 27.9482ZM8.42079 2.66085C5.2443 2.66085 2.66298 5.24219 2.66298 8.41867V19.5606C2.66298 22.7371 5.2443 25.3184 8.42079 25.3184H19.5627C22.7392 25.3184 25.3205 22.7371 25.3205 19.5606V8.41867C25.3205 5.24219 22.7392 2.66085 19.5627 2.66085H8.42079Z"
+                                        fill="url(#paint2_linear_66_2307)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_66_2307" x1="7.59633" y1="-7.13001" x2="33.8418" y2="19.1154"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop offset="0.0011048" stop-color="#FFE185" />
+                                        <stop offset="0.2094" stop-color="#FFBB36" />
+                                        <stop offset="0.3765" stop-color="#FF5176" />
+                                        <stop offset="0.5238" stop-color="#F63395" />
+                                        <stop offset="0.7394" stop-color="#A436D2" />
+                                        <stop offset="1" stop-color="#5F4EED" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_66_2307" x1="0.290569" y1="0.175574" x2="26.5364" y2="26.4214"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop offset="0.0011048" stop-color="#FFE185" />
+                                        <stop offset="0.2094" stop-color="#FFBB36" />
+                                        <stop offset="0.3765" stop-color="#FF5176" />
+                                        <stop offset="0.5238" stop-color="#F63395" />
+                                        <stop offset="0.7394" stop-color="#A436D2" />
+                                        <stop offset="1" stop-color="#5F4EED" />
+                                    </linearGradient>
+                                    <linearGradient id="paint2_linear_66_2307" x1="0.233205" y1="0.232874" x2="26.4792" y2="26.4788"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop offset="0.0011048" stop-color="#FFE185" />
+                                        <stop offset="0.2094" stop-color="#FFBB36" />
+                                        <stop offset="0.3765" stop-color="#FF5176" />
+                                        <stop offset="0.5238" stop-color="#F63395" />
+                                        <stop offset="0.7394" stop-color="#A436D2" />
+                                        <stop offset="1" stop-color="#5F4EED" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer-top__socials-item">
+                        <a class="footer-top__socials-item-link" href="#">
+                            <svg width="32" height="26" viewBox="0 0 32 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                        d="M30.9236 3.57084C29.9686 3.99991 28.9098 4.26288 27.8786 4.43589C28.37 4.35285 29.0897 3.46704 29.3734 3.10718C29.8163 2.56046 30.1762 1.93762 30.3838 1.26634C30.4115 1.21097 30.4322 1.14868 30.3769 1.10716C30.3077 1.07948 30.2661 1.09333 30.2177 1.12101C29.0689 1.73693 27.8717 2.18676 26.6052 2.5051C26.5014 2.53279 26.4253 2.5051 26.3561 2.43589C26.2523 2.31825 26.1554 2.20752 26.0378 2.11063C25.5049 1.65388 24.9305 1.30095 24.2869 1.03797C23.4426 0.691948 22.5153 0.546601 21.6018 0.608885C20.7159 0.664249 19.844 0.913391 19.055 1.32862C18.2661 1.74385 17.5602 2.31133 16.9997 3.00338C16.4183 3.71618 15.9893 4.56047 15.7747 5.46013C15.5602 6.32519 15.5809 7.1764 15.7124 8.0553C15.7332 8.20063 15.7194 8.22141 15.5879 8.20064C10.6328 7.46016 6.52209 5.6885 3.17951 1.88917C3.03418 1.72308 2.95804 1.7231 2.84039 1.90303C1.38018 4.08989 2.08607 7.60545 3.91307 9.33557C4.15529 9.56394 4.40443 9.79926 4.67433 10.0069C4.57744 10.0276 3.35943 9.89612 2.27984 9.33557C2.13451 9.2456 2.06531 9.29408 2.05147 9.46017C2.03763 9.69547 2.05839 9.9169 2.09299 10.173C2.36981 12.3944 3.90614 14.4429 6.01688 15.2457C6.26601 15.3495 6.54285 15.4463 6.81275 15.4879C6.33523 15.5917 5.83695 15.6678 4.4667 15.564C4.29369 15.5294 4.23141 15.6193 4.29369 15.7785C5.32484 18.5951 7.55323 19.4325 9.22798 19.91C9.44943 19.9516 9.67781 19.9516 9.89926 20C9.88542 20.0208 9.87158 20.0208 9.85774 20.0415C9.3041 20.8858 7.38022 21.5156 6.48748 21.827C4.86118 22.3945 3.08953 22.6505 1.37326 22.4844C1.09644 22.4429 1.04108 22.4498 0.964954 22.4844C0.888829 22.5329 0.958045 22.5952 1.04109 22.6713C1.38711 22.8997 1.74696 23.1073 2.10682 23.3011C3.20026 23.8824 4.33521 24.3391 5.52553 24.6713C11.6709 26.3668 18.5983 25.1212 23.2073 20.5329C26.8336 16.9343 28.1 11.9654 28.1 6.99649C28.1 6.80272 28.3284 6.69198 28.4668 6.59509C29.408 5.88921 30.1693 5.03797 30.8752 4.08987C31.0343 3.87534 31.0343 3.68851 31.0343 3.61238C31.0343 3.59854 31.0343 3.58469 31.0343 3.58469C31.0482 3.48781 31.0413 3.51547 30.9236 3.57084Z"
+                                        fill="url(#paint0_linear_66_2278)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_66_2278" x1="26.2445" y1="22.4176" x2="8.27191" y2="4.44511"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#00CCFF" />
+                                        <stop offset="1" stop-color="#0080FF" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer-top__socials-item">
+                        <a class="footer-top__socials-item-link" href="#">
+                            <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                        d="M0.181152 28.1384L2.16732 20.7336C1.04621 18.7059 0.451018 16.436 0.451018 14.1245C0.451018 6.58816 6.58255 0.449707 14.1258 0.449707C21.6691 0.449707 27.8007 6.58124 27.8007 14.1245C27.8007 21.6678 21.6691 27.7994 14.1258 27.7994C11.8629 27.7994 9.62758 27.2249 7.62757 26.1454L0.181152 28.1384ZM7.99433 23.3702L8.46491 23.6471C10.1881 24.6713 12.1466 25.218 14.1258 25.218C20.2435 25.218 25.2124 20.2422 25.2124 14.1315C25.2124 8.01378 20.2366 3.04488 14.1258 3.04488C8.00816 3.04488 3.0393 8.0207 3.0393 14.1315C3.0393 16.1522 3.59984 18.1384 4.65867 19.8824L4.94931 20.3529L3.84206 24.4844L7.99433 23.3702Z"
+                                        fill="url(#paint0_linear_66_2287)" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M19.2124 16.0346C18.6518 15.6955 17.9182 15.3217 17.2539 15.5916C16.7487 15.7993 16.4234 16.5951 16.0912 17.0034C15.9251 17.211 15.7175 17.2456 15.4615 17.1418C13.5514 16.3806 12.0912 15.1072 11.0324 13.3494C10.8525 13.0795 10.887 12.8581 11.1016 12.6089C11.4199 12.2352 11.8213 11.8061 11.9044 11.3009C11.9874 10.7958 11.7521 10.2075 11.5445 9.7577C11.2746 9.1833 10.977 8.3667 10.4026 8.04144C9.86973 7.74386 9.17771 7.90994 8.70712 8.29057C7.89051 8.95493 7.50294 9.99301 7.50986 11.0242C7.50986 11.3148 7.5514 11.6055 7.62061 11.8892C7.7867 12.5674 8.09809 13.2041 8.45103 13.8061C8.71401 14.2629 9.00466 14.6989 9.31608 15.128C10.3403 16.5121 11.6068 17.7231 13.0808 18.6228C13.8144 19.0726 14.6102 19.4671 15.4269 19.737C16.3473 20.0415 17.1639 20.3598 18.1604 20.166C19.1985 19.9654 20.2228 19.3287 20.638 18.3252C20.7625 18.0276 20.8179 17.6955 20.7556 17.3841C20.6103 16.7266 19.7383 16.346 19.2124 16.0346Z"
+                                      fill="url(#paint1_linear_66_2287)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_66_2287" x1="22.9804" y1="27.2975" x2="3.08323" y2="7.40028"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#00FB73" />
+                                        <stop offset="1" stop-color="#00B25B" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_66_2287" x1="24.5322" y1="25.7457" x2="4.63488" y2="5.84843"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#00FB73" />
+                                        <stop offset="1" stop-color="#00B25B" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer-top__socials-item">
+                        <a class="footer-top__socials-item-link" href="#">
+                            <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                        d="M31.0435 7.05878C31.0435 3.4117 28.0884 0.449738 24.4345 0.449738H7.54164C3.89456 0.449738 0.932617 3.40478 0.932617 7.05878V14.9204C0.932617 18.5675 3.88764 21.5294 7.54164 21.5294H24.4345C28.0815 21.5294 31.0435 18.5744 31.0435 14.9204V7.05878ZM21.1126 11.5778L13.5347 15.3287C13.2372 15.4879 12.2268 15.2734 12.2268 14.9343V7.23872C12.2268 6.89962 13.2441 6.68509 13.5417 6.85118L20.7943 10.7958C21.0988 10.9757 21.4171 11.4117 21.1126 11.5778Z"
+                                        fill="url(#paint0_linear_66_2298)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_66_2298" x1="29.0703" y1="20.9947" x2="1.18464" y2="-0.334742"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#FF0000" />
+                                        <stop offset="1" stop-color="#9B0000" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom__inner">
+                <div class="footer-bottom__box">
+                    <h4 class="footer-bottom__box-title">
+                        Отслеживание посылок
+                    </h4>
+                    <div class="footer-bottom__box-inner">
+                        <ul class="footer-bottom__list">
+                            <li class="footer-bottom__list-item">
+                                <a class="footer-bottom__list-item-link" href="#">
+                                    Отследить посылку из Китая по трек номеру
+                                </a>
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <a class="footer-bottom__list-item-link" href="#">
+                                    Отслеживание посылок с Алиекспресс
+                                </a>
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <a class="footer-bottom__list-item-link" href="#">
+                                    Отслеживание посылок с Joom
+                                </a>
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <a class="footer-bottom__list-item-link" href="#">
+                                    Отслеживание посылок с Пандао
+                                </a>
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <a class="footer-bottom__list-item-link" href="#">
+                                    Отслеживание грузов транспортных компании
+                                </a>
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <a class="footer-bottom__list-item-link" href="#">
+                                    Таможенное оформление посылок и беспошлинный лимит
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="footer-bottom__list">
+                            <li class="footer-bottom__list-item">
+                                <a class="footer-bottom__list-item-link" href="#">
+                                    Отслеживание посылок с ASOS
+                                </a>
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <a class="footer-bottom__list-item-link" href="#">
+                                    Отслеживание посылок из Англии
+                                </a>
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <a class="footer-bottom__list-item-link" href="#">
+                                    Почта России отслеживание
+                                </a>
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <a class="footer-bottom__list-item-link" href="#">
+                                    Отслеживание SF-Express на русском
+                                </a>
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <a class="footer-bottom__list-item-link" href="#">
+                                    Отслеживание ePacket на русском
+                                </a>
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <a class="footer-bottom__list-item-link" href="#">
+                                    Отслеживание Почты Малайзии POS Malaysia на русском
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom__box-inner">
+                    <div class="footer-bottom__box">
+                        <h4 class="footer-bottom__box-title">
+                            Справочники
+                        </h4>
+                        <div class="footer-bottom__box-inner">
+                            <ul class="footer-bottom__list">
+                                <li class="footer-bottom__list-item">
+                                    <a class="footer-bottom__list-item-link" href="#">
+                                        Кнопка Отслеживания
+                                    </a>
+                                </li>
+                                <li class="footer-bottom__list-item">
+                                    <a class="footer-bottom__list-item-link" href="#">
+                                        Коды сотрировочных центров
+                                    </a>
+                                </li>
+                                <li class="footer-bottom__list-item">
+                                    <a class="footer-bottom__list-item-link" href="#">
+                                        Почеум моя посылка не отслеживается?
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-bottom__box">
+                        <h4 class="footer-bottom__box-title">
+                            Язык
+                        </h4>
+                        <div class="footer-bottom__box-inner">
+                            <ul class="footer-bottom__list">
+                                <li class="footer-bottom__list-item">
+                                    <a class="footer-bottom__list-item-link" href="#">
+                                        English
+                                    </a>
+                                </li>
+                                <li class="footer-bottom__list-item">
+                                    <a class="footer-bottom__list-item-link" href="#">
+                                        Русский
+                                    </a>
+                                </li>
+                                <li class="footer-bottom__list-item">
+                                    <a class="footer-bottom__list-item-link" href="#">
+                                        Francias
+                                    </a>
+                                </li>
+                                <li class="footer-bottom__list-item">
+                                    <a class="footer-bottom__list-item-link" href="#">
+                                        Espanol
+                                    </a>
+                                </li>
+                                <li class="footer-bottom__list-item">
+                                    <a class="footer-bottom__list-item-link" href="#">
+                                        Portigues
+                                    </a>
+                                </li>
+                                <li class="footer-bottom__list-item">
+                                    <a class="footer-bottom__list-item-link" href="#">
+                                        Deutsch
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="footer-bottom__bottom">
+                <li class="footer-bottom__bottom-item">
+                    <a class="footer-bottom__bottom-item-link" href="#">
+                        О проекте
+                    </a>
+                </li>
+                <li class="footer-bottom__bottom-item">
+                    <a class="footer-bottom__bottom-item-link" href="#">
+                        Пользовательское соглашение
+                    </a>
+                </li>
+                <li class="footer-bottom__bottom-item">
+                    <a class="footer-bottom__bottom-item-link" href="#">
+                        Политика конфиденциальности
+                    </a>
+                </li>
+                <li class="footer-bottom__bottom-item">
+                    <a class="footer-bottom__bottom-item-link" href="#">
+                        (c) 2010-2022
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>

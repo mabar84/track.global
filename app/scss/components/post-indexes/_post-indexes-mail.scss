@@ -1,0 +1,276 @@
+.post-indexes-mail {
+  .container {
+    @include for-470-px {
+      padding: 0 10px;
+    }
+  }
+
+  .top {
+    padding: 70px 0 30px;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 300px;
+      height: 200px;
+
+      @include for-1340-px {
+        height: 160px;
+      }
+    }
+
+    &::before {
+      left: 20px;
+      background-image: url('../images/services-pochta/bg-one.png');
+
+      @include for-1170-px {
+        left: -60px;
+      }
+
+      @include for-769-px {
+        left: -94px;
+        width: 327px;
+        height: 190px;
+      }
+
+      @include for-640-px {
+        background-image: url('../images/country/top-bg.png');
+        width: 160px;
+        height: 150px;
+        top: 5px;
+        left: 0;
+      }
+
+      @include for-470-px {
+        top: -13px;
+        width: 153px;
+        left: -54px;
+      }
+    }
+
+    &::after {
+      right: 20px;
+      background-image: url('../images/services-pochta/bg-two.png');
+      height: 190px;
+
+      @include for-915-px {
+        right: 0;
+      }
+
+      @include for-769-px {
+        height: 194px;
+        width: 280px;
+        bottom: 18px;
+      }
+
+      @include for-640-px {
+        background-image: url('../images/country/top-box-mob.svg');
+        height: 117px;
+        width: 120px;
+        bottom: 29px;
+        right: 0px;
+        top: 10px;
+      }
+
+      @include for-470-px {
+        top: 0;
+      }
+    }
+
+    @include for-915-px {
+      padding: 46px 0 40px;
+    }
+
+    @include for-769-px {}
+
+    @include for-640-px {
+      padding: 20px 0 0 0;
+    }
+  }
+
+  .top__inner {
+    justify-content: center;
+  }
+
+  .top__content {
+    @include for-725-px {
+      width: 100%;
+      min-height: 160px;
+    }
+
+    @include for-470-px {
+      min-height: 150px;
+    }
+  }
+
+  .top__search {
+    width: 556px;
+    margin: 0 auto;
+
+    @include for-725-px {
+      margin-bottom: 40px;
+    }
+
+    @include for-640-px {
+      margin-bottom: 0;
+      width: 100%;
+    }
+  }
+
+  .breadcrumbs {
+    margin-bottom: 30px;
+
+    @include for-470-px {
+      display: none;
+    }
+  }
+
+  .breadcrumbs__list {
+    @include for-769-px {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  &__inner {
+    padding: 10px 0 50px;
+
+    @include for-470-px {
+      padding: 20px 0;
+    }
+  }
+
+  &__title {
+    @extend %Mont-700;
+    font-size: 35px;
+    line-height: 43px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+    @include for-1025-px {
+      font-size: 28px;
+      line-height: 32px;
+    }
+
+    @include for-769-px {
+      font-size: 25px;
+      line-height: 30px;
+    }
+
+    @include for-640-px {
+      font-size: 22px;
+      line-height: 27px;
+    }
+
+    @include for-470-px {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+
+    @include for-640-px {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__content {
+    padding: 30px;
+    border: 1px solid #E6E6E6;
+    border-radius: 3px;
+    margin-right: 20px;
+    max-width: 40%;
+
+    @include for-915-px {
+      padding: 20px;
+    }
+
+    @include for-769-px {
+      max-width: 50%;
+    }
+
+    @include for-640-px {
+      max-width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &__content-item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+
+      @include for-915-px {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__content-title {
+    @extend %Mont-700;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 10px;
+    display: block;
+
+    @include for-769-px {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  &__content-text {
+    padding-left: 20px;
+
+    span {
+      &:not(:last-child) {
+        display: block;
+        margin-bottom: 15px;
+      }
+    }
+
+    @include for-915-px {
+      padding-left: 10px;
+    }
+
+    @include for-769-px {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  &__map {
+    max-width: 60%;
+    flex-grow: 2;
+
+    @include for-769-px {
+      max-width: 50%;
+    }
+
+    @include for-640-px {
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__map-img {
+    width: 100%;
+    height: auto;
+
+    @include for-640-px {
+      height: 370px;
+    }
+
+    @include for-470-px {
+      height: 250px;
+    }
+  }
+}

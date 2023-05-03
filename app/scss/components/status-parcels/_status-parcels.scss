@@ -1,0 +1,42 @@
+.status-parcels {
+  .header {
+    background: linear-gradient(360deg, #E9E9E9 0%, rgba(238, 234, 234, 0) 71.82%);
+  }
+
+  .top__search-btn {
+    display: none;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 30px;
+
+    @include for-470-px {
+      display: none;
+    }
+  }
+
+  .faq__wrapper {
+    padding: 20px 0 50px;
+  }
+
+  .faq__list {
+    margin-bottom: 0;
+  }
+
+  .faq__list-text {
+    span:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+
+  .faq__list-item-link {
+    color: $accent;
+    text-decoration: underline;
+    transition: all .3s ease-in-out;
+    display: inline-block;
+
+    &:hover {
+      transform: perspective(100px) rotateY(-30deg);
+    }
+  }
+}

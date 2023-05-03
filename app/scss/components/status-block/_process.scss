@@ -1,0 +1,24 @@
+.process {
+  &__link {
+    font-size: 20px;
+    line-height: 24px;
+    color: $accent;
+    text-decoration: underline;
+    transition: all .3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @include for-470-px {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  .tracking-widget {
+    @include for-470-px {
+      padding-top: 20px;
+    }
+  }
+}

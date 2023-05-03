@@ -1,0 +1,81 @@
+.poshta-reviews {
+  padding: 84px 0 50px;
+
+  @include for-769-px {
+    padding: 72px 0 30px;
+  }
+
+  @include for-470-px {
+    padding: 40px 0 20px;
+  }
+
+  &__title {
+    @extend %Mont-700;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 32px;
+
+    @include for-769-px {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include for-470-px {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 30px;
+
+    @include for-470-px {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  &__box-name {
+    @extend %Mont-700;
+    display: block;
+    font-size: 18px;
+    line-height: 22px;
+    margin-right: 30px;
+
+    @include for-470-px {
+      font-size: 14px;
+      line-height: 17px;
+      margin-right: 10px;
+    }
+  }
+
+  &__item-text {
+    color: #200E32;
+    font-weight: 300;
+
+    @include for-470-px {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  .poshta-reviews__box-star.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group.jq-ry-normal-group svg {
+    @include for-470-px {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .poshta-reviews__box-star.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group.jq-ry-rated-group svg {
+
+    @include for-470-px {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}

@@ -1,0 +1,252 @@
+.footer-top {
+  padding: 40px 0;
+  background-color: $accent;
+
+  @include for-769-px {
+    padding: 30px 20px;
+  }
+
+  @include for-470-px {
+    padding: 20px 0 30px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include for-640-px {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    @extend %Mont-900;
+    font-size: 35px;
+    line-height: 43px;
+    color: #ffffff;
+
+    @include for-769-px {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include for-640-px {
+      margin-bottom: 20px;
+    }
+
+    @include for-470-px {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__subtitle {
+    @extend %Mont-400;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 10px;
+    display: block;
+
+    @include for-769-px {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    @include for-470-px {
+      font-size: 12px;
+      line-height: 15px;
+      margin-top: 5px;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+
+    @include for-769-px {
+      align-self: flex-end;
+    }
+
+    @include for-640-px {
+      align-self: center;
+    }
+  }
+
+  &__socials-item {
+    transition: all .3s ease;
+    border-radius: 50%;
+
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__socials-item-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    @include for-769-px {
+      width: 30px;
+      height: 30px;
+
+      svg {
+        width: 18px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  padding: 30px 0 44px;
+  background-color: $footer-bg;
+
+  @include for-769-px {
+    padding-bottom: 30px;
+  }
+
+  @include for-470-px {
+    padding-bottom: 20px;
+  }
+
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 34px;
+
+    @include for-470-px {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__box {
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @include for-470-px {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__box-title {
+    @extend %Mont-700;
+    color: #ffffff;
+    margin-bottom: 20px;
+
+    @include for-470-px {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__box-inner {
+    display: flex;
+
+    @include for-769-px {
+      flex-direction: column;
+
+      &:last-child {
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__list {
+    &:not(:last-child) {
+      margin-right: 14px;
+
+      @include for-769-px {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__list-item {
+    &:not(:last-child) {
+      margin-bottom: 7px;
+    }
+  }
+
+  &__list-item-link {
+    font-size: 12px;
+    line-height: 15px;
+    color: #ffffff;
+    transition: all .3s ease;
+
+    &:hover {
+      color: $accent;
+      text-decoration: underline;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 24px;
+    border-top: 1px solid #817C7C;
+
+    @include for-769-px {
+      justify-content: center;
+    }
+
+    @include for-470-px {
+      flex-direction: column;
+    }
+  }
+
+  &__bottom-item {
+    &:not(:last-child) {
+      margin-right: 36px;
+
+      @include for-470-px {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+
+    &:nth-child(2) {
+      margin-right: 20px;
+
+      @include for-470-px {
+        margin-right: 0;
+      }
+    }
+
+    &:last-child {
+      @extend %Mont-700;
+    }
+  }
+
+  &__bottom-item-link {
+    font-size: 12px;
+    line-height: 15px;
+    color: #ffffff;
+    transition: all .3s ease;
+
+    &:hover {
+      color: $accent;
+      text-decoration: underline;
+    }
+  }
+}

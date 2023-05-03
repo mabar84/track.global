@@ -1,0 +1,49 @@
+.text-input {
+  display: inline-block;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 17px;
+  border: 1px solid #E6E6E6;
+  border-radius: 3px;
+  font-weight: 400;
+  outline: #E6E6E6;
+
+
+  &::placeholder {
+    color: #c4c4c4;
+    opacity: 1;
+  }
+
+  &__accent {
+    border-color: #000;
+    background-color: #EFEEEE;
+    @extend %Mont-700;
+  }
+
+  &.has-error {
+    border-color: #E24949;
+  }
+
+  @include for-470-px {
+    padding: 10px;
+    font-size: 12px;
+  }
+}
+
+.error-text {
+  color: #E24949;
+  font-size: 12px;
+  line-height: 1.2;
+  @include for-470-px {
+    font-size: 10px;
+  }
+}
+
+.problem-form {
+  padding-left: 26px;
+  padding-right: 26px;
+  @include for-470-px {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

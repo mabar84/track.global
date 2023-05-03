@@ -1,0 +1,14 @@
+.ready {
+
+  .tracking-widget__list {
+    &::before {
+      top: 20px;
+    }
+  }
+
+  &__img {
+    @include for-769-px {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,443 @@
+.top {
+  background: linear-gradient(
+    360deg,
+    #e9e9e9 0%,
+    rgba(238, 234, 234, 0) 71.82%
+  );
+  position: relative;
+  padding-bottom: 46px;
+
+  @include for-725-px {
+    padding-top: 24px;
+    padding-bottom: 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    @extend %Mont-900;
+    font-size: 60px;
+    line-height: 73px;
+    color: $accent;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+
+    @include for-769-px {
+      font-size: 40px;
+      line-height: 49px;
+    }
+
+    @include for-725-px {
+      font-size: 25px;
+      line-height: 30px;
+      text-align: center;
+      margin-top: 25px;
+    }
+    @include for-470-px {
+      margin-top: 10px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 54px;
+
+    a {
+      text-decoration: underline;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: $accent;
+      }
+    }
+
+    @include for-769-px {
+      margin-bottom: 0;
+    }
+
+    @include for-725-px {
+      font-size: 12px;
+      line-height: 15px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__img-mob {
+    display: none;
+  }
+
+  &__search {
+    padding: 20px;
+    padding-bottom: 12px;
+    background-color: #000000;
+    border-radius: 3px;
+    position: relative;
+    z-index: 10;
+
+    @include for-725-px {
+      padding: 20px 10px;
+      padding-bottom: 12px;
+    }
+  }
+
+  &__search-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__search-label {
+    max-width: 100%;
+    width: 100%;
+    margin-right: 20px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 10px;
+      top: 10px;
+      background-image: url("../images/icons/search.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    @include for-725-px {
+      margin-right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    @include for-470-px {
+      width: 80%;
+
+      &::before {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+
+  &__search-input {
+    width: 100%;
+    height: 40px;
+    padding: 11px 12px 12px 37px;
+    border-radius: 3px;
+    border: transparent;
+    outline: transparent;
+    font-size: 16px;
+    line-height: 17px;
+
+    &::placeholder {
+      color: #c4c4c4;
+      @include for-470-px {
+        font-size: 10px;
+      }
+    }
+
+    @include for-470-px {
+      border-radius: 3px 0 0 3px;
+      height: 30px;
+      padding: 9px 9px 10px 27px;
+      line-height: 12px;
+    }
+  }
+
+  &__search-btn {
+    width: 136px;
+    height: 40px;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: $accent;
+    @extend %Mont-700;
+    color: #ffffff;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 20px $accent, 0 0 40px $accent;
+    }
+
+    @include for-470-px {
+      font-size: 12px;
+      line-height: 15px;
+      width: 100px;
+      height: 30px;
+    }
+  }
+
+  &__btn-spiner {
+    opacity: 0;
+    top: -300px;
+  }
+
+  &__btn-text {
+    display: block;
+    margin-right: 13px;
+
+    @include for-470-px {
+      margin-right: 10px;
+    }
+  }
+
+  &__btn-text--active {
+    display: none;
+
+    @include for-470-px {
+      font-size: 10px;
+    }
+  }
+
+  &__search-btn--active {
+    justify-content: space-evenly;
+    background-color: #f09f9f;
+
+    .top__btn-spiner {
+      opacity: 1;
+      top: 0;
+    }
+
+    .top__btn-text {
+      display: none;
+    }
+
+    .top__btn-text--active {
+      display: block;
+    }
+  }
+
+  #circularG {
+    position: relative;
+    width: 30px;
+    height: 30px;
+  }
+
+  .circularG {
+    position: absolute;
+    background-color: #ffffff;
+    width: 5px;
+    height: 5px;
+    border-radius: 7px;
+    -o-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    animation-name: bounce_circularG;
+    -o-animation-name: bounce_circularG;
+    -ms-animation-name: bounce_circularG;
+    -webkit-animation-name: bounce_circularG;
+    -moz-animation-name: bounce_circularG;
+    animation-duration: 1.97s;
+    -o-animation-duration: 1.97s;
+    -ms-animation-duration: 1.97s;
+    -webkit-animation-duration: 1.97s;
+    -moz-animation-duration: 1.97s;
+    animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-direction: normal;
+    -o-animation-direction: normal;
+    -ms-animation-direction: normal;
+    -webkit-animation-direction: normal;
+    -moz-animation-direction: normal;
+  }
+
+  #circularG_1 {
+    left: 13px;
+    top: 0;
+    animation-delay: 0.74s;
+    -o-animation-delay: 0.74s;
+    -ms-animation-delay: 0.74s;
+    -webkit-animation-delay: 0.74s;
+    -moz-animation-delay: 0.74s;
+  }
+
+  #circularG_2 {
+    left: 21px;
+    top: 4px;
+    animation-delay: 0.98s;
+    -o-animation-delay: 0.98s;
+    -ms-animation-delay: 0.98s;
+    -webkit-animation-delay: 0.98s;
+    -moz-animation-delay: 0.98s;
+  }
+
+  #circularG_3 {
+    right: 1px;
+    top: 12px;
+    animation-delay: 1.23s;
+    -o-animation-delay: 1.23s;
+    -ms-animation-delay: 1.23s;
+    -webkit-animation-delay: 1.23s;
+    -moz-animation-delay: 1.23s;
+  }
+
+  #circularG_4 {
+    left: 20px;
+    bottom: 6px;
+    animation-delay: 1.48s;
+    -o-animation-delay: 1.48s;
+    -ms-animation-delay: 1.48s;
+    -webkit-animation-delay: 1.48s;
+    -moz-animation-delay: 1.48s;
+  }
+
+  #circularG_5 {
+    left: 13px;
+    bottom: 2px;
+    animation-delay: 1.72s;
+    -o-animation-delay: 1.72s;
+    -ms-animation-delay: 1.72s;
+    -webkit-animation-delay: 1.72s;
+    -moz-animation-delay: 1.72s;
+  }
+
+  #circularG_6 {
+    right: 20px;
+    bottom: 6px;
+    animation-delay: 1.97s;
+    -o-animation-delay: 1.97s;
+    -ms-animation-delay: 1.97s;
+    -webkit-animation-delay: 1.97s;
+    -moz-animation-delay: 1.97s;
+  }
+
+  #circularG_7 {
+    left: 1px;
+    top: 12px;
+    animation-delay: 2.21s;
+    -o-animation-delay: 2.21s;
+    -ms-animation-delay: 2.21s;
+    -webkit-animation-delay: 2.21s;
+    -moz-animation-delay: 2.21s;
+  }
+
+  #circularG_8 {
+    right: 21px;
+    top: 4px;
+    animation-delay: 2.46s;
+    -o-animation-delay: 2.46s;
+    -ms-animation-delay: 2.46s;
+    -webkit-animation-delay: 2.46s;
+    -moz-animation-delay: 2.46s;
+  }
+
+  @keyframes bounce_circularG {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(0.3);
+    }
+  }
+
+  @-o-keyframes bounce_circularG {
+    0% {
+      -o-transform: scale(1);
+    }
+
+    100% {
+      -o-transform: scale(0.3);
+    }
+  }
+
+  @-ms-keyframes bounce_circularG {
+    0% {
+      -ms-transform: scale(1);
+    }
+
+    100% {
+      -ms-transform: scale(0.3);
+    }
+  }
+
+  @-webkit-keyframes bounce_circularG {
+    0% {
+      -webkit-transform: scale(1);
+    }
+
+    100% {
+      -webkit-transform: scale(0.3);
+    }
+  }
+
+  @-moz-keyframes bounce_circularG {
+    0% {
+      -moz-transform: scale(1);
+    }
+
+    100% {
+      -moz-transform: scale(0.3);
+    }
+  }
+
+  &__search-links {
+    display: flex;
+    flex-wrap: wrap;
+    @include for-470-px {
+      text-align: center;
+    }
+  }
+
+  &__search-link {
+    font-size: 12px;
+    line-height: 15px;
+    color: #ffffff;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+    margin-bottom: 8px;
+
+    &:not(:last-child) {
+      margin-right: 14px;
+    }
+
+    &:hover {
+      color: $accent;
+    }
+
+    @include for-470-px {
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+
+  &__progress-line-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 10px;
+    background: #ffe1e1;
+    border-radius: 10px;
+    display: none;
+    z-index: 100;
+  }
+
+  &__progress-line-bg--active {
+    display: block;
+  }
+
+  &__progress-line {
+    background: #e24949;
+    border-radius: 10px;
+    height: 10px;
+  }
+}
+
+.tracking-widget__top--transparent {
+  background: none;
+  padding-bottom: 0;
+}

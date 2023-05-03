@@ -1,0 +1,325 @@
+.shop-ali {
+
+  .container {
+    @include for-470-px {
+      padding: 0 10px;
+    }
+  }
+
+  .top {
+    padding: 70px 0 30px;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 300px;
+      height: 200px;
+
+      @include for-1340-px {
+        height: 160px;
+      }
+    }
+
+    &::before {
+      left: 20px;
+      background-image: url('../images/services-pochta/bg-one.png');
+
+      @include for-1170-px {
+        left: -60px;
+      }
+
+      @include for-769-px {
+        left: -94px;
+        width: 327px;
+        height: 190px;
+      }
+
+      @include for-640-px {
+        background-image: url('../images/services-pochta/bg-one-mob.svg');
+        width: 127px;
+        height: 146px;
+        top: 5px;
+        left: 0;
+      }
+
+      @include for-470-px {
+        top: 5px;
+      }
+    }
+
+    &::after {
+      right: 20px;
+      background-image: url('../images/services-pochta/bg-two.png');
+      height: 190px;
+
+      @include for-915-px {
+        right: 0;
+      }
+
+      @include for-769-px {
+        height: 194px;
+        width: 280px;
+        bottom: 18px;
+      }
+
+      @include for-640-px {
+        background-image: url('../images/country/top-box-mob.svg');
+        height: 117px;
+        width: 120px;
+        bottom: 29px;
+        right: 0px;
+        top: 10px;
+      }
+
+      @include for-470-px {
+        top: 0;
+      }
+    }
+
+    @include for-915-px {
+      padding: 46px 0 40px;
+    }
+
+    @include for-769-px {}
+
+    @include for-640-px {
+      padding: 20px 0 0 0;
+    }
+  }
+
+  .top__inner {
+    justify-content: center;
+  }
+
+  .top__title {
+    font-size: 35px;
+    line-height: 43px;
+    margin-bottom: 30px;
+
+    @include for-915-px {
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    @include for-769-px {
+      font-size: 25px;
+      line-height: 30px;
+      position: relative;
+      z-index: 2;
+      margin-bottom: 37px;
+    }
+
+    @include for-640-px {
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 10px;
+    }
+
+    @include for-470-px {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 14px;
+    }
+  }
+
+  .top__content {
+    @include for-725-px {
+      width: 100%;
+      min-height: 170px;
+    }
+
+    @include for-470-px {
+      min-height: 150px;
+    }
+  }
+
+  .top__search {
+    width: 556px;
+    margin: 0 auto;
+
+    @include for-725-px {
+      margin-bottom: 40px;
+    }
+
+    @include for-640-px {
+      margin-bottom: 0;
+      width: 100%;
+    }
+  }
+
+  .breadcrumbs {
+    margin-bottom: 30px;
+
+    @include for-470-px {
+      display: none;
+    }
+  }
+
+  .breadcrumbs__list {
+    @include for-769-px {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  .services-pochta__top {
+    @include for-769-px {
+      padding: 15px;
+    }
+
+    @include for-725-px {
+      min-height: 172px;
+    }
+
+    @include for-470-px {
+      min-height: 130px;
+    }
+  }
+
+  .services-pochta__top-wrapper {
+    @include for-470-px {
+      left: 110px;
+      top: 60px;
+    }
+  }
+
+  .services-pochta__top-box {
+    &:not(:last-child) {
+      margin-right: 255px;
+
+      @include for-769-px {
+        margin-right: 0;
+        margin-bottom: 6px;
+      }
+    }
+
+    @include for-725-px {
+
+      &:first-child {
+        flex-direction: row;
+        align-items: center;
+      }
+
+
+      &:nth-child(2) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  .services-pochta__top-img {
+    width: 110px;
+    height: 110px;
+
+    @include for-769-px {
+      margin-right: 15px;
+    }
+
+    @include for-470-px {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .services-pochta__status {
+    display: none;
+  }
+
+  .services-pochta__info {
+    margin-bottom: 36px;
+
+    @include for-470-px {
+      margin-bottom: 40px;
+    }
+  }
+
+  .services-pochta__star.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group.jq-ry-normal-group svg {
+    fill: #ffffff;
+    stroke: $accent;
+    stroke-width: 15;
+
+    @include for-470-px {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .services-pochta__star.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group.jq-ry-rated-group svg {
+    fill: $accent;
+    stroke: $accent;
+    stroke-width: 15;
+
+    @include for-470-px {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .services-pochta__top-box-star.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group.jq-ry-normal-group svg {
+    @include for-470-px {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .services-pochta__top-box-star.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group.jq-ry-rated-group svg {
+    @include for-470-px {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  h1:not([class]) {
+    @extend %Mont-700;
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 20px;
+  }
+
+  h2:not([class]) {
+    @extend %Mont-700;
+    font-size: 30px;
+    line-height: 34px;
+    margin-bottom: 20px;
+  }
+
+  h3:not([class]) {
+    @extend %Mont-700;
+    font-size: 28px;
+    line-height: 26px;
+    margin-bottom: 20px;
+  }
+
+  h4,
+  h5,
+  h6:not([class]) {
+    @extend %Mont-700;
+    font-size: 26px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  p,
+  ul,
+  li:not([class]) {
+    margin-bottom: 10px;
+  }
+
+  ul:not([class]) {
+    padding-left: 18px;
+  }
+
+  a:not([class]) {
+    color: $accent;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
