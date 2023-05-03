@@ -1,3 +1,55 @@
+.through-insert {
+    svg {
+        margin-bottom: 2px;
+        margin-right: 5px;
+    }
+    p {
+        display: flex;
+        align-items: center;
+    }
+    span {
+        text-transform: none;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: #e24949;
+    }
+    &__mobile-hidden {
+        display: none;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: #e24949;
+        & p {
+            display: flex;
+            align-items: center;
+        }
+        & svg {
+            margin-bottom: 2px;
+            margin-right: 5px;
+            @include for-725-px {
+                display: none;
+            }
+        }
+        @include for-1000-px {
+            display: block;
+            position: absolute;
+            top: 36px;
+            right: 140px;
+        }
+        @include for-725-px {
+            top: 24px;
+            right: 120px;
+            font-size: 10px;
+            line-height: 12px;
+        }
+        @include for-470-px {
+            top: 12px;
+        }
+    }
+}
 .cashbe13 {
     padding: 18px 28px;
     width: 1107px;
