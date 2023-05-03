@@ -161,3 +161,115 @@
         }
     }
 }
+.big-cashbe {
+    margin: 30px auto;
+    @include for-1025-px {
+        margin: 20px auto;
+    }
+    @include for-640-px {
+        margin: 20px auto 0;
+    }
+    .content {
+        padding: 20px 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        @include for-1025-px {
+            padding: 10px 0;
+            gap: 16px;
+        }
+        @include for-769-px {
+            flex-direction: column;
+            align-items: center;
+        }
+        @include for-640-px {
+            gap: 10px;
+        }
+        .left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            @include for-1025-px {
+                gap: 14px;
+            }
+            @include for-640-px {
+                gap: 5px;
+            }
+        }
+        .logo {
+            width: 162px;
+            height: 33px;
+            @include for-1025-px {
+                width: 162px;
+                height: 33px;
+            }
+            @include for-640-px {
+                width: 76px;
+                height: 16px;
+            }
+        }
+        .sign {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 37px;
+            text-align: right;
+            color: #e24949;
+            opacity: 0.9;
+            @include for-640-px {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+        .text {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            color: #e24949;
+            opacity: 0.9;
+            @include for-640-px {
+                font-size: 12px;
+                line-height: 15px;
+            }
+        }
+        .subtext {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            display: flex;
+            align-items: center;
+            color: #979797;
+            @include for-640-px {
+                font-size: 10px;
+                line-height: 12px;
+            }
+        }
+        .toshopping {
+            width: 173px;
+            height: 44px;
+            padding: 12px 28px;
+            background: #ffffff;
+            border: 1px solid #e7262e;
+            border-radius: 8px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: #e7262e;
+            opacity: 0.9;
+            transition: 0.3s;
+            text-align: center;
+            @include for-640-px {
+                width: calc(100vw - 30px);
+            }
+            &:hover {
+                background: #e7262e;
+                color: #ffffff;
+                opacity: 0.9;
+            }
+        }
+    }
+}
