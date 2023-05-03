@@ -273,3 +273,59 @@
         }
     }
 }
+.animation-cashbe {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 13px;
+    gap: 14px;
+    @include for-640-px {
+        margin-bottom: 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .black {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+    }
+    .red {
+        color: #e24949;
+    }
+    .get-cashbe {
+        padding: 6px 32px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+        border: 1px dashed #2e2e46;
+        transition: 0.3s;
+        &:hover {
+            background: #000000;
+            color: #ffffff;
+        }
+    }
+    .animation-cashbe__text {
+        opacity: 0;
+        animation: fade-in 1s ease-in-out 1s forwards;
+        @keyframes fade-in {
+            to {
+                opacity: 1;
+            }
+        }
+    }
+    .get-cashbe {
+        opacity: 0;
+        animation: fade-in 0.5s ease-in-out 2s forwards;
+        @keyframes fade-in {
+            to {
+                opacity: 1;
+            }
+        }
+    }
+}

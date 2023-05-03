@@ -1,5 +1,4 @@
 .shop-ali {
-
   .container {
     @include for-470-px {
       padding: 0 10px;
@@ -12,7 +11,7 @@
 
     &::before,
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       background-repeat: no-repeat;
@@ -27,7 +26,7 @@
 
     &::before {
       left: 20px;
-      background-image: url('../images/services-pochta/bg-one.png');
+      background-image: url("../images/services-pochta/bg-one.png");
 
       @include for-1170-px {
         left: -60px;
@@ -40,7 +39,7 @@
       }
 
       @include for-640-px {
-        background-image: url('../images/services-pochta/bg-one-mob.svg');
+        background-image: url("../images/services-pochta/bg-one-mob.svg");
         width: 127px;
         height: 146px;
         top: 5px;
@@ -54,7 +53,7 @@
 
     &::after {
       right: 20px;
-      background-image: url('../images/services-pochta/bg-two.png');
+      background-image: url("../images/services-pochta/bg-two.png");
       height: 190px;
 
       @include for-915-px {
@@ -68,7 +67,7 @@
       }
 
       @include for-640-px {
-        background-image: url('../images/country/top-box-mob.svg');
+        background-image: url("../images/country/top-box-mob.svg");
         height: 117px;
         width: 120px;
         bottom: 29px;
@@ -85,7 +84,8 @@
       padding: 46px 0 40px;
     }
 
-    @include for-769-px {}
+    @include for-769-px {
+    }
 
     @include for-640-px {
       padding: 20px 0 0 0;
@@ -100,6 +100,12 @@
     font-size: 35px;
     line-height: 43px;
     margin-bottom: 30px;
+    &.cashbe {
+      margin-bottom: 8px;
+      @include for-640-px {
+        margin-bottom: 10px;
+      }
+    }
 
     @include for-915-px {
       font-size: 30px;
@@ -199,12 +205,10 @@
     }
 
     @include for-725-px {
-
       &:first-child {
         flex-direction: row;
         align-items: center;
       }
-
 
       &:nth-child(2) {
         flex-direction: column;
@@ -239,7 +243,7 @@
     }
   }
 
-  .services-pochta__star.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group.jq-ry-normal-group svg {
+  .services-pochta__star.jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group.jq-ry-normal-group svg {
     fill: #ffffff;
     stroke: $accent;
     stroke-width: 15;
@@ -250,7 +254,7 @@
     }
   }
 
-  .services-pochta__star.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group.jq-ry-rated-group svg {
+  .services-pochta__star.jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group.jq-ry-rated-group svg {
     fill: $accent;
     stroke: $accent;
     stroke-width: 15;
@@ -261,14 +265,14 @@
     }
   }
 
-  .services-pochta__top-box-star.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group.jq-ry-normal-group svg {
+  .services-pochta__top-box-star.jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group.jq-ry-normal-group svg {
     @include for-470-px {
       width: 15px;
       height: 15px;
     }
   }
 
-  .services-pochta__top-box-star.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group.jq-ry-rated-group svg {
+  .services-pochta__top-box-star.jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group.jq-ry-rated-group svg {
     @include for-470-px {
       width: 15px;
       height: 15px;
