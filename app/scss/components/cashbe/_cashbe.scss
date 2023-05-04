@@ -164,10 +164,10 @@
 .big-cashbe {
     margin: 30px auto;
     @include for-1025-px {
-        margin: 20px auto;
+        margin: 0 auto 20px;
     }
     @include for-640-px {
-        margin: 20px auto 0;
+        margin: 0px auto 10px;
     }
     .content {
         padding: 20px 0;
@@ -184,6 +184,7 @@
             align-items: center;
         }
         @include for-640-px {
+            padding-top: 0;
             gap: 10px;
         }
         .left {
@@ -288,18 +289,19 @@
     }
     .black {
         font-style: normal;
-        font-weight: 500;
+        font-weight: 600;
         font-size: 16px;
         line-height: 20px;
         color: #000000;
     }
     .red {
+        font-weight: 600;
         color: #e24949;
     }
     .get-cashbe {
         padding: 6px 32px;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 600;
         font-size: 14px;
         line-height: 17px;
         color: #000000;
