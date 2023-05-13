@@ -1,0 +1,202 @@
+.import-parcels {
+    margin-bottom: 100px;
+    @include for-1025-px {
+        margin-bottom: 40px;
+    }
+    @include for-640-px {
+        margin-bottom: 20px;
+    }
+    .title {
+        margin-bottom: 40px;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 43px;
+        @include for-1025-px {
+            margin-bottom: 20px;
+            font-size: 26px;
+            line-height: 32px;
+        }
+        @include for-640-px {
+            margin-bottom: 10px;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+    .cards {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        @include for-1025-px {
+            justify-content: center;
+        }
+        @include for-640-px {
+            gap: 10px;
+        }
+    }
+    .card {
+        width: 270px;
+        height: 306px;
+        padding: 24px 34px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border: 0.5px solid rgba(0, 0, 0, 0.3);
+        @include for-640-px {
+            padding: 14px;
+            width: 145px;
+            height: 185px;
+        }
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .img {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+            object-fit: cover;
+            background: #999999;
+            @include for-640-px {
+                margin-bottom: 10px;
+                width: 84px;
+                height: 84px;
+                border-radius: 3px;
+            }
+        }
+        .title {
+            margin-bottom: 6px;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            word-break: break-all;
+            @include for-640-px {
+                margin-bottom: 4px;
+                font-size: 12px;
+                line-height: 15px;
+            }
+        }
+        .subtitle {
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            @include for-640-px {
+                font-size: 10px;
+                line-height: 12px;
+            }
+        }
+        .link {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            text-decoration-line: underline;
+            color: #e24949;
+            @include for-640-px {
+                font-size: 10px;
+                line-height: 12px;
+            }
+        }
+    }
+}
+.store-promotions {
+    .title {
+        margin-bottom: 60px;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 43px;
+        @include for-1025-px {
+            margin-bottom: 20px;
+            font-size: 26px;
+            line-height: 32px;
+        }
+        @include for-640-px {
+            margin-bottom: 14px;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+    .cards {
+        margin-bottom: 20px;
+        display: flex;
+        column-gap: 20px;
+        row-gap: 30px;
+        flex-wrap: wrap;
+        @include for-1170-px {
+            justify-content: center;
+            row-gap: 26px;
+        }
+        @include for-640-px {
+            gap: 20px;
+        }
+    }
+    .card {
+        width: 366px;
+        height: 409px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        &.hide-tablet {
+            @include for-1025-px {
+                display: none;
+            }
+        }
+        &.hide-mobile {
+            @include for-640-px {
+                display: none;
+            }
+        }
+        @include for-1025-px {
+            width: 354px;
+            height: 396px;
+        }
+        @include for-640-px {
+            width: 300px;
+            height: 336px;
+        }
+        .img {
+            width: 366px;
+            height: 366px;
+            object-fit: cover;
+            background: #999999;
+            @include for-1025-px {
+                width: 354px;
+                height: 354px;
+            }
+            @include for-640-px {
+                width: 300px;
+                height: 300px;
+            }
+        }
+        .subtitle {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: center;
+            @include for-640-px {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+    .show-all {
+        text-align: center;
+        font-size: 18px;
+        line-height: 22px;
+        text-decoration-line: underline;
+        cursor: pointer;
+        color: #e24949;
+        display: none;
+        @include for-1025-px {
+            display: block;
+        }
+    }
+}
