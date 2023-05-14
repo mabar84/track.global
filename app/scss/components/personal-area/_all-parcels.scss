@@ -1,0 +1,294 @@
+.parcel {
+    .filter {
+        @include for-1170-px {
+            margin-bottom: 12px;
+        }
+        .item {
+            margin-right: 24px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            color: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            &.active {
+                color: #000000;
+                border-bottom: 2px solid #e24949;
+                @include for-1170-px {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+                @include for-725-px {
+                    font-size: 12px;
+                    line-height: 15px;
+                }
+            }
+            @include for-1170-px {
+                margin-right: 20px;
+                font-size: 16px;
+                line-height: 20px;
+            }
+            @include for-725-px {
+                margin-right: 8px;
+                font-size: 12px;
+                line-height: 15px;
+            }
+        }
+    }
+    .cards {
+        &.mobile-hidden {
+            @include for-725-px {
+                display: none;
+            }
+        }
+        .card {
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 20px rgba(23, 23, 80, 0.05);
+            border-radius: 8px;
+            &-header {
+                padding: 16px 20px;
+                display: grid;
+                grid-template-columns: 280px 150px 160px 1fr;
+                // grid-template-areas: "supply status service check";
+                background: #f4f4f4;
+                border-radius: 8px 8px 0px 0px;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 22px;
+                @include for-1170-px {
+                    font-size: 14px;
+                    line-height: 17px;
+                    grid-template-columns: 240px 120px 130px 1fr;
+                }
+            }
+            &-body {
+                padding: 16px 20px;
+                display: grid;
+                grid-template-columns: 280px 120px 160px 1fr;
+                // grid-template-areas: "supply status-value service-value data";
+                border-radius: 0 0 8px 8px;
+                background: #ffffff;
+                @include for-1170-px {
+                    padding: 10px 20px;
+                    grid-template-columns: 240px 120px 130px 1fr;
+                }
+                .supply {
+                    &-name {
+                        margin-bottom: 6px;
+                        font-size: 16px;
+                        line-height: 20px;
+                        color: #000000;
+                        @include for-1170-px {
+                            font-size: 14px;
+                            line-height: 17px;
+                        }
+                    }
+                    &-code {
+                        margin-bottom: 14px;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: rgba(0, 0, 0, 0.5);
+                        @include for-1170-px {
+                            font-size: 12px;
+                            line-height: 15px;
+                        }
+                    }
+                    &-info {
+                        display: flex;
+                        gap: 10px;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: rgba(0, 0, 0, 0.5);
+                        @include for-1170-px {
+                            font-size: 12px;
+                            line-height: 15px;
+                        }
+                    }
+                }
+                .status-value {
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 20px;
+                    &_delivered {
+                        color: #2dbb2a;
+                    }
+                    &_on-way {
+                        color: #e24949;
+                    }
+                    &_received {
+                        color: rgba(0, 0, 0, 0.5);
+                    }
+                    &_in-archive {
+                        color: rgba(0, 0, 0, 0.5);
+                    }
+                    @include for-1170-px {
+                        font-size: 14px;
+                        line-height: 17px;
+                    }
+                }
+                .service-value {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: #000000;
+                    @include for-1170-px {
+                        font-size: 14px;
+                        line-height: 17px;
+                    }
+                }
+                .data {
+                    display: flex;
+                    justify-content: space-between;
+                    @include for-1170-px {
+                        flex-direction: column;
+                        gap: 29px;
+                    }
+                    .time {
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 20px;
+                        color: #000000;
+                        @include for-1170-px {
+                            font-size: 14px;
+                            line-height: 17px;
+                        }
+                    }
+                    .buttons {
+                        display: flex;
+                        gap: 20px;
+                        @include for-1170-px {
+                            gap: 10px;
+                        }
+                        .item {
+                            height: 40px;
+                            padding: 8px 10px;
+                            font-weight: 400;
+                            font-size: 18px;
+                            line-height: 22px;
+                            color: rgba(0, 0, 0, 0.5);
+                            display: flex;
+                            align-items: center;
+                            background: #f4f4f4;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            @include for-1170-px {
+                                height: 23px;
+                                padding: 4px 6px;
+                                font-size: 12px;
+                                line-height: 15px;
+                            }
+                            img {
+                                margin-right: 10px;
+                                width: 18px;
+                                height: 20px;
+                                @include for-1170-px {
+                                    width: 12px;
+                                    height: 12px;
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .cards-mobile {
+        display: none;
+        .card {
+            padding: 10px;
+            &-flex-item {
+                margin-bottom: 10px;
+                display: flex;
+                justify-content: space-between;
+            }
+            &-supply {
+                margin-bottom: 10px;
+            }
+            .supply-name {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 17px;
+                color: #000000;
+            }
+            .supply-code {
+                font-weight: 400;
+                font-size: 10px;
+                line-height: 12px;
+                color: rgba(0, 0, 0, 0.5);
+            }
+            .status-value {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 17px;
+                &_delivered {
+                    color: #2dbb2a;
+                }
+                &_on-way {
+                    color: #e24949;
+                }
+                &_received {
+                    color: rgba(0, 0, 0, 0.5);
+                }
+                &_in-archive {
+                    color: rgba(0, 0, 0, 0.5);
+                }
+            }
+            &-service {
+                margin-bottom: 3px;
+                &_text {
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: #000000;
+                }
+            }
+            &-last-check {
+                margin-bottom: 11px;
+                &_text {
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: #000000;
+                }
+            }
+            &-next-check {
+                margin-bottom: 6px;
+                &_text {
+                    font-weight: 400;
+                    font-size: 10px;
+                    line-height: 12px;
+                    color: rgba(73, 69, 79, 0.8);
+                }
+            }
+            .buttons {
+                display: flex;
+                gap: 7px;
+                .item {
+                    height: 17px;
+                    padding: 2px 6px;
+                    font-weight: 400;
+                    font-size: 10px;
+                    line-height: 12px;
+                    color: rgba(0, 0, 0, 0.5);
+                    display: flex;
+                    align-items: center;
+                    background: #f4f4f4;
+                    border-radius: 4px;
+                    cursor: pointer;
+
+                    img {
+                        margin-right: 4px;
+                        width: 11px;
+                        height: 10px;
+                    }
+                }
+            }
+        }
+
+        @include for-725-px {
+            display: block;
+        }
+    }
+}

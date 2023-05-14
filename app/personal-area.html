@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Магазин AliExpress</title>
+    <title>Personal area</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
 
@@ -64,192 +64,185 @@
     <main class="main">
       <section class="personal-area">
         <section class="process" id="widgetContentMain">
-          <div class="tracking-widget">
-            <!-- if not found -->
-
-            <div class="download-app">
-              <div class="wrapper">
-                <p class="text">СКАЧИВАЙТЕ ПРИЛОЖЕНИЕ</p>
-                <a href="#" class="link">TRACK.GLOBAL</a>
-              </div>
+          <div class="parcel container">
+            <div class="filter">
+              <span class="item active">Все посылки </span>
+              <span class="item">Посылки в пути</span>
+              <span class="item">Доставленные посылки</span>
             </div>
-
-            <div class="import-parcels">
-              <div class="container">
-                <h2 class="title">Импортировать посылки из</h2>
-                <div class="cards">
-                  <div class="card">
-                    <div class="wrapper">
-                      <img src="images/personal-area/wb.png" alt="shop" class="img" />
-                      <p class="title">Wildberries</p>
-                      <p class="subtitle">маркетплейс</p>
-                    </div>
-                    <a href="#" class="link">Импортировать</a>
-                  </div>
-                  <div class="card">
-                    <div class="wrapper">
-                      <img src="images/personal-area/iherb.png" alt="shop" class="img" />
-                      <p class="title">iHerb</p>
-                      <p class="subtitle">международный интернет-магазин</p>
-                    </div>
-                    <a href="#" class="link">Импортировать</a>
-                  </div>
-                  <div class="card">
-                    <div class="wrapper">
-                      <img src="images/personal-area/joom.png" alt="shop" class="img" />
-                      <p class="title">Joom</p>
-                      <p class="subtitle">маркетплейс</p>
-                    </div>
-                    <a href="#" class="link">Импортировать</a>
-                  </div>
-                  <div class="card">
-                    <div class="wrapper">
-                      <img src="images/personal-area/ali.png" alt="shop" class="img" />
-                      <p class="title">AliExpress</p>
-                      <p class="subtitle">маркетплейс</p>
-                    </div>
-                    <a href="#" class="link">Импортировать</a>
-                  </div>
+            <div class="cards mobile-hidden">
+              <div class="card">
+                <div class="card-header">
+                  <div class="code">Трек-код</div>
+                  <div class="status">Статус</div>
+                  <div class="service">Служба</div>
+                  <div class="check">Последняя проверка</div>
                 </div>
-              </div>
-            </div>
-
-            <div class="store-promotions">
-              <div class="container">
-                <h2 class="title">Акции интернет-магазинов</h2>
-                <div class="cards">
-                  <a href="#" class="card">
-                    <img src="images/personal-area/girl.png" alt="shop" class="img" />
-                    <p class="subtitle">Новая коллеккция в love republic</p>
-                  </a>
-                  <a href="#" class="card">
-                    <img src="images/personal-area/percents.png" alt="shop" class="img" />
-                    <p class="subtitle">Кешбэк в магазине rendez vous</p>
-                  </a>
-                  <a href="#" class="card hide-tablet">
-                    <img src="images/personal-area/girl.png" alt="shop" class="img" />
-                    <p class="subtitle">Новая коллеккция в love republic</p>
-                  </a>
-                  <a href="#" class="card hide-mobile">
-                    <img src="images/personal-area/percents.png" alt="shop" class="img" />
-                    <p class="subtitle">Кешбэк в магазине rendez vous</p>
-                  </a>
-                  <a href="#" class="card hide-mobile">
-                    <img src="images/personal-area/girl.png" alt="shop" class="img" />
-                    <p class="subtitle">Новая коллеккция в love republic</p>
-                  </a>
-                  <a href="#" class="card hide-tablet">
-                    <img src="images/personal-area/percents.png" alt="shop" class="img" />
-                    <p class="subtitle">Кешбэк в магазине rendez vous</p>
-                  </a>
-                </div>
-                <p id="show-all" class="show-all">Смотреть все</p>
-              </div>
-            </div>
-
-            <div class="tracking-widget-empty-help">
-              <div class="container">
-                <div class="tracking-widget-empty-help__text article text-center">
-                  Если уверены, что ни одна из ошибок к вам не подходит, то нажмите кнопку ниже и сообщите нам детали вашего отправления, чтобы мы могли решить
-                  эту проблему
-                </div>
-                <div class="tracking-widget-empty-help__btn-wrapper">
-                  <button class="btn-primary tracking-widget-empty-help__btn" id="show-modal-report-form-btn2" type="button">Сообщить о проблеме</button>
-                </div>
-              </div>
-            </div>
-            <div id="modal-report-form" class="modal-problem ah-modal">
-              <div class="ah-modal__container">
-                <div class="ah-modal__content">
-                  <button data-ah-modal-dismiss class="close-btn ah-modal__close">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M20 2L18 0L10 8L2 0L0 2L8 10L0 18L2 20L10 12L18 20L20 18L12 10L20 2Z" fill="black" />
-                    </svg>
-                  </button>
-
-                  <div class="modal-header">
-                    <h3 class="modal-title">Сообщить о проблеме</h3>
-                    <p class="modal-subtitle article">Расскажите нам побольше о своей посылке, чтобы мы смогли добавить отслеживание таких посылок в будущем</p>
-                  </div>
-
-                  <div class="modal-body">
-                    <ul class="styled-check-ul">
-                      <li class="article">
-                        <strong>Узнайте какой службой реально была отправлена посылка.</strong> Название вам предоставляет площадка, либо это название можно
-                        получить на странице отслеживания вашего трек-номера. Примеры названий: Yanwen, GD Post, SF Express, СДЭК, Pony Express, Dhl и другие.
-                      </li>
-                      <li class="article">
-                        Seller’s Shippingf Method - это НЕ название службы! Если продавец указал это как способ отправки, то вам нужно перейти по
-                        предоставленной продавцом ссылке и найти ральное название службы или указать эту ссылку в форме. <br /><br />
-                        Обязательно убедитесь, что по вашей ссылке реально находится информация о посылке, если мы не сможем эту информацию там найти, то врядли
-                        сможем добавить отслеживание.
-                      </li>
-                    </ul>
-
-                    <form action="#" class="mt-30a problem-form" id="report-form">
-                      <div class="mt-10">
-                        <input type="text" class="text-input w-100 text-input__accent" value="RL01717528R" readonly />
-                      </div>
-                      <div class="mt-10">
-                        <input
-                          type="text"
-                          class="text-input w-100"
-                          placeholder="Название службы доставки*"
-                          data-required
-                          data-required-text="обязательно к заполнению" />
-                      </div>
-                      <div class="mt-10">
-                        <input
-                          type="text"
-                          class="text-input w-100"
-                          placeholder="Магазин, в котором оформлена посылка*"
-                          data-required
-                          data-required-text="обязательно к заполнению" />
-                      </div>
-                      <div class="mt-10">
-                        <input type="text" class="text-input w-100" placeholder="Ссылка на работающее отслеживание" />
-                      </div>
-                      <div class="mt-10">
-                        <input
-                          type="text"
-                          class="text-input w-100"
-                          placeholder="Email на который мы отправим отчет*"
-                          data-required
-                          data-required-text="обязательно к заполнению" />
-                      </div>
-                      <div class="mt-30a">
-                        <button type="submit" class="btn-primary w-xs-100">отправить</button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div id="modal-confirmation-sending" class="ah-modal">
-              <div class="ah-modal__container">
-                <div class="ah-modal__content">
-                  <button class="close-btn ah-modal__close" id="close-modal-confirmation-btn">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M20 2L18 0L10 8L2 0L0 2L8 10L0 18L2 20L10 12L18 20L20 18L12 10L20 2Z" fill="black" />
-                    </svg>
-                  </button>
-
-                  <div class="modal-header">
-                    <p class="modal-title">Спасибо!</p>
-                    <p class="modal-subtitle article">
-                      Мы уже работаем над этой проблемой.<br />
-                      Скоро мы отправим Вам отчет на электронную почту о решении проблемы.
+                <div class="card-body">
+                  <div class="supply">
+                    <p class="supply-name">Пылесос с алиэкспресс</p>
+                    <p class="supply-code">LC566539063CN</p>
+                    <p class="supply-info">
+                      <span>Следующая проверка</span>
+                      <span>Через 17 ч.</span>
                     </p>
                   </div>
-
-                  <div class="modal-body text-center">
-                    <button type="submit" class="btn-primary" onclick="event.preventDefault(); ahModalHide('modalProblemFormSend')">ОК</button>
+                  <div class="status-value status-value_on-way">В пути</div>
+                  <div class="service-value">Алиэкспресс</div>
+                  <div class="data">
+                    <p class="time">07.07.2022 15:36</p>
+                    <div class="buttons">
+                      <div class="archive item">
+                        <img src="images/personal-area/archive.svg" alt="icon" />
+                        <span>В&nbsp;архив</span>
+                      </div>
+                      <div class="trash item">
+                        <img src="images/personal-area/trash.svg" alt="icon" />
+                        <span>Удалить</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <div class="code">Трек-код</div>
+                  <div class="status">Статус</div>
+                  <div class="service">Служба</div>
+                  <div class="check">Последняя проверка</div>
+                </div>
+                <div class="card-body">
+                  <div class="supply">
+                    <p class="supply-name">Пылесос с алиэкспресс</p>
+                    <p class="supply-code">LC566539063CN</p>
+                    <p class="supply-info">
+                      <span>Следующая проверка</span>
+                      <span>Через 17 ч.</span>
+                    </p>
+                  </div>
+                  <div class="status-value status-value_delivered">Доставлено</div>
+                  <div class="service-value">Почта России</div>
+                  <div class="data">
+                    <p class="time">07.07.2022 15:36</p>
+                    <div class="buttons">
+                      <div class="archive item">
+                        <img src="images/personal-area/archive.svg" alt="icon" />
+                        <span>В&nbsp;архив</span>
+                      </div>
+                      <div class="trash item">
+                        <img src="images/personal-area/trash.svg" alt="icon" />
+                        <span>Удалить</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <div class="code">Трек-код</div>
+                  <div class="status">Статус</div>
+                  <div class="service">Служба</div>
+                  <div class="check">Последняя проверка</div>
+                </div>
+                <div class="card-body">
+                  <div class="supply">
+                    <p class="supply-name">Пылесос с алиэкспресс</p>
+                    <p class="supply-code">LC566539063CN</p>
+                    <p class="supply-info">
+                      <span>Следующая проверка</span>
+                      <span>Через 17 ч.</span>
+                    </p>
+                  </div>
+                  <div class="status-value status-value_in-archive">В архиве</div>
+                  <div class="service-value">Почта России</div>
+                  <div class="data">
+                    <p class="time">07.07.2022 15:36</p>
+                    <div class="buttons">
+                      <div class="archive item">
+                        <img src="images/personal-area/archive.svg" alt="icon" />
+                        <span>В&nbsp;архив</span>
+                      </div>
+                      <div class="trash item">
+                        <img src="images/personal-area/trash.svg" alt="icon" />
+                        <span>Удалить</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <div class="code">Трек-код</div>
+                  <div class="status">Статус</div>
+                  <div class="service">Служба</div>
+                  <div class="check">Последняя проверка</div>
+                </div>
+                <div class="card-body">
+                  <div class="supply">
+                    <p class="supply-name">Пылесос с алиэкспресс</p>
+                    <p class="supply-code">LC566539063CN</p>
+                    <p class="supply-info">
+                      <span>Следующая проверка</span>
+                      <span>Через 17 ч.</span>
+                    </p>
+                  </div>
+                  <div class="status-value status-value_received">Получено</div>
+                  <div class="service-value">Почта России</div>
+                  <div class="data">
+                    <p class="time">07.07.2022 15:36</p>
+                    <div class="buttons">
+                      <div class="archive item">
+                        <img src="images/personal-area/archive.svg" alt="icon" />
+                        <span>В&nbsp;архив</span>
+                      </div>
+                      <div class="trash item">
+                        <img src="images/personal-area/trash.svg" alt="icon" />
+                        <span>Удалить</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="cards cards-mobile">
+              <div class="card">
+                <div class="card-supply card-flex-item">
+                  <div class="">
+                    <p class="supply-name">Пылесос с алиэкспресс</p>
+                    <p class="supply-code">LC566539063CN</p>
+                  </div>
+                  <div class="status-value status-value_on-way">В пути</div>
+                </div>
+                <div class="card-service card-flex-item">
+                  <p class="card-service_text">Служба</p>
+                  <p class="card-service_text">Алиэкспресс</p>
+                </div>
+                <div class="card-last-check card-flex-item">
+                  <p class="card-last-check_text">Последняя проверка</p>
+                  <p class="card-last-check_text">07.07.22 15:36</p>
+                </div>
+                <div class="card-next-check card-flex-item">
+                  <p class="card-next-check_text">Следующая проверка</p>
+                  <p class="card-next-check_text">Через 17 ч.</p>
+                </div>
+                <div class="card-next-check card-flex-item">
+                  <div class="buttons">
+                    <div class="archive item">
+                      <img src="images/personal-area/archive.svg" alt="icon" />
+                      <span>В&nbsp;архив</span>
+                    </div>
+                    <div class="trash item">
+                      <img src="images/personal-area/trash.svg" alt="icon" />
+                      <span>Удалить</span>
+                    </div>
+                  </div>
+                  <div class=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <div class="tracking-widget">
             <!-- else found -->
             <div class="container">
               <div class="tracking-widget__inner">
@@ -799,6 +792,189 @@
               </div>
             </div>
             <!-- -->
+
+            <div class="download-app">
+              <div class="wrapper">
+                <p class="text">СКАЧИВАЙТЕ ПРИЛОЖЕНИЕ</p>
+                <a href="#" class="link">TRACK.GLOBAL</a>
+              </div>
+            </div>
+
+            <div class="import-parcels">
+              <div class="container">
+                <h2 class="title">Импортировать посылки из</h2>
+                <div class="cards">
+                  <div class="card">
+                    <div class="wrapper">
+                      <img src="images/personal-area/wb.png" alt="shop" class="img" />
+                      <p class="title">Wildberries</p>
+                      <p class="subtitle">маркетплейс</p>
+                    </div>
+                    <a href="#" class="link">Импортировать</a>
+                  </div>
+                  <div class="card">
+                    <div class="wrapper">
+                      <img src="images/personal-area/iherb.png" alt="shop" class="img" />
+                      <p class="title">iHerb</p>
+                      <p class="subtitle">международный интернет-магазин</p>
+                    </div>
+                    <a href="#" class="link">Импортировать</a>
+                  </div>
+                  <div class="card">
+                    <div class="wrapper">
+                      <img src="images/personal-area/joom.png" alt="shop" class="img" />
+                      <p class="title">Joom</p>
+                      <p class="subtitle">маркетплейс</p>
+                    </div>
+                    <a href="#" class="link">Импортировать</a>
+                  </div>
+                  <div class="card">
+                    <div class="wrapper">
+                      <img src="images/personal-area/ali.png" alt="shop" class="img" />
+                      <p class="title">AliExpress</p>
+                      <p class="subtitle">маркетплейс</p>
+                    </div>
+                    <a href="#" class="link">Импортировать</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="store-promotions">
+              <div class="container">
+                <h2 class="title">Акции интернет-магазинов</h2>
+                <div class="cards">
+                  <a href="#" class="card">
+                    <img src="images/personal-area/girl.png" alt="shop" class="img" />
+                    <p class="subtitle">Новая коллеккция в love republic</p>
+                  </a>
+                  <a href="#" class="card">
+                    <img src="images/personal-area/percents.png" alt="shop" class="img" />
+                    <p class="subtitle">Кешбэк в магазине rendez vous</p>
+                  </a>
+                  <a href="#" class="card hide-tablet">
+                    <img src="images/personal-area/girl.png" alt="shop" class="img" />
+                    <p class="subtitle">Новая коллеккция в love republic</p>
+                  </a>
+                  <a href="#" class="card hide-mobile">
+                    <img src="images/personal-area/percents.png" alt="shop" class="img" />
+                    <p class="subtitle">Кешбэк в магазине rendez vous</p>
+                  </a>
+                  <a href="#" class="card hide-mobile">
+                    <img src="images/personal-area/girl.png" alt="shop" class="img" />
+                    <p class="subtitle">Новая коллеккция в love republic</p>
+                  </a>
+                  <a href="#" class="card hide-tablet">
+                    <img src="images/personal-area/percents.png" alt="shop" class="img" />
+                    <p class="subtitle">Кешбэк в магазине rendez vous</p>
+                  </a>
+                </div>
+                <p id="show-all" class="show-all">Смотреть все</p>
+              </div>
+            </div>
+
+            <div class="tracking-widget-empty-help">
+              <div class="container">
+                <div class="tracking-widget-empty-help__text article text-center">
+                  Если уверены, что ни одна из ошибок к вам не подходит, то нажмите кнопку ниже и сообщите нам детали вашего отправления, чтобы мы могли решить
+                  эту проблему
+                </div>
+                <div class="tracking-widget-empty-help__btn-wrapper">
+                  <button class="btn-primary tracking-widget-empty-help__btn" id="show-modal-report-form-btn2" type="button">Сообщить о проблеме</button>
+                </div>
+              </div>
+            </div>
+            <div id="modal-report-form" class="modal-problem ah-modal">
+              <div class="ah-modal__container">
+                <div class="ah-modal__content">
+                  <button data-ah-modal-dismiss class="close-btn ah-modal__close">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M20 2L18 0L10 8L2 0L0 2L8 10L0 18L2 20L10 12L18 20L20 18L12 10L20 2Z" fill="black" />
+                    </svg>
+                  </button>
+
+                  <div class="modal-header">
+                    <h3 class="modal-title">Сообщить о проблеме</h3>
+                    <p class="modal-subtitle article">Расскажите нам побольше о своей посылке, чтобы мы смогли добавить отслеживание таких посылок в будущем</p>
+                  </div>
+
+                  <div class="modal-body">
+                    <ul class="styled-check-ul">
+                      <li class="article">
+                        <strong>Узнайте какой службой реально была отправлена посылка.</strong> Название вам предоставляет площадка, либо это название можно
+                        получить на странице отслеживания вашего трек-номера. Примеры названий: Yanwen, GD Post, SF Express, СДЭК, Pony Express, Dhl и другие.
+                      </li>
+                      <li class="article">
+                        Seller’s Shippingf Method - это НЕ название службы! Если продавец указал это как способ отправки, то вам нужно перейти по
+                        предоставленной продавцом ссылке и найти ральное название службы или указать эту ссылку в форме. <br /><br />
+                        Обязательно убедитесь, что по вашей ссылке реально находится информация о посылке, если мы не сможем эту информацию там найти, то врядли
+                        сможем добавить отслеживание.
+                      </li>
+                    </ul>
+
+                    <form action="#" class="mt-30a problem-form" id="report-form">
+                      <div class="mt-10">
+                        <input type="text" class="text-input w-100 text-input__accent" value="RL01717528R" readonly />
+                      </div>
+                      <div class="mt-10">
+                        <input
+                          type="text"
+                          class="text-input w-100"
+                          placeholder="Название службы доставки*"
+                          data-required
+                          data-required-text="обязательно к заполнению" />
+                      </div>
+                      <div class="mt-10">
+                        <input
+                          type="text"
+                          class="text-input w-100"
+                          placeholder="Магазин, в котором оформлена посылка*"
+                          data-required
+                          data-required-text="обязательно к заполнению" />
+                      </div>
+                      <div class="mt-10">
+                        <input type="text" class="text-input w-100" placeholder="Ссылка на работающее отслеживание" />
+                      </div>
+                      <div class="mt-10">
+                        <input
+                          type="text"
+                          class="text-input w-100"
+                          placeholder="Email на который мы отправим отчет*"
+                          data-required
+                          data-required-text="обязательно к заполнению" />
+                      </div>
+                      <div class="mt-30a">
+                        <button type="submit" class="btn-primary w-xs-100">отправить</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="modal-confirmation-sending" class="ah-modal">
+              <div class="ah-modal__container">
+                <div class="ah-modal__content">
+                  <button class="close-btn ah-modal__close" id="close-modal-confirmation-btn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M20 2L18 0L10 8L2 0L0 2L8 10L0 18L2 20L10 12L18 20L20 18L12 10L20 2Z" fill="black" />
+                    </svg>
+                  </button>
+
+                  <div class="modal-header">
+                    <p class="modal-title">Спасибо!</p>
+                    <p class="modal-subtitle article">
+                      Мы уже работаем над этой проблемой.<br />
+                      Скоро мы отправим Вам отчет на электронную почту о решении проблемы.
+                    </p>
+                  </div>
+
+                  <div class="modal-body text-center">
+                    <button type="submit" class="btn-primary" onclick="event.preventDefault(); ahModalHide('modalProblemFormSend')">ОК</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
