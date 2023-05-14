@@ -1,0 +1,64 @@
+.parcel {
+    position: sticky;
+    top: 79px;
+    padding: 30px 0px 20px;
+    margin-bottom: 40px;
+    background: #fbfbfb;
+
+    .wrapper {
+        margin: 0 auto;
+
+        display: flex;
+
+        gap: 40px;
+        .left {
+            display: flex;
+            gap: 20px;
+            .input {
+                padding: 11px;
+                width: 220px;
+                height: 37px;
+                background: #ffffff;
+                border: 0.5px solid rgba(0, 0, 0, 0.5);
+                outline: none;
+            }
+            .add-parcel {
+                height: 37px;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 17px;
+                text-transform: none;
+                color: #ffffff;
+                display: flex;
+                align-items: center;
+                padding: 10px 20px;
+                background: #e24949;
+                &:hover {
+                    transition: 0.3s;
+                    box-shadow: 0 0 20px #e24949, 0 0 40px #e24949;
+                }
+            }
+            .subtext {
+                margin-top: 3px;
+                font-weight: 400;
+                font-size: 10px;
+                line-height: 12px;
+                color: rgba(0, 0, 0, 0.5);
+            }
+        }
+        .right {
+            display: flex;
+            height: 37px;
+            gap: 24px;
+            align-items: center;
+            .link {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 17px;
+                color: #000000;
+            }
+        }
+    }
+}
