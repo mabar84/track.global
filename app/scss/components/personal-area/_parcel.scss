@@ -7,10 +7,12 @@
 
     .wrapper {
         margin: 0 auto;
-
         display: flex;
-
         gap: 40px;
+        @include for-1170-px {
+            flex-direction: column;
+            gap: 20px;
+        }
         .left {
             display: flex;
             gap: 20px;
@@ -46,12 +48,16 @@
                 line-height: 12px;
                 color: rgba(0, 0, 0, 0.5);
             }
+            @include for-1170-px {
+                order: 1;
+            }
         }
         .right {
             display: flex;
             height: 37px;
             gap: 24px;
             align-items: center;
+
             .link {
                 font-style: normal;
                 font-weight: 500;

@@ -1,0 +1,157 @@
+.profile-settings {
+    &-title {
+        margin-bottom: 30px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        color: #000000;
+    }
+    .wrapper {
+        display: flex;
+        gap: 100px;
+        margin-bottom: 60px;
+        .text {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            color: #000000;
+        }
+        .subtext {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+        }
+        .flex-item {
+            padding: 2px 0 2px 16px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &-with-bg {
+                height: 37px;
+                padding: 8px 0 8px 16px;
+                background: #fbfbfb;
+                background: red;
+            }
+            .right {
+                display: flex;
+                .text {
+                    width: 100px;
+                }
+            }
+        }
+        &-left {
+            width: 580px;
+            display: flex;
+            flex-direction: column;
+        }
+        &-right {
+            .flex-item {
+                &-with-bg {
+                    width: 271px;
+                    background: red;
+                }
+            }
+            .input {
+                width: 271px;
+            }
+            .buttons {
+                display: flex;
+                gap: 24px;
+            }
+            .save-password {
+                padding: 10px 20px;
+                height: 37px;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 17px;
+                text-transform: none;
+                color: #ffffff;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                background: #e24949;
+                &:hover {
+                    transition: 0.3s;
+                    box-shadow: 0 0 20px #e24949, 0 0 40px #e24949;
+                }
+            }
+            .delete-accaunt {
+                padding: 8px 23px;
+                height: 37px;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 17px;
+                text-transform: none;
+                color: rgba(0, 0, 0, 0.5);
+                display: flex;
+                align-items: center;
+                background: #fbfbfb;
+                border: 0.5px solid rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+                & img {
+                    margin-right: 12px;
+                    width: 20px;
+                    height: 20px;
+                }
+                &:hover {
+                    transition: 0.3s;
+                    box-shadow: 0 0 20px #333, 0 0 40px #333;
+                }
+            }
+        }
+    }
+    .input {
+        margin-bottom: 20px;
+        width: 100%;
+        height: 37px;
+        padding: 10px 14px;
+        outline: none;
+        &::placeholder {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+    }
+    .custom-checkbox {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+    .custom-checkbox + label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+    }
+    .custom-checkbox + label::before {
+        content: "\2714";
+        color: #fff;
+        font-size: 26px;
+        padding-top: 4px;
+        padding-left: 4px;
+        display: inline-block;
+        flex-shrink: 0;
+        flex-grow: 0;
+        margin-right: 10px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+        width: 30px;
+        height: 30px;
+        border: 1px solid rgba(80, 80, 80, 0.5);
+        border-radius: 8px;
+        cursor: pointer;
+        outline: none;
+    }
+    .custom-checkbox:checked + label::before {
+        content: "\2714";
+        color: #e24949;
+    }
+}

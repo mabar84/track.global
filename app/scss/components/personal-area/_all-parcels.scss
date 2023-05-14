@@ -57,6 +57,10 @@
                 @include for-1170-px {
                     font-size: 14px;
                     line-height: 17px;
+                    // grid-template-columns: 240px 120px 130px 1fr;
+                    grid-template-columns: 1fr 120px 130px 1fr;
+                }
+                @include for-750-px {
                     grid-template-columns: 240px 120px 130px 1fr;
                 }
             }
@@ -69,6 +73,9 @@
                 background: #ffffff;
                 @include for-1170-px {
                     padding: 10px 20px;
+                    grid-template-columns: 1fr 120px 130px 1fr;
+                }
+                @include for-750-px {
                     grid-template-columns: 240px 120px 130px 1fr;
                 }
                 .supply {

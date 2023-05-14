@@ -175,6 +175,13 @@
     }
 }
 .store-promotions {
+    margin: 100px auto;
+    @include for-1170-px {
+        margin-bottom: 40px;
+    }
+    @include for-725-px {
+        margin-bottom: 20px;
+    }
     .title {
         margin-bottom: 60px;
         font-weight: 700;
