@@ -28,6 +28,9 @@
                 background: #ffffff;
                 border: 0.5px solid rgba(0, 0, 0, 0.5);
                 outline: none;
+                &.error {
+                    border: 1px solid #e24949;
+                }
             }
             .add-parcel {
                 height: 37px;
@@ -69,6 +72,10 @@
                 font-size: 14px;
                 line-height: 17px;
                 color: #000000;
+                &:hover {
+                    transition: 0.3s;
+                    color: #e24949;
+                }
             }
         }
     }

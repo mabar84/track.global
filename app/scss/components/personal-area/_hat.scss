@@ -22,9 +22,14 @@
     display: flex;
     align-items: center;
     .wrapper {
+        background: transparent;
         width: max-content;
         display: flex;
         align-items: center;
+        &:hover {
+            transition: 0.3s;
+            opacity: 0.7;
+        }
     }
     &.notLogged {
         background: red;
@@ -43,6 +48,10 @@
         color: #000000;
         & span {
             cursor: pointer;
+            &:hover {
+                transition: 0.3s;
+                opacity: 0.7;
+            }
         }
     }
     &-mail {

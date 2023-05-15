@@ -42,7 +42,7 @@
             </ul>
             <div class="">
               <div class="">
-                <div class="user">
+                <div class="user notLogged">
                   <a class="wrapper" href="#">
                     <img src="images/personal-area/user-p.svg" alt="icon" class="user-img" />
                     <div class="">
@@ -51,7 +51,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="user notLogged">
+                <div class="user">
                   <img src="images/personal-area/user.svg" alt="icon" class="user-img" />
                   <div class="">
                     <p class="user-name"><span id="authorization">Вход</span>/<span id="registration">регистрация</span></p>
@@ -81,7 +81,7 @@
     <div class="parcel">
       <div class="wrapper container">
         <div class="left">
-          <input type="text" class="input" placeholder="Введите код посылки" />
+          <input id="parcel-code" type="text" class="input" placeholder="Введите код посылки" />
           <div class="">
             <input type="text" class="input" placeholder="Назовите посылку*" />
             <p class="subtext">*Необязательное поле</p>
@@ -101,9 +101,9 @@
         <section class="process" id="widgetContentMain">
           <div class="all-parcel container">
             <div class="filter">
-              <span class="item active">Все посылки </span>
-              <span class="item">Посылки в пути</span>
-              <span class="item">Доставленные посылки</span>
+              <span for="all" class="item active">Все посылки </span>
+              <span for="В пути" class="item">Посылки в пути</span>
+              <span for="Доставлено" class="item">Доставленные посылки</span>
             </div>
             <div class="cards mobile-hidden">
               <div class="card">
@@ -156,39 +156,6 @@
                     </p>
                   </div>
                   <div class="status-value status-value_delivered">Доставлено</div>
-                  <div class="service-value">Почта России</div>
-                  <div class="data">
-                    <p class="time">07.07.2022 15:36</p>
-                    <div class="buttons">
-                      <div class="archive item">
-                        <img src="images/personal-area/archive.svg" alt="icon" />
-                        <span>В&nbsp;архив</span>
-                      </div>
-                      <div class="trash item">
-                        <img src="images/personal-area/trash.svg" alt="icon" />
-                        <span>Удалить</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <div class="code">Трек-код</div>
-                  <div class="status">Статус</div>
-                  <div class="service">Служба</div>
-                  <div class="check">Последняя проверка</div>
-                </div>
-                <div class="card-body">
-                  <div class="supply">
-                    <p class="supply-name">Пылесос с алиэкспресс</p>
-                    <p class="supply-code">LC566539063CN</p>
-                    <p class="supply-info">
-                      <span>Следующая проверка</span>
-                      <span>Через 17 ч.</span>
-                    </p>
-                  </div>
-                  <div class="status-value status-value_in-archive">В архиве</div>
                   <div class="service-value">Почта России</div>
                   <div class="data">
                     <p class="time">07.07.2022 15:36</p>
@@ -1002,7 +969,7 @@
 
                   <div class="mt-30a buttons">
                     <a href="#" class="first">Войти</a>
-                    <a href="#" class="second">Регистрация</a>
+                    <a id="registration-modal" href="#" class="second">Регистрация</a>
                   </div>
                 </form>
               </div>
@@ -1026,7 +993,7 @@
 
                   <div class="mt-30a buttons">
                     <a href="#" class="first">Зарегистрироваться</a>
-                    <a href="#" class="second">Войти</a>
+                    <a id="authorization-modal" href="#" class="second">Войти</a>
                   </div>
                 </form>
               </div>
@@ -1042,7 +1009,7 @@
                   <input type="text" class="input" placeholder="Назовите посылку*" />
                   <p class="modal-subtitle article">*Необязательное поле</p>
                   <div class="mt-30a buttons">
-                    <a href="#" class="first">Зарегистрироваться</a>
+                    <a href="#" class="first">Добавить посылку</a>
                   </div>
                 </form>
               </div>

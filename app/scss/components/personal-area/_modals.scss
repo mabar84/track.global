@@ -29,17 +29,19 @@
             width: 310px;
         }
         .input {
+            padding: 10px 14px;
             width: 270px;
             height: 35px;
-            padding: 10px 14px;
+            outline: none;
             &::placeholder {
                 font-style: normal;
                 font-weight: 400;
                 font-size: 12px;
                 line-height: 15px;
-                /* identical to box height */
-
                 color: rgba(0, 0, 0, 0.5);
+            }
+            &.error {
+                border: 1px solid #e24949;
             }
         }
         .buttons {

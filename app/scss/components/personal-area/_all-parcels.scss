@@ -14,6 +14,31 @@
             line-height: 22px;
             color: rgba(0, 0, 0, 0.5);
             cursor: pointer;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -3px;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background-color: rgba(0, 0, 0, 0);
+                -webkit-transform: scaleX(0);
+                -ms-transform: scaleX(0);
+                transform: scaleX(0);
+                -webkit-transform-origin: left;
+                -ms-transform-origin: left;
+                transform-origin: left;
+                -webkit-transition: all 0.25s ease;
+                -o-transition: all 0.25s ease;
+                transition: all 0.25s ease;
+            }
+            &:hover::before {
+                background-color: #e24949;
+                -webkit-transform: scaleX(1);
+                -ms-transform: scaleX(1);
+                transform: scaleX(1);
+            }
             &.active {
                 color: #000000;
                 border-bottom: 2px solid #e24949;
