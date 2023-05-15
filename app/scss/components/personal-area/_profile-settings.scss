@@ -1,4 +1,11 @@
 .profile-settings {
+    margin-bottom: 100px;
+    @include for-1170-px {
+        margin-bottom: 60px;
+    }
+    @include for-725-px {
+        margin-bottom: 40px;
+    }
     &-title {
         margin-bottom: 30px;
         font-style: normal;
@@ -6,17 +13,35 @@
         font-size: 20px;
         line-height: 24px;
         color: #000000;
+        @include for-1025-px {
+            margin-bottom: 10px;
+            font-size: 18px;
+            line-height: 22px;
+        }
     }
     .wrapper {
         display: flex;
         gap: 100px;
         margin-bottom: 60px;
+        @include for-1025-px {
+            flex-direction: column;
+            background: lightblue;
+            align-items: center;
+            gap: 20px;
+        }
+        @include for-725-px {
+            margin-bottom: 20px;
+        }
         .text {
             font-style: normal;
             font-weight: 500;
             font-size: 18px;
             line-height: 22px;
             color: #000000;
+            @include for-1025-px {
+                font-size: 14px;
+                line-height: 17px;
+            }
         }
         .subtext {
             font-style: normal;
@@ -24,8 +49,13 @@
             font-size: 14px;
             line-height: 17px;
             color: #000000;
+            @include for-1025-px {
+                font-size: 12px;
+                line-height: 15px;
+            }
         }
         .flex-item {
+            height: 37px;
             padding: 2px 0 2px 16px;
             margin-bottom: 20px;
             display: flex;
@@ -54,10 +84,16 @@
                 &-with-bg {
                     width: 271px;
                     background: red;
+                    @include for-1025-px {
+                        width: 580px;
+                    }
                 }
             }
             .input {
                 width: 271px;
+                @include for-1025-px {
+                    width: 100%;
+                }
             }
             .buttons {
                 display: flex;
@@ -120,6 +156,15 @@
             color: rgba(0, 0, 0, 0.5);
         }
     }
+    .links {
+        display: flex;
+        gap: 20px;
+        & img {
+            width: 196px;
+            height: 56px;
+            object-fit: cover;
+        }
+    }
     .custom-checkbox {
         position: absolute;
         z-index: -1;
@@ -132,7 +177,7 @@
     }
     .custom-checkbox + label::before {
         content: "\2714";
-        color: #fff;
+        color: transparent;
         font-size: 26px;
         padding-top: 4px;
         padding-left: 4px;
@@ -149,6 +194,12 @@
         border-radius: 8px;
         cursor: pointer;
         outline: none;
+        @include for-1025-px {
+            padding-left: 2px;
+            width: 24px;
+            height: 24px;
+            font-size: 22px;
+        }
     }
     .custom-checkbox:checked + label::before {
         content: "\2714";
