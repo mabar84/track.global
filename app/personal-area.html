@@ -73,6 +73,8 @@
                   <p class="subtext">*Необязательное поле</p>
                 </div>
                 <a href="#" class="add-parcel" id="add-parcel"> Добавить посылку </a>
+                <a href="#" class="add-parcel" id="authorization"> authorization </a>
+                <a href="#" class="add-parcel" id="registration"> registration </a>
               </div>
               <div class="right">
                 <a href="#import-parcels" class="link">Посылки из магазинов</a>
@@ -964,104 +966,64 @@
               </div>
             </div>
 
-            <div class="tracking-widget-empty-help">
-              <div class="container">
-                <div class="tracking-widget-empty-help__text article text-center">
-                  Если уверены, что ни одна из ошибок к вам не подходит, то нажмите кнопку ниже и сообщите нам детали вашего отправления, чтобы мы могли решить
-                  эту проблему
-                </div>
-                <div class="tracking-widget-empty-help__btn-wrapper">
-                  <button class="btn-primary tracking-widget-empty-help__btn" id="show-modal-report-form-btn2" type="button">Сообщить о проблеме</button>
-                </div>
-              </div>
-            </div>
-            <div id="modal-report-form" class="modal-problem ah-modal">
+            <div id="modal-authorization-form" class="modal modal-authorization modal-problem ah-modal">
               <div class="ah-modal__container">
                 <div class="ah-modal__content">
-                  <button data-ah-modal-dismiss class="close-btn ah-modal__close">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M20 2L18 0L10 8L2 0L0 2L8 10L0 18L2 20L10 12L18 20L20 18L12 10L20 2Z" fill="black" />
-                    </svg>
-                  </button>
-
-                  <div class="modal-header">
-                    <h3 class="modal-title">Сообщить о проблеме</h3>
-                    <p class="modal-subtitle article">Расскажите нам побольше о своей посылке, чтобы мы смогли добавить отслеживание таких посылок в будущем</p>
-                  </div>
-
+                  <h3 class="modal-title">Авторизация</h3>
                   <div class="modal-body">
-                    <ul class="styled-check-ul">
-                      <li class="article">
-                        <strong>Узнайте какой службой реально была отправлена посылка.</strong> Название вам предоставляет площадка, либо это название можно
-                        получить на странице отслеживания вашего трек-номера. Примеры названий: Yanwen, GD Post, SF Express, СДЭК, Pony Express, Dhl и другие.
-                      </li>
-                      <li class="article">
-                        Seller’s Shippingf Method - это НЕ название службы! Если продавец указал это как способ отправки, то вам нужно перейти по
-                        предоставленной продавцом ссылке и найти ральное название службы или указать эту ссылку в форме. <br /><br />
-                        Обязательно убедитесь, что по вашей ссылке реально находится информация о посылке, если мы не сможем эту информацию там найти, то врядли
-                        сможем добавить отслеживание.
-                      </li>
-                    </ul>
+                    <form action="#" class="mt-30a" id="authorization-form">
+                      <p class="modal-subtitle article">E-mail</p>
 
-                    <form action="#" class="mt-30a problem-form" id="report-form">
-                      <div class="mt-10">
-                        <input type="text" class="text-input w-100 text-input__accent" value="RL01717528R" readonly />
-                      </div>
-                      <div class="mt-10">
-                        <input
-                          type="text"
-                          class="text-input w-100"
-                          placeholder="Название службы доставки*"
-                          data-required
-                          data-required-text="обязательно к заполнению" />
-                      </div>
-                      <div class="mt-10">
-                        <input
-                          type="text"
-                          class="text-input w-100"
-                          placeholder="Магазин, в котором оформлена посылка*"
-                          data-required
-                          data-required-text="обязательно к заполнению" />
-                      </div>
-                      <div class="mt-10">
-                        <input type="text" class="text-input w-100" placeholder="Ссылка на работающее отслеживание" />
-                      </div>
-                      <div class="mt-10">
-                        <input
-                          type="text"
-                          class="text-input w-100"
-                          placeholder="Email на который мы отправим отчет*"
-                          data-required
-                          data-required-text="обязательно к заполнению" />
-                      </div>
-                      <div class="mt-30a">
-                        <button type="submit" class="btn-primary w-xs-100">отправить</button>
+                      <input type="text" class="input" placeholder="example@mail.ru" />
+                      <p class="modal-subtitle article">Пароль</p>
+
+                      <input type="text" class="input" placeholder="example@mail.ru" />
+
+                      <div class="mt-30a buttons">
+                        <a href="#" class="first">Войти</a>
+                        <a href="#" class="second">Регистрация</a>
                       </div>
                     </form>
                   </div>
                 </div>
               </div>
             </div>
-
-            <div id="modal-confirmation-sending" class="ah-modal">
+            <div id="modal-registration-form" class="modal modal-registration modal-problem ah-modal">
               <div class="ah-modal__container">
                 <div class="ah-modal__content">
-                  <button class="close-btn ah-modal__close" id="close-modal-confirmation-btn">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M20 2L18 0L10 8L2 0L0 2L8 10L0 18L2 20L10 12L18 20L20 18L12 10L20 2Z" fill="black" />
-                    </svg>
-                  </button>
+                  <h3 class="modal-title">Регистрация</h3>
+                  <div class="modal-body">
+                    <form action="#" class="mt-30a" id="authorization-form">
+                      <p class="modal-subtitle article">E-mail</p>
+                      <input type="text" class="input" placeholder="example@mail.ru" />
 
-                  <div class="modal-header">
-                    <p class="modal-title">Спасибо!</p>
-                    <p class="modal-subtitle article">
-                      Мы уже работаем над этой проблемой.<br />
-                      Скоро мы отправим Вам отчет на электронную почту о решении проблемы.
-                    </p>
+                      <p class="modal-subtitle article">Пароль</p>
+                      <input type="text" class="input" placeholder="example@mail.ru" />
+
+                      <p class="modal-subtitle article">Повторите пароль</p>
+                      <input type="text" class="input" placeholder="example@mail.ru" />
+
+                      <div class="mt-30a buttons">
+                        <a href="#" class="first">Зарегистрироваться</a>
+                        <a href="#" class="second">Войти</a>
+                      </div>
+                    </form>
                   </div>
-
-                  <div class="modal-body text-center">
-                    <button type="submit" class="btn-primary" onclick="event.preventDefault(); ahModalHide('modalProblemFormSend')">ОК</button>
+                </div>
+              </div>
+            </div>
+            <div id="modal-add-parcel-form" class="modal modal-add-parcel modal-problem ah-modal">
+              <div class="ah-modal__container">
+                <div class="ah-modal__content">
+                  <div class="modal-body">
+                    <form action="#" class="mt-30a" id="add-parcel-form">
+                      <input type="text" class="input" placeholder="Введите код посылки" />
+                      <input type="text" class="input" placeholder="Назовите посылку*" />
+                      <p class="modal-subtitle article">*Необязательное поле</p>
+                      <div class="mt-30a buttons">
+                        <a href="#" class="first">Зарегистрироваться</a>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>

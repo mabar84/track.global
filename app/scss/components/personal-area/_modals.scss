@@ -1,0 +1,136 @@
+.personal-area {
+    .modal {
+        background: #ffffff;
+        padding: 20px;
+        width: 310px;
+        &-title {
+            text-align: left;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            color: #000000;
+        }
+        &-subtitle {
+            margin-bottom: 10px;
+            text-align: left;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            color: rgba(0, 0, 0, 0.8);
+        }
+        .mt-30a {
+            margin-top: 12px;
+            margin-bottom: 0px;
+        }
+        .ah-modal__content {
+            padding: 20px;
+            width: 310px;
+        }
+        .input {
+            width: 270px;
+            height: 35px;
+            padding: 10px 14px;
+            &::placeholder {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 15px;
+                /* identical to box height */
+
+                color: rgba(0, 0, 0, 0.5);
+            }
+        }
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+            .first {
+                height: 37px;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 17px;
+                text-transform: none;
+                color: #ffffff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px 20px;
+                background: #e24949;
+                &:hover {
+                    transition: 0.3s;
+                    box-shadow: 0 0 20px #e24949, 0 0 40px #e24949;
+                }
+            }
+            .second {
+                height: 37px;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 17px;
+                text-transform: none;
+                color: #000000;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px 20px;
+                background: #ffffff;
+                border: 1px solid #e24949;
+                &:hover {
+                    background: #e24949;
+                    color: #ffffff;
+                    transition: 0.3s;
+                    box-shadow: 0 0 20px #e24949, 0 0 40px #e24949;
+                }
+            }
+        }
+        &-registration {
+            .buttons {
+                gap: 10px;
+                .first {
+                    padding: 10px;
+                }
+            }
+        }
+        &-add-parcel {
+            .ah-modal__content {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 86px;
+                padding: 20px 15px;
+                width: 300px;
+            }
+            .mt-30a {
+                margin-top: 0;
+            }
+            .input {
+                &:first-child {
+                    margin-bottom: 14px;
+                }
+            }
+            .modal-subtitle {
+                margin-top: 3px;
+                margin-bottom: 0;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 10px;
+                line-height: 12px;
+
+                color: rgba(0, 0, 0, 0.5);
+            }
+            .buttons {
+                gap: 10px;
+                margin-top: 14px;
+                .first {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
