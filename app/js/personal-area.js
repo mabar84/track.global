@@ -82,6 +82,22 @@ modalAuthorizationButton.addEventListener("click", () => {
   }
 });
 
+// modalAddParcel
+const modalAddParcel = document.getElementById("modal-add-parcel-form");
+const modalAddParcelInput = modalAddParcel.querySelector("input");
+const modalAddParcelButton = modalAddParcel.querySelector(".first");
+
+modalAddParcelButton.addEventListener("click", () => {
+  if (!modalAddParcelInput.value) {
+    modalAddParcelInput.classList.add("error");
+  } else {
+    ahModalHide("modal-add-parcel-form");
+    console.log("Добавлено");
+  }
+});
+modalAddParcelInput.addEventListener("input", () => {
+  modalAddParcelInput.classList.remove("error");
+});
 //filter all-parcels
 const allParcels = document.querySelectorAll(".all-parcel .filter .item");
 const allParcelsCards = document.querySelectorAll(".all-parcel .cards .card");

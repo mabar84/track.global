@@ -62,3 +62,26 @@
         color: rgba(0, 0, 0, 0.6);
     }
 }
+.hat {
+    & img {
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+        display: none;
+        @include for-725-px {
+            display: block;
+            position: sticky;
+            top: 500px;
+        }
+    }
+    @include for-725-px {
+        padding: 20px 10px 15px;
+        position: absolute;
+        left: 0px;
+        right: 0;
+        background: #ffffff;
+        top: 46px;
+        display: flex;
+        justify-content: space-between;
+    }
+}

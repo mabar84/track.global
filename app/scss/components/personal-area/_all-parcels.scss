@@ -3,6 +3,9 @@
     @include for-1170-px {
         margin-top: 250px;
     }
+    @include for-725-px {
+        margin-top: 107px;
+    }
     .filter {
         @include for-1170-px {
             margin-bottom: 12px;
