@@ -1,16 +1,22 @@
 .parcel {
-    position: sticky;
+    position: fixed;
     top: 79px;
+    left: 0;
+    right: 0;
+    z-index: 1;
     padding: 30px 0px 20px;
     margin-bottom: 40px;
     background: #fbfbfb;
+    @include for-1170-px {
+        padding: 10px 20px 20px 20px;
+    }
     .wrapper {
         margin: 0 auto;
         display: flex;
         gap: 40px;
         @include for-1170-px {
             flex-direction: column;
-            gap: 20px;
+            gap: 10px;
         }
         .left {
             display: flex;

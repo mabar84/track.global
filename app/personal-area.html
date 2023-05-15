@@ -40,12 +40,30 @@
                 <a class="header__menu-item-link" href="faq.html">FAQ</a>
               </li>
             </ul>
-            <div class="header__lang">
-              <div class="header__lang-box">
+            <div class="">
+              <div class="">
+                <div class="user">
+                  <a class="wrapper" href="#">
+                    <img src="images/personal-area/user-p.svg" alt="icon" class="user-img" />
+                    <div class="">
+                      <p class="user-name">Полина Красносельская</p>
+                      <p class="user-mail">polinakrasnoselskaya@mail.ru</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="user notLogged">
+                  <img src="images/personal-area/user.svg" alt="icon" class="user-img" />
+                  <div class="">
+                    <p class="user-name"><span id="authorization">Вход</span>/<span id="registration">регистрация</span></p>
+                    <p class="user-mail">Личный кабинет</p>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="header__lang-box">
                 <img class="header__lang-flag header__lang-flag--disabled header__lang-flag--en" src="images/US.png" alt="флаг US" />
                 <img class="header__lang-flag header__lang-flag--disabled header__lang-flag--ru" src="images/RU.png" alt="флаг RU" />
                 <span class="header__lang-text">EN</span>
-              </div>
+              </div> -->
               <ul class="header__dropdown">
                 <li class="header__dropdown-item"><img class="header__lang-flag" src="images/US.png" alt="флаг US" />EN</li>
                 <li class="header__dropdown-item"><img class="header__lang-flag" src="images/RU.png" alt="флаг RU" />RU</li>
@@ -60,31 +78,27 @@
         </nav>
       </div>
     </header>
+    <div class="parcel">
+      <div class="wrapper container">
+        <div class="left">
+          <input type="text" class="input" placeholder="Введите код посылки" />
+          <div class="">
+            <input type="text" class="input" placeholder="Назовите посылку*" />
+            <p class="subtext">*Необязательное поле</p>
+          </div>
+          <a href="#" class="add-parcel" id="add-parcel"> Добавить посылку </a>
+        </div>
+        <div class="right">
+          <a href="#import-parcels" class="link">Посылки из магазинов</a>
+          <a href="#store-promotions" class="link">Акции</a>
+          <a href="#profile-settings" class="link">Настройки</a>
+        </div>
+      </div>
+    </div>
 
     <main class="main">
       <section class="personal-area">
         <section class="process" id="widgetContentMain">
-          <div class="parcel">
-            <div class="wrapper container">
-              <div class="left">
-                <input type="text" class="input" placeholder="Введите код посылки" />
-                <div class="">
-                  <input type="text" class="input" placeholder="Назовите посылку*" />
-                  <p class="subtext">*Необязательное поле</p>
-                </div>
-                <a href="#" class="add-parcel" id="add-parcel"> Добавить посылку </a>
-              </div>
-              <div class="right">
-                <a href="#import-parcels" class="link">Посылки из магазинов</a>
-                <a href="#store-promotions" class="link">Акции</a>
-                <a href="#profile-settings" class="link">Настройки</a>
-              </div>
-            </div>
-          </div>
-
-          <a href="#" class="add-parcel" id="authorization"> authorization </a>
-          <a href="#" class="add-parcel" id="registration"> registration </a>
-
           <div class="all-parcel container">
             <div class="filter">
               <span class="item active">Все посылки </span>

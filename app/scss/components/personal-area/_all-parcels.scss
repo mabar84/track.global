@@ -1,4 +1,8 @@
 .all-parcel {
+    margin-top: 221px;
+    @include for-1170-px {
+        margin-top: 250px;
+    }
     .filter {
         @include for-1170-px {
             margin-bottom: 12px;
