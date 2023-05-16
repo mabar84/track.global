@@ -86,3 +86,58 @@
 #show-when-parcel-clicked {
     display: none;
 }
+.parcel-mobile {
+    height: 68px;
+    position: fixed;
+    z-index: 1;
+    top: calc(100vh - 68px);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    display: flex;
+    gap: 20px;
+    display: none;
+    @include for-725-px {
+        display: flex;
+        justify-content: space-around;
+    }
+    .item {
+        width: 80px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            .item-image svg path {
+                stroke: #e24949;
+                stroke-opacity: 1;
+            }
+            .item-text {
+                color: #e24949;
+            }
+        }
+        &-image {
+            margin-bottom: 6px;
+        }
+        &-text {
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 12px;
+            text-align: center;
+            letter-spacing: 0.5px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+    }
+    .add-parcel-mobile {
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        right: 20px;
+        bottom: 88px;
+        border-radius: 77px;
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2);
+    }
+}
