@@ -7,8 +7,6 @@
         margin-top: 107px;
     }
     .filter {
-        white-space: nowrap;
-        overflow: hidden;
         @include for-1170-px {
             margin-bottom: 12px;
         }
@@ -20,10 +18,11 @@
             color: rgba(0, 0, 0, 0.5);
             cursor: pointer;
             position: relative;
+            border-bottom: 2px solid #ffffff;
             &::before {
                 content: "";
                 position: absolute;
-                bottom: -2px;
+                bottom: -1px;
                 left: 0;
                 right: 0;
                 height: 2px;
@@ -46,7 +45,7 @@
             }
             &.active {
                 color: #000000;
-                border-bottom: 3px solid #e24949;
+                border-bottom: 2px solid #e24949;
                 @include for-1170-px {
                     font-size: 16px;
                     line-height: 20px;

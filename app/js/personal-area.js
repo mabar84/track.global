@@ -163,3 +163,48 @@ document.getElementById("book-post-more").addEventListener("click", () => {
   document.getElementById("book-post-more").classList.toggle("collapsed");
   trackingWidgetAsideInner.classList.toggle("collapsed");
 });
+
+// anchors-links
+const anchorsLinksDesktop = document.querySelectorAll(".parcel .wrapper .right .link");
+const anchorsLinksMobile = document.querySelectorAll(".parcel-mobile .item");
+const staticHeader = document.querySelector(".header-personal-area");
+const staticParcel = document.querySelector(".parcel");
+
+anchorsLinksDesktop.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const ID = event.target.getAttribute("href").substr(1);
+
+    let element = document.getElementById(ID);
+    let elementPosition = element.getBoundingClientRect().top;
+
+    let headerOffset = staticHeader.clientHeight + staticParcel.clientHeight;
+
+    let offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  });
+});
+anchorsLinksMobile.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const ID = link.getAttribute("href").substr(1);
+
+    let element = document.getElementById(ID);
+    let elementPosition = element.getBoundingClientRect().top;
+
+    let headerOffset = staticHeader.clientHeight + staticParcel.clientHeight;
+
+    offsetPosition = elementPosition + window.pageYOffset - headerOffset - 360;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  });
+});
