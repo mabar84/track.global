@@ -142,3 +142,19 @@ document.getElementById("add-parcel").addEventListener("click", (e) => {
 parcelCode.addEventListener("input", () => {
   parcelCode.classList.remove("error");
 });
+
+//show block when parcel clicked
+const allParcelsCardsContainer = document.querySelector(".all-parcel .cards");
+console.log(allParcelsCardsContainer);
+
+allParcelsCardsContainer.addEventListener("click", (e) => {
+  // if (e.target.closest("archive")) {
+  //   console.log(e.currentTarget);
+  // }
+  if (!e.target.closest("#archive") && !e.target.closest("#trash") && e.target.closest(".card")) {
+    document.getElementById("show-when-parcel-clicked").style.display = "block";
+  }
+
+  // console.log(e.target);
+  // console.log(e.currentTarget);
+});
