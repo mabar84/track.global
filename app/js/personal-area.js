@@ -164,7 +164,7 @@ document.getElementById("book-post-more").addEventListener("click", () => {
   trackingWidgetAsideInner.classList.toggle("collapsed");
 });
 
-// anchors-links
+//   anchors-links
 const anchorsLinksDesktop = document.querySelectorAll(".parcel .wrapper .right .link");
 const anchorsLinksMobile = document.querySelectorAll(".parcel-mobile .item");
 const staticHeader = document.querySelector(".header-personal-area");
