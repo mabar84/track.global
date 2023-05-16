@@ -109,6 +109,15 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        &:active {
+            .item-image svg path {
+                stroke: #e24949;
+                stroke-opacity: 1;
+            }
+            .item-text {
+                color: #e24949;
+            }
+        }
         &:hover {
             .item-image svg path {
                 stroke: #e24949;

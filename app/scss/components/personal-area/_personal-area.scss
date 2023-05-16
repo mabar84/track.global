@@ -27,3 +27,19 @@
         }
     }
 }
+.personal-area {
+    .tracking-widget__wrapper {
+        @include for-640-px {
+            order: 1;
+            margin-bottom: 0;
+        }
+    }
+    .tracking-widget__aside-inner {
+        &.collapsed {
+            @include for-640-px {
+                background: red;
+                // display: none;
+            }
+        }
+    }
+}

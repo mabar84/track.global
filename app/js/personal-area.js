@@ -143,18 +143,17 @@ parcelCode.addEventListener("input", () => {
   parcelCode.classList.remove("error");
 });
 
-//show block when parcel clicked
+//show block when parcel-card clicked
 const allParcelsCardsContainer = document.querySelector(".all-parcel .cards");
-console.log(allParcelsCardsContainer);
-
 allParcelsCardsContainer.addEventListener("click", (e) => {
-  // if (e.target.closest("archive")) {
-  //   console.log(e.currentTarget);
-  // }
-  if (!e.target.closest("#archive") && !e.target.closest("#trash") && e.target.closest(".card")) {
+  if (!e.target.closest(".archive") && !e.target.closest(".trash") && e.target.closest(".card")) {
     document.getElementById("show-when-parcel-clicked").style.display = "block";
   }
-
-  // console.log(e.target);
-  // console.log(e.currentTarget);
+});
+//show block when parcel-card-mobile clicked
+const allParcelsCardsContainerMobile = document.querySelector(".all-parcel .cards-mobile");
+allParcelsCardsContainerMobile.addEventListener("click", (e) => {
+  if (!e.target.closest(".archive") && !e.target.closest(".trash") && e.target.closest(".card")) {
+    document.getElementById("show-when-parcel-clicked").style.display = "block";
+  }
 });
