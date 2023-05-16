@@ -7,7 +7,8 @@
         margin-top: 107px;
     }
     .filter {
-        // white-space: nowrap;
+        white-space: nowrap;
+        overflow: hidden;
         @include for-1170-px {
             margin-bottom: 12px;
         }

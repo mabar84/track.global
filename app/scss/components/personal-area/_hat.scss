@@ -12,7 +12,6 @@
         }
     }
     &.notLogged {
-        background: red;
         display: none;
     }
     &-img {
@@ -47,7 +46,6 @@
         width: 36px;
         height: 36px;
         cursor: pointer;
-        display: none;
         @include for-725-px {
             display: block;
             position: sticky;
