@@ -157,3 +157,9 @@ allParcelsCardsContainerMobile.addEventListener("click", (e) => {
     document.getElementById("show-when-parcel-clicked").style.display = "block";
   }
 });
+//book-post-more
+const trackingWidgetAsideInner = document.querySelector(".personal-area .tracking-widget__aside-inner");
+document.getElementById("book-post-more").addEventListener("click", () => {
+  document.getElementById("book-post-more").classList.toggle("collapsed");
+  trackingWidgetAsideInner.classList.toggle("collapsed");
+});

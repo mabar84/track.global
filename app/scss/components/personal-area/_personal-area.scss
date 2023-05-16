@@ -37,8 +37,7 @@
     .tracking-widget__aside-inner {
         &.collapsed {
             @include for-640-px {
-                background: red;
-                // display: none;
+                display: none;
             }
         }
     }
