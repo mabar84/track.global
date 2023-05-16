@@ -174,7 +174,7 @@ anchorsLinksDesktop.forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
 
-    const ID = event.target.getAttribute("href").substr(1);
+    const ID = link.getAttribute("href").substr(1);
 
     let element = document.getElementById(ID);
     let elementPosition = element.getBoundingClientRect().top;
@@ -194,13 +194,12 @@ anchorsLinksMobile.forEach((link) => {
     event.preventDefault();
 
     const ID = link.getAttribute("href").substr(1);
-
     let element = document.getElementById(ID);
     let elementPosition = element.getBoundingClientRect().top;
 
     let headerOffset = staticHeader.clientHeight + staticParcel.clientHeight;
 
-    offsetPosition = elementPosition + window.pageYOffset - headerOffset - 360;
+    offsetPosition = elementPosition + window.pageYOffset - headerOffset - 80;
 
     window.scrollTo({
       top: offsetPosition,
