@@ -49,6 +49,7 @@
         }
     }
     .tracking-widget__inner {
+        margin-bottom: 20px;
         @include for-640-px {
             margin-top: 0;
         }
