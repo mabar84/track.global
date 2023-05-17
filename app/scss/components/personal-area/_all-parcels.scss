@@ -7,12 +7,13 @@
         margin-top: 107px;
     }
     .filter {
+        margin-bottom: 22px;
         @include for-1170-px {
             margin-bottom: 12px;
         }
         .item {
             margin-right: 24px;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 18px;
             line-height: 22px;
             color: rgba(0, 0, 0, 0.5);
@@ -74,6 +75,7 @@
             }
         }
         .card {
+            cursor: pointer;
             margin-bottom: 20px;
             box-shadow: 0px 4px 20px rgba(23, 23, 80, 0.05);
             border-radius: 8px;
@@ -81,16 +83,14 @@
                 padding: 16px 20px;
                 display: grid;
                 grid-template-columns: 280px 150px 160px 1fr;
-                // grid-template-areas: "supply status service check";
                 background: #f4f4f4;
                 border-radius: 8px 8px 0px 0px;
-                font-weight: 500;
+                font-weight: 600;
                 font-size: 18px;
                 line-height: 22px;
                 @include for-1170-px {
                     font-size: 14px;
                     line-height: 17px;
-                    // grid-template-columns: 240px 120px 130px 1fr;
                     grid-template-columns: 1fr 120px 130px 1fr;
                 }
                 @include for-750-px {
@@ -101,7 +101,6 @@
                 padding: 16px 20px;
                 display: grid;
                 grid-template-columns: 280px 120px 160px 1fr;
-                // grid-template-areas: "supply status-value service-value data";
                 border-radius: 0 0 8px 8px;
                 background: #ffffff;
                 @include for-1170-px {
@@ -116,6 +115,7 @@
                         margin-bottom: 6px;
                         font-size: 16px;
                         line-height: 20px;
+                        font-weight: 700;
                         color: #000000;
                         @include for-1170-px {
                             font-size: 14px;
@@ -212,6 +212,10 @@
                             background: #f4f4f4;
                             border-radius: 4px;
                             cursor: pointer;
+                            &:hover {
+                                transition: 0.3s;
+                                box-shadow: 0 0 20px #e24949, 0 0 40px #e24949;
+                            }
                             @include for-1170-px {
                                 height: 23px;
                                 padding: 4px 6px;
