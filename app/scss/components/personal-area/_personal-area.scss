@@ -48,4 +48,16 @@
             top: 112px;
         }
     }
+    .tracking-widget__inner {
+        @include for-640-px {
+            margin-top: 0;
+        }
+    }
+    .tracking-widget__aside-box {
+        &.collapsed {
+            @include for-640-px {
+                display: none;
+            }
+        }
+    }
 }

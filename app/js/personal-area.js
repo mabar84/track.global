@@ -157,7 +157,13 @@ allParcelsCardsContainer.addEventListener("click", (e) => {
   });
 
   if (!e.target.closest(".archive") && !e.target.closest(".trash") && e.target.closest(".card")) {
-    document.getElementById("show-when-parcel-clicked").style.display = "block";
+    const cardWrapper = e.target.closest(".card-wrapper");
+    const parcelWidget = cardWrapper.querySelector(".tracking-widget");
+
+    // parcelWidget.classList.toggle("show-when-parcel-clicked");
+    setTimeout(() => {
+      parcelWidget.classList.toggle("show-when-parcel-clicked");
+    }, 1500);
   }
 });
 //show block when parcel-card-mobile clicked
@@ -174,15 +180,35 @@ allParcelsCardsContainerMobile.addEventListener("click", (e) => {
   });
 
   if (!e.target.closest(".archive") && !e.target.closest(".trash") && e.target.closest(".card")) {
-    document.getElementById("show-when-parcel-clicked").style.display = "block";
+    const cardWrapper = e.target.closest(".card-mobile-wrapper");
+    const parcelWidget = cardWrapper.querySelector(".tracking-widget");
+    const bookPost = cardWrapper.querySelector(".book-post");
+    // parcelWidget.classList.toggle("show-when-parcel-clicked");
+    setTimeout(() => {
+      bookPost.classList.toggle("show-when-parcel-clicked");
+      parcelWidget.classList.toggle("show-when-parcel-clicked");
+    }, 1500);
+    // document.getElementById("show-when-parcel-clicked").style.display = "block";
   }
 });
 //book-post-more
-const trackingWidgetAsideInner = document.querySelector(".personal-area .tracking-widget__aside-inner");
-document.getElementById("book-post-more").addEventListener("click", () => {
-  document.getElementById("book-post-more").classList.toggle("collapsed");
-  trackingWidgetAsideInner.classList.toggle("collapsed");
+const bookPostMoreCards = document.querySelectorAll(".cards-mobile .book-post");
+const trackingWidgetAsideInner = document.querySelectorAll(".cards-mobile .tracking-widget__aside-inner");
+
+bookPostMoreCards.forEach((banderol) => {
+  banderol.addEventListener("click", () => {
+    const cardWrapper = banderol.closest(".card-mobile-wrapper");
+    const asideBox = cardWrapper.querySelector(".tracking-widget__aside-box");
+    const asideInner = cardWrapper.querySelector(".tracking-widget__aside-inner");
+
+    asideBox.classList.toggle("collapsed");
+    asideInner.classList.toggle("collapsed");
+  });
 });
+// document.getElementById("book-post-more").addEventListener("click", () => {
+//   document.getElementById("book-post-more").classList.toggle("collapsed");
+//   trackingWidgetAsideInner.classList.toggle("collapsed");
+// });
 
 //   anchors-links
 const anchorsLinksDesktop = document.querySelectorAll(".parcel .wrapper .right .link");
