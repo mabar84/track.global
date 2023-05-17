@@ -146,6 +146,16 @@ parcelCode.addEventListener("input", () => {
 //show block when parcel-card clicked
 const allParcelsCardsContainer = document.querySelector(".all-parcel .cards");
 allParcelsCardsContainer.addEventListener("click", (e) => {
+  //show progress bar
+  const progress = document.getElementById("widgetProgressMain");
+  const submitButton = document.querySelector(".hidden-submit-button");
+  progress.classList.add("top__progress-line-bg--active");
+  submitButton.classList.add("top__search-btn--active");
+  setAnimate(progress, "start", submitButton);
+  getDeliveryData().then((data) => {
+    setAnimate(progress, "end", submitButton);
+  });
+
   if (!e.target.closest(".archive") && !e.target.closest(".trash") && e.target.closest(".card")) {
     document.getElementById("show-when-parcel-clicked").style.display = "block";
   }
@@ -153,6 +163,16 @@ allParcelsCardsContainer.addEventListener("click", (e) => {
 //show block when parcel-card-mobile clicked
 const allParcelsCardsContainerMobile = document.querySelector(".all-parcel .cards-mobile");
 allParcelsCardsContainerMobile.addEventListener("click", (e) => {
+  //show progress bar
+  const progress = document.getElementById("widgetProgressMain");
+  const submitButton = document.querySelector(".hidden-submit-button");
+  progress.classList.add("top__progress-line-bg--active");
+  submitButton.classList.add("top__search-btn--active");
+  setAnimate(progress, "start", submitButton);
+  getDeliveryData().then((data) => {
+    setAnimate(progress, "end", submitButton);
+  });
+
   if (!e.target.closest(".archive") && !e.target.closest(".trash") && e.target.closest(".card")) {
     document.getElementById("show-when-parcel-clicked").style.display = "block";
   }

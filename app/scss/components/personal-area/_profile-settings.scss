@@ -9,7 +9,7 @@
     &-title {
         margin-bottom: 30px;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 600;
         font-size: 20px;
         line-height: 24px;
         color: #000000;
@@ -26,7 +26,7 @@
         @include for-1025-px {
             flex-direction: column;
             margin-bottom: 20px;
-            align-items: center;
+            align-items: start;
             gap: 0px;
         }
         @include for-725-px {
@@ -34,7 +34,7 @@
         }
         .text {
             font-style: normal;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 18px;
             line-height: 22px;
             color: #000000;
@@ -203,6 +203,9 @@
         display: flex;
         gap: 20px;
         @include for-1025-px {
+            justify-content: start;
+        }
+        @include for-640-px {
             justify-content: center;
         }
         & img {

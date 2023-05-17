@@ -41,4 +41,11 @@
             }
         }
     }
+    .top__progress-line-bg {
+        position: fixed;
+        top: 200px;
+        @include for-725-px {
+            top: 112px;
+        }
+    }
 }

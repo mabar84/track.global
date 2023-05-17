@@ -1,5 +1,6 @@
 .all-parcel {
     margin-top: 221px;
+    overflow: hidden;
     @include for-1170-px {
         margin-top: 250px;
     }
@@ -8,11 +9,22 @@
     }
     .filter {
         margin-bottom: 22px;
+        white-space: nowrap;
+
+        display: flex;
+        gap: 24px;
+        overflow-x: auto;
+        white-space: nowrap;
+        flex-wrap: nowrap;
         @include for-1170-px {
             margin-bottom: 12px;
         }
+        @include for-640-px {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-bottom: 7px;
+        }
         .item {
-            margin-right: 24px;
             font-weight: 600;
             font-size: 18px;
             line-height: 22px;

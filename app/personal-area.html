@@ -174,20 +174,21 @@
           <a href="#profile-settings" class="link">Настройки</a>
         </div>
       </div>
-      <div class="top__progress-line-bg" id="widgetProgressMain">
-        <div class="top__progress-line" id="top__progress-line"></div>
-      </div>
     </div>
 
     <main class="main" id="main">
       <section class="personal-area">
+        <div class="top__progress-line-bg" id="widgetProgressMain">
+          <div class="top__progress-line" id="top__progress-line"></div>
+          <button class="hidden-submit-button"></button>
+        </div>
         <section class="process" id="widgetContentMain">
           <div class="all-parcel container">
-            <div class="filter">
-              <span for="all" class="item active">Все посылки </span>
-              <span for="В пути" class="item">Посылки в пути</span>
-              <span for="Доставлено" class="item">Доставленные посылки</span>
-            </div>
+            <ul class="filter">
+              <li for="all" class="item active">Все посылки</li>
+              <li for="В пути" class="item">Посылки в пути</li>
+              <li for="Доставлено" class="item">Доставленные посылки</li>
+            </ul>
             <div class="cards mobile-hidden">
               <div class="card">
                 <div class="card-header">
@@ -985,32 +986,40 @@
               <div class="cards">
                 <div class="card">
                   <div class="wrapper">
-                    <img src="images/personal-area/wb.png" alt="shop" class="img" />
-                    <p class="title">Wildberries</p>
+                    <a href="#">
+                      <img src="images/personal-area/wb.png" alt="shop" class="img" />
+                    </a>
+                    <a href="#" class="title">Wildberries</a>
                     <p class="subtitle">маркетплейс</p>
                   </div>
                   <a href="#" class="link">Импортировать</a>
                 </div>
                 <div class="card">
                   <div class="wrapper">
-                    <img src="images/personal-area/iherb.png" alt="shop" class="img" />
-                    <p class="title">iHerb</p>
+                    <a href="#">
+                      <img src="images/personal-area/iherb.png" alt="shop" class="img" />
+                    </a>
+                    <a href="#" class="title">iHerb</a>
                     <p class="subtitle">международный интернет-магазин</p>
                   </div>
                   <a href="#" class="link">Импортировать</a>
                 </div>
                 <div class="card">
                   <div class="wrapper">
-                    <img src="images/personal-area/joom.png" alt="shop" class="img" />
-                    <p class="title">Joom</p>
+                    <a href="#">
+                      <img src="images/personal-area/joom.png" alt="shop" class="img" />
+                    </a>
+                    <a href="#" class="title">Joom</a>
                     <p class="subtitle">маркетплейс</p>
                   </div>
                   <a href="#" class="link">Импортировать</a>
                 </div>
                 <div class="card">
                   <div class="wrapper">
-                    <img src="images/personal-area/ali.png" alt="shop" class="img" />
-                    <p class="title">AliExpress</p>
+                    <a href="#">
+                      <img src="images/personal-area/ali.png" alt="shop" class="img" />
+                    </a>
+                    <a href="#" class="title">AliExpress</a>
                     <p class="subtitle">маркетплейс</p>
                   </div>
                   <a href="#" class="link">Импортировать</a>
