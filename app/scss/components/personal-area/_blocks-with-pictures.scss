@@ -106,6 +106,7 @@
     .card {
         width: 270px;
         height: 306px;
+        margin-bottom: 20px;
         padding: 24px 34px;
         overflow: hidden;
         display: flex;
@@ -113,6 +114,9 @@
         justify-content: space-between;
         align-items: center;
         border: 0.5px solid rgba(0, 0, 0, 0.3);
+        &.while-hidden {
+            display: none;
+        }
         @include for-640-px {
             padding: 14px;
             width: 145px;
@@ -183,9 +187,21 @@
             }
         }
     }
+    .show-all {
+        text-align: center;
+        font-size: 18px;
+        line-height: 22px;
+        text-decoration-line: underline;
+        cursor: pointer;
+        color: #e24949;
+        transition: all 0.3s ease;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
 }
 .store-promotions {
-    margin: 100px auto;
+    margin: 80px auto;
     @include for-1170-px {
         margin-top: 40px;
         margin-bottom: 40px;

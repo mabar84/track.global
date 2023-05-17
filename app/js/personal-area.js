@@ -1,6 +1,6 @@
+// store-promotions
 const storePromotionsAdditionalCardsTablet = document.querySelectorAll(".store-promotions .hide-tablet");
 const storePromotionsAdditionalCardsMobile = document.querySelectorAll(".store-promotions .hide-mobile");
-
 document.getElementById("show-all").addEventListener("click", () => {
   document.getElementById("show-all").style.display = "none";
   storePromotionsAdditionalCardsTablet.forEach((el) => {
@@ -8,6 +8,14 @@ document.getElementById("show-all").addEventListener("click", () => {
   });
   storePromotionsAdditionalCardsMobile.forEach((el) => {
     el.classList.remove("hide-mobile");
+  });
+});
+
+//import
+document.getElementById("show-all-import").addEventListener("click", () => {
+  const hiddenCards = document.querySelectorAll(".import-parcels .while-hidden");
+  hiddenCards.forEach((card) => {
+    card.classList.remove("while-hidden");
   });
 });
 
