@@ -115,6 +115,13 @@ allParcels.forEach((el) => {
     const filter = el.getAttribute("for");
 
     allParcelsCards.forEach((card) => {
+      const parent = card.parentNode;
+      const parcelWidget = parent.querySelector(".tracking-widget");
+      const bookPost = parent.querySelector(".book-post");
+
+      parcelWidget.classList.add("show-when-parcel-clicked");
+      bookPost?.classList.add("show-when-parcel-clicked");
+
       card.style.display = "none";
 
       const statusValue = card.querySelector(".status-value").textContent;
@@ -177,7 +184,7 @@ allParcelsCardsContainer.addEventListener("click", (e) => {
       submitButton.classList.add("top__search-btn--active");
       setAnimate(progress, "start", submitButton);
       getDeliveryData().then((data) => {
-        setAnimate(progress, "end", submitButton);
+        // setAnimate(progress, "end", submitButton);
       });
     }
 
@@ -251,7 +258,6 @@ bookPostMoreCards.forEach((banderol) => {
 //   anchors-links
 const anchorsLinksDesktop = document.querySelectorAll(".parcel .wrapper .right .link");
 const anchorsLinksMobile = document.querySelectorAll(".parcel-mobile .item");
-const staticHeader = document.querySelector(".header-personal-area");
 const staticParcel = document.querySelector(".parcel");
 
 anchorsLinksDesktop.forEach((link) => {
@@ -263,7 +269,7 @@ anchorsLinksDesktop.forEach((link) => {
     let element = document.getElementById(ID);
     let elementPosition = element.getBoundingClientRect().top;
 
-    let headerOffset = staticHeader.clientHeight + staticParcel.clientHeight;
+    let headerOffset = staticParcel.clientHeight;
 
     let offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -281,13 +287,18 @@ anchorsLinksMobile.forEach((link) => {
     let element = document.getElementById(ID);
     let elementPosition = element.getBoundingClientRect().top;
 
-    let headerOffset = staticHeader.clientHeight + staticParcel.clientHeight;
+    let headerOffset = staticParcel.clientHeight;
 
-    offsetPosition = elementPosition + window.pageYOffset - headerOffset - 80;
+    offsetPosition = elementPosition + window.pageYOffset - headerOffset - 50;
 
     window.scrollTo({
       top: offsetPosition,
       behavior: "smooth",
     });
   });
+});
+
+// glue add-parcel
+window.addEventListener("scroll", () => {
+  window.pageYOffset > 79 ? staticParcel.classList.add("glue") : staticParcel.classList.remove("glue");
 });

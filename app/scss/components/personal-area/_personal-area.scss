@@ -1,21 +1,25 @@
 .header {
     &.header-personal-area {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 2;
-        background: #ffffff;
-        .header__menu {
-            @include for-1170-px {
-                margin-right: 30px;
-            }
-            &-item {
-                @include for-1170-px {
-                    margin-right: 30px;
-                }
-            }
+        @include for-725-px {
+            padding-bottom: 80px;
         }
+
+        // position: fixed;
+        // top: 0;
+        // left: 0;
+        // right: 0;
+        // z-index: 2;
+        // background: #ffffff;
+        // .header__menu {
+        //     @include for-1170-px {
+        //         margin-right: 30px;
+        //     }
+        //     &-item {
+        //         @include for-1170-px {
+        //             margin-right: 30px;
+        //         }
+        //     }
+        // }
     }
 }
 .footer {
@@ -42,14 +46,17 @@
         }
     }
     .top__progress-line-bg {
-        position: fixed;
-        top: 176px;
-        @include for-1170-px {
-            top: 203px;
-        }
-        @include for-725-px {
-            top: 107px;
-        }
+        position: absolute;
+
+        // top: 0px;
+        // position: fixed;
+        // top: 176px;
+        // @include for-1170-px {
+        //     top: 203px;
+        // }
+        // @include for-725-px {
+        //     top: 107px;
+        // }
     }
     .tracking-widget__inner {
         margin-bottom: 20px;

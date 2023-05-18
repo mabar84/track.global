@@ -1,19 +1,18 @@
 .all-parcel {
-    margin-top: 221px;
+    // margin-top: 121px;
     overflow: hidden;
     @include for-1170-px {
-        margin-top: 250px;
+        // margin-top: 250px;
     }
     @include for-725-px {
-        margin-top: 124px;
+        // margin-top: 124px;
     }
     @include for-640-px {
-        margin-top: 117px;
+        // margin-top: 117px;
     }
     .filter {
         margin-bottom: 22px;
         white-space: nowrap;
-
         display: flex;
         gap: 24px;
         overflow-x: auto;
@@ -84,6 +83,9 @@
         }
     }
     .cards {
+        .card-wrapper {
+            position: relative;
+        }
         &.mobile-hidden {
             @include for-725-px {
                 display: none;
