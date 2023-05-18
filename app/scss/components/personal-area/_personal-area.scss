@@ -43,9 +43,12 @@
     }
     .top__progress-line-bg {
         position: fixed;
-        top: 200px;
+        top: 176px;
+        @include for-1170-px {
+            top: 203px;
+        }
         @include for-725-px {
-            top: 112px;
+            top: 107px;
         }
     }
     .tracking-widget__inner {

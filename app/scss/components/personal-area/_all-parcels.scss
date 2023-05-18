@@ -5,7 +5,10 @@
         margin-top: 250px;
     }
     @include for-725-px {
-        margin-top: 107px;
+        margin-top: 124px;
+    }
+    @include for-640-px {
+        margin-top: 117px;
     }
     .filter {
         margin-bottom: 22px;
