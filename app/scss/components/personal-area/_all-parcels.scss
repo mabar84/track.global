@@ -257,6 +257,9 @@
     }
     .cards-mobile {
         display: none;
+        .card-mobile-wrapper {
+            position: relative;
+        }
         .card {
             padding: 10px;
             &-flex-item {

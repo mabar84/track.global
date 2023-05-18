@@ -3,13 +3,6 @@
     padding: 30px 0px 20px;
     margin-bottom: 40px;
     background: #fbfbfb;
-    &.glue {
-        position: fixed;
-        // top: 79px;
-        top: 0;
-        left: 0;
-        right: 0;
-    }
     @include for-1170-px {
         padding: 10px 20px 20px 20px;
     }

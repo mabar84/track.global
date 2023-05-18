@@ -178,13 +178,13 @@ allParcelsCardsContainer.addEventListener("click", (e) => {
     const isOpen = cardWrapper.querySelector(".show-when-parcel-clicked");
     if (isOpen) {
       //show progress bar
-      const progress = document.getElementById("widgetProgressMain");
+      const progress = cardWrapper.querySelector(".widgetProgressMain");
       const submitButton = document.querySelector(".hidden-submit-button");
       progress.classList.add("top__progress-line-bg--active");
       submitButton.classList.add("top__search-btn--active");
       setAnimate(progress, "start", submitButton);
       getDeliveryData().then((data) => {
-        // setAnimate(progress, "end", submitButton);
+        setAnimate(progress, "end", submitButton);
       });
     }
 
@@ -220,11 +220,13 @@ allParcelsCardsContainerMobile.addEventListener("click", (e) => {
     const isOpen = cardWrapper.querySelector(".show-when-parcel-clicked");
     if (isOpen) {
       if (!e.target.closest(".book-post ")) {
+        console.log(12345);
         //show progress bar
-        const progress = document.getElementById("widgetProgressMain");
+        const progress = cardWrapper.querySelector(".widgetProgressMain");
         const submitButton = document.querySelector(".hidden-submit-button");
         progress.classList.add("top__progress-line-bg--active");
         submitButton.classList.add("top__search-btn--active");
+        console.log(submitButton);
         setAnimate(progress, "start", submitButton);
         getDeliveryData().then((data) => {
           setAnimate(progress, "end", submitButton);
@@ -232,8 +234,10 @@ allParcelsCardsContainerMobile.addEventListener("click", (e) => {
       }
     }
 
-    bookPost.classList.toggle("show-when-parcel-clicked");
-    parcelWidget.classList.toggle("show-when-parcel-clicked");
+    setTimeout(() => {
+      bookPost.classList.toggle("show-when-parcel-clicked");
+      parcelWidget.classList.toggle("show-when-parcel-clicked");
+    }, 1500);
   }
 });
 //book-post-more
@@ -301,4 +305,14 @@ anchorsLinksMobile.forEach((link) => {
 // glue add-parcel
 window.addEventListener("scroll", () => {
   window.pageYOffset > 79 ? staticParcel.classList.add("glue") : staticParcel.classList.remove("glue");
+});
+
+//switch parcel
+const switchParcel = document.querySelector(".switch-parcel");
+switchParcel.addEventListener("click", () => {
+  switchParcel.classList.toggle("active");
+});
+const switchHeader = document.querySelector(".switch-header");
+switchHeader.addEventListener("click", () => {
+  switchHeader.classList.toggle("active");
 });
