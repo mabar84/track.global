@@ -169,26 +169,20 @@ allParcelsCardsContainer.addEventListener("click", (e) => {
   if (!e.target.closest(".archive") && !e.target.closest(".trash") && e.target.closest(".card")) {
     const cardWrapper = e.target.closest(".card-wrapper");
 
-    if (cardWrapper.offsetTop < 800) {
-      window.scrollTo({
-        top: cardWrapper.offsetTop - 180,
-        behavior: "smooth",
-      });
-    } else {
-      window.scrollTo({
-        top: 180,
-        behavior: "smooth",
-      });
-    }
-
     const parcelWidget = cardWrapper.querySelector(".tracking-widget");
     const isInfoHidden = cardWrapper.querySelector(".show-when-parcel-clicked") ? true : false;
 
-    allWidgets.forEach((w) => {
-      if (w !== parcelWidget) {
-        w.classList.add("show-when-parcel-clicked");
-      }
-    });
+    // if (cardWrapper.offsetTop < 800) {
+    //   window.scrollTo({
+    //     top: cardWrapper.offsetTop - 180,
+    //     behavior: "smooth",
+    //   });
+    // } else {
+    //   window.scrollTo({
+    //     top: 180,
+    //     behavior: "smooth",
+    //   });
+    // }
 
     if (isInfoHidden) {
       //show progress bar
@@ -203,9 +197,38 @@ allParcelsCardsContainer.addEventListener("click", (e) => {
       setTimeout(() => {
         console.log("замедление 1500мс");
         parcelWidget.classList.toggle("show-when-parcel-clicked");
+
+        allWidgets.forEach((w) => {
+          if (w !== parcelWidget) {
+            w.classList.add("show-when-parcel-clicked");
+          }
+        });
       }, 1500);
+
+      cardWrapper.scrollIntoView({
+        behavior: "smooth",
+      });
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     } else {
       parcelWidget.classList.toggle("show-when-parcel-clicked");
+
+      allWidgets.forEach((w) => {
+        if (w !== parcelWidget) {
+          w.classList.add("show-when-parcel-clicked");
+        }
+      });
+
+      cardWrapper.scrollIntoView({
+        behavior: "smooth",
+      });
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     }
   }
 });
@@ -220,33 +243,21 @@ allParcelsCardsContainerMobile.addEventListener("click", (e) => {
   if (!e.target.closest(".archive") && !e.target.closest(".trash") && e.target.closest(".card")) {
     const cardWrapper = e.target.closest(".card-mobile-wrapper");
 
-    if (cardWrapper.offsetTop < 800) {
-      window.scrollTo({
-        top: cardWrapper.offsetTop - 180,
-        behavior: "smooth",
-      });
-    } else {
-      window.scrollTo({
-        top: 180,
-        behavior: "smooth",
-      });
-    }
+    // if (cardWrapper.offsetTop < 800) {
+    //   window.scrollTo({
+    //     top: cardWrapper.offsetTop - 180,
+    //     behavior: "smooth",
+    //   });
+    // } else {
+    //   window.scrollTo({
+    //     top: 180,
+    //     behavior: "smooth",
+    //   });
+    // }
 
     const parcelWidget = cardWrapper.querySelector(".tracking-widget");
     const bookPost = cardWrapper.querySelector(".book-post");
     const isInfoHidden = cardWrapper.querySelector(".show-when-parcel-clicked") ? true : false;
-
-    allWidgets.forEach((w) => {
-      if (w !== parcelWidget) {
-        w.classList.add("show-when-parcel-clicked");
-      }
-    });
-
-    allBookPosts.forEach((w) => {
-      if (w !== bookPost) {
-        w.classList.add("show-when-parcel-clicked");
-      }
-    });
 
     if (isInfoHidden) {
       if (!e.target.closest(".book-post ")) {
@@ -264,11 +275,53 @@ allParcelsCardsContainerMobile.addEventListener("click", (e) => {
           console.log("замедление 1500мс");
           bookPost.classList.toggle("show-when-parcel-clicked");
           parcelWidget.classList.toggle("show-when-parcel-clicked");
+
+          allWidgets.forEach((w) => {
+            if (w !== parcelWidget) {
+              w.classList.add("show-when-parcel-clicked");
+            }
+          });
+
+          allBookPosts.forEach((w) => {
+            if (w !== bookPost) {
+              w.classList.add("show-when-parcel-clicked");
+            }
+          });
         }, 1500);
+
+        cardWrapper.scrollIntoView({
+          behavior: "smooth",
+        });
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       }
     } else {
       bookPost.classList.toggle("show-when-parcel-clicked");
       parcelWidget.classList.toggle("show-when-parcel-clicked");
+
+      allWidgets.forEach((w) => {
+        if (w !== parcelWidget) {
+          w.classList.add("show-when-parcel-clicked");
+        }
+      });
+
+      allBookPosts.forEach((w) => {
+        if (w !== bookPost) {
+          w.classList.add("show-when-parcel-clicked");
+        }
+      });
+
+      cardWrapper.scrollIntoView({
+        behavior: "smooth",
+      });
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     }
   }
 });
