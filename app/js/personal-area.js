@@ -168,8 +168,6 @@ allParcelsCardsContainer.addEventListener("click", (e) => {
 
   if (!e.target.closest(".archive") && !e.target.closest(".trash") && e.target.closest(".card")) {
     const cardWrapper = e.target.closest(".card-wrapper");
-    console.log(cardWrapper.offsetTop);
-    console.log(cardWrapper.offsetPosition);
 
     if (cardWrapper.offsetTop < 800) {
       window.scrollTo({
@@ -195,7 +193,7 @@ allParcelsCardsContainer.addEventListener("click", (e) => {
     if (isInfoHidden) {
       //show progress bar
       const progress = cardWrapper.querySelector(".widgetProgressMain");
-      const submitButton = document.querySelector(".hidden-submit-button");
+      const submitButton = cardWrapper.querySelector(".hidden-submit-button");
       progress.classList.add("top__progress-line-bg--active");
       submitButton.classList.add("top__search-btn--active");
       setAnimate(progress, "start", submitButton);
@@ -203,25 +201,40 @@ allParcelsCardsContainer.addEventListener("click", (e) => {
         setAnimate(progress, "end", submitButton);
       });
       setTimeout(() => {
+        console.log("замедление 1500мс");
         parcelWidget.classList.toggle("show-when-parcel-clicked");
       }, 1500);
     } else {
       parcelWidget.classList.toggle("show-when-parcel-clicked");
     }
-    console.log(cardWrapper);
   }
 });
 //show block when parcel-card-mobile clicked
 const allParcelsCardsContainerMobile = document.querySelector(".all-parcel .cards-mobile");
 allParcelsCardsContainerMobile.addEventListener("click", (e) => {
   e.preventDefault();
+
   const allWidgets = allParcelsCardsContainerMobile.querySelectorAll(".tracking-widget");
   const allBookPosts = allParcelsCardsContainerMobile.querySelectorAll(".book-post");
 
   if (!e.target.closest(".archive") && !e.target.closest(".trash") && e.target.closest(".card")) {
     const cardWrapper = e.target.closest(".card-mobile-wrapper");
+
+    if (cardWrapper.offsetTop < 800) {
+      window.scrollTo({
+        top: cardWrapper.offsetTop - 180,
+        behavior: "smooth",
+      });
+    } else {
+      window.scrollTo({
+        top: 180,
+        behavior: "smooth",
+      });
+    }
+
     const parcelWidget = cardWrapper.querySelector(".tracking-widget");
     const bookPost = cardWrapper.querySelector(".book-post");
+    const isInfoHidden = cardWrapper.querySelector(".show-when-parcel-clicked") ? true : false;
 
     allWidgets.forEach((w) => {
       if (w !== parcelWidget) {
@@ -235,27 +248,28 @@ allParcelsCardsContainerMobile.addEventListener("click", (e) => {
       }
     });
 
-    const isOpen = cardWrapper.querySelector(".show-when-parcel-clicked");
-    if (isOpen) {
+    if (isInfoHidden) {
       if (!e.target.closest(".book-post ")) {
-        console.log(12345);
         //show progress bar
         const progress = cardWrapper.querySelector(".widgetProgressMain");
-        const submitButton = document.querySelector(".hidden-submit-button");
+        const submitButton = cardWrapper.querySelector(".hidden-submit-button");
         progress.classList.add("top__progress-line-bg--active");
         submitButton.classList.add("top__search-btn--active");
-        console.log(submitButton);
+
         setAnimate(progress, "start", submitButton);
         getDeliveryData().then((data) => {
           setAnimate(progress, "end", submitButton);
         });
+        setTimeout(() => {
+          console.log("замедление 1500мс");
+          bookPost.classList.toggle("show-when-parcel-clicked");
+          parcelWidget.classList.toggle("show-when-parcel-clicked");
+        }, 1500);
       }
-    }
-
-    setTimeout(() => {
+    } else {
       bookPost.classList.toggle("show-when-parcel-clicked");
       parcelWidget.classList.toggle("show-when-parcel-clicked");
-    }, 1500);
+    }
   }
 });
 //book-post-more
