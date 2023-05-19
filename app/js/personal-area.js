@@ -203,15 +203,14 @@ allParcelsCardsContainer.addEventListener("click", (e) => {
             w.classList.add("show-when-parcel-clicked");
           }
         });
+        cardWrapper.scrollIntoView({
+          behavior: "smooth",
+        });
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       }, 1500);
-
-      cardWrapper.scrollIntoView({
-        behavior: "smooth",
-      });
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
     } else {
       parcelWidget.classList.toggle("show-when-parcel-clicked");
 
@@ -287,16 +286,16 @@ allParcelsCardsContainerMobile.addEventListener("click", (e) => {
               w.classList.add("show-when-parcel-clicked");
             }
           });
+
+          cardWrapper.scrollIntoView({
+            behavior: "smooth",
+          });
+
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
         }, 1500);
-
-        cardWrapper.scrollIntoView({
-          behavior: "smooth",
-        });
-
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
       }
     } else {
       bookPost.classList.toggle("show-when-parcel-clicked");
