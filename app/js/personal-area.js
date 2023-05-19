@@ -257,10 +257,6 @@ bookPostMoreCards.forEach((banderol) => {
     asideInner.classList.toggle("collapsed");
   });
 });
-// document.getElementById("book-post-more").addEventListener("click", () => {
-//   document.getElementById("book-post-more").classList.toggle("collapsed");
-//   trackingWidgetAsideInner.classList.toggle("collapsed");
-// });
 
 //   anchors-links
 const anchorsLinksDesktop = document.querySelectorAll(".parcel .wrapper .right .link");
@@ -323,17 +319,7 @@ window.addEventListener("scroll", () => {
 });
 
 //switch add-parcel header
-// const switchParcel = document.querySelector(".switch-parcel");
 switchHeaderParcel.addEventListener("click", () => {
   switchHeaderParcel.classList.toggle("active");
   staticHeader.classList.toggle("z2");
-
-  // staticHeader.classList.add("glue");
-
-  // staticParcel.classList.remove("glue");
-  // staticParcel.classList.add("glue");
 });
-// const switchHeader = document.querySelector(".switch-header");
-// switchHeader.addEventListener("click", () => {
-//   switchHeader.classList.toggle("active");
-// });
