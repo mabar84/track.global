@@ -168,8 +168,23 @@ allParcelsCardsContainer.addEventListener("click", (e) => {
 
   if (!e.target.closest(".archive") && !e.target.closest(".trash") && e.target.closest(".card")) {
     const cardWrapper = e.target.closest(".card-wrapper");
+    console.log(cardWrapper.offsetTop);
+    console.log(cardWrapper.offsetPosition);
+
+    if (cardWrapper.offsetTop < 800) {
+      window.scrollTo({
+        top: cardWrapper.offsetTop - 180,
+        behavior: "smooth",
+      });
+    } else {
+      window.scrollTo({
+        top: 180,
+        behavior: "smooth",
+      });
+    }
 
     const parcelWidget = cardWrapper.querySelector(".tracking-widget");
+    const isInfoHidden = cardWrapper.querySelector(".show-when-parcel-clicked") ? true : false;
 
     allWidgets.forEach((w) => {
       if (w !== parcelWidget) {
@@ -177,8 +192,7 @@ allParcelsCardsContainer.addEventListener("click", (e) => {
       }
     });
 
-    const isOpen = cardWrapper.querySelector(".show-when-parcel-clicked");
-    if (isOpen) {
+    if (isInfoHidden) {
       //show progress bar
       const progress = cardWrapper.querySelector(".widgetProgressMain");
       const submitButton = document.querySelector(".hidden-submit-button");
@@ -188,12 +202,13 @@ allParcelsCardsContainer.addEventListener("click", (e) => {
       getDeliveryData().then((data) => {
         setAnimate(progress, "end", submitButton);
       });
-    }
-
-    // parcelWidget.classList.toggle("show-when-parcel-clicked");
-    setTimeout(() => {
+      setTimeout(() => {
+        parcelWidget.classList.toggle("show-when-parcel-clicked");
+      }, 1500);
+    } else {
       parcelWidget.classList.toggle("show-when-parcel-clicked");
-    }, 1500);
+    }
+    console.log(cardWrapper);
   }
 });
 //show block when parcel-card-mobile clicked
