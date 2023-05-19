@@ -47,6 +47,39 @@
             margin-bottom: 0;
         }
     }
+    .tracking-widget__content {
+        position: relative;
+        .cross-close-tablet {
+            padding: 3px;
+            width: 20px;
+            height: 20px;
+            background: #d9d9d9;
+            position: absolute;
+            right: 0;
+            top: 0;
+            cursor: pointer;
+            display: none;
+            @include for-1025-px {
+                display: block;
+            }
+        }
+    }
+    .tracking-widget__aside {
+        position: relative;
+        .cross-close {
+            padding: 3px;
+            width: 20px;
+            height: 20px;
+            background: #d9d9d9;
+            position: absolute;
+            right: 0;
+            top: 0;
+            cursor: pointer;
+            @include for-1025-px {
+                display: none;
+            }
+        }
+    }
     .tracking-widget__aside-inner {
         &.collapsed {
             @include for-640-px {
