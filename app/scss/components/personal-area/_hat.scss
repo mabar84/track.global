@@ -1,6 +1,7 @@
 .user {
     display: flex;
     align-items: center;
+    margin-right: 30px;
     .wrapper {
         background: transparent;
         width: max-content;
@@ -42,24 +43,27 @@
     }
 }
 .hat {
-    & img {
-        width: 36px;
-        height: 36px;
-        cursor: pointer;
-        @include for-725-px {
-            display: block;
-            position: sticky;
-            top: 500px;
-        }
-    }
-    @include for-725-px {
+    @include for-1000-px {
         padding: 20px 10px 15px;
         position: absolute;
         left: 0px;
         right: 0;
         background: #ffffff;
-        top: 41px;
+        top: 80px;
         display: flex;
         justify-content: space-between;
+    }
+    @include for-725-px {
+        top: 50px;
+    }
+    & img {
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+        @include for-1000-px {
+            display: block;
+            position: sticky;
+            top: 500px;
+        }
     }
 }

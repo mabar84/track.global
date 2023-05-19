@@ -162,6 +162,8 @@ parcelCode.addEventListener("input", () => {
 const allParcelsCardsContainer = document.querySelector(".all-parcel .cards");
 
 allParcelsCardsContainer.addEventListener("click", (e) => {
+  e.preventDefault();
+
   const allWidgets = allParcelsCardsContainer.querySelectorAll(".tracking-widget");
 
   if (!e.target.closest(".archive") && !e.target.closest(".trash") && e.target.closest(".card")) {
@@ -197,6 +199,7 @@ allParcelsCardsContainer.addEventListener("click", (e) => {
 //show block when parcel-card-mobile clicked
 const allParcelsCardsContainerMobile = document.querySelector(".all-parcel .cards-mobile");
 allParcelsCardsContainerMobile.addEventListener("click", (e) => {
+  e.preventDefault();
   const allWidgets = allParcelsCardsContainerMobile.querySelectorAll(".tracking-widget");
   const allBookPosts = allParcelsCardsContainerMobile.querySelectorAll(".book-post");
 
@@ -263,6 +266,7 @@ bookPostMoreCards.forEach((banderol) => {
 const anchorsLinksDesktop = document.querySelectorAll(".parcel .wrapper .right .link");
 const anchorsLinksMobile = document.querySelectorAll(".parcel-mobile .item");
 const staticParcel = document.querySelector(".parcel");
+const staticHeader = document.querySelector(".header");
 
 anchorsLinksDesktop.forEach((link) => {
   link.addEventListener("click", (event) => {
@@ -293,7 +297,7 @@ anchorsLinksMobile.forEach((link) => {
 
     let headerOffset = staticParcel.clientHeight;
 
-    offsetPosition = elementPosition + window.pageYOffset - headerOffset - 50;
+    offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
     window.scrollTo({
       top: offsetPosition,
@@ -302,17 +306,34 @@ anchorsLinksMobile.forEach((link) => {
   });
 });
 
-// glue add-parcel
+//glue add-parcel
+const switchHeaderParcel = document.querySelector(".switch-header-parcel");
+
 window.addEventListener("scroll", () => {
-  window.pageYOffset > 79 ? staticParcel.classList.add("glue") : staticParcel.classList.remove("glue");
+  if (window.pageYOffset > 79) {
+    switchHeaderParcel.classList.add("visible");
+    staticParcel.classList.add("glue");
+    staticHeader.classList.add("glue");
+  } else {
+    switchHeaderParcel.classList.remove("visible");
+
+    staticParcel.classList.remove("glue");
+    staticHeader.classList.remove("glue");
+  }
 });
 
-//switch parcel
-const switchParcel = document.querySelector(".switch-parcel");
-switchParcel.addEventListener("click", () => {
-  switchParcel.classList.toggle("active");
+//switch add-parcel header
+// const switchParcel = document.querySelector(".switch-parcel");
+switchHeaderParcel.addEventListener("click", () => {
+  switchHeaderParcel.classList.toggle("active");
+  staticHeader.classList.toggle("z2");
+
+  // staticHeader.classList.add("glue");
+
+  // staticParcel.classList.remove("glue");
+  // staticParcel.classList.add("glue");
 });
-const switchHeader = document.querySelector(".switch-header");
-switchHeader.addEventListener("click", () => {
-  switchHeader.classList.toggle("active");
-});
+// const switchHeader = document.querySelector(".switch-header");
+// switchHeader.addEventListener("click", () => {
+//   switchHeader.classList.toggle("active");
+// });

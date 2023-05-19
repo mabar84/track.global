@@ -1,8 +1,8 @@
 .all-parcel {
-    // margin-top: 121px;
+    // margin-top: 0px;
     overflow: hidden;
-    @include for-1170-px {
-        // margin-top: 250px;
+    @include for-1000-px {
+        margin-top: 80px;
     }
     @include for-725-px {
         // margin-top: 124px;
@@ -21,7 +21,7 @@
         @include for-1170-px {
             margin-bottom: 12px;
         }
-        @include for-640-px {
+        @include for-1000-px {
             padding-top: 5px;
             padding-bottom: 5px;
             margin-bottom: 7px;

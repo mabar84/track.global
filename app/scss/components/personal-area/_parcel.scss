@@ -6,7 +6,7 @@
     @include for-1170-px {
         padding: 10px 20px 20px 20px;
     }
-    @include for-725-px {
+    @include for-1000-px {
         display: none;
     }
     .wrapper {
@@ -103,7 +103,7 @@
     display: flex;
     gap: 20px;
     display: none;
-    @include for-725-px {
+    @include for-1000-px {
         display: flex;
         justify-content: space-around;
     }
