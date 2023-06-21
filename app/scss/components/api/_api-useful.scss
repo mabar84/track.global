@@ -3,17 +3,17 @@
     z-index: 1;
     position: relative;
     background: #ffffff;
-
     @include for-1000-px {
         padding: 30px 0;
     }
     @include for-640-px {
         padding: 10px 0 20px;
-        margin-top: -70px;
-        border: 1px solid #e1e1e1;
-        border-radius: 8px;
         margin-right: 10px;
         margin-left: 10px;
+        margin-top: -70px;
+        margin-bottom: 10px;
+        border: 1px solid #e1e1e1;
+        border-radius: 8px;
     }
     .api-gradient {
         position: absolute;

@@ -1,26 +1,198 @@
 .api-orders {
     background: #fdf6f6;
+    @include for-640-px {
+        padding: 10px;
+        background: #fdf6f6;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #e1e1e1;
+        box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
     .container {
+        max-width: 1280px;
         display: flex;
         justify-content: space-between;
+        @include for-640-px {
+            flex-direction: column;
+            gap: 10px;
+        }
     }
     .images {
         width: 50%;
-        height: 407px;
-        background: red;
+        height: 55vw;
         position: relative;
-        overflow: hidden;
+        @include for-640-px {
+            padding-top: 27px;
+            width: 100%;
+            height: max-content;
+        }
         .iphone-img {
-            width: 243px;
-            height: 336px;
+            width: 72%;
+            height: auto;
             flex-shrink: 0;
             position: absolute;
-            bottom: -5px;
+            bottom: 0;
             left: 50%;
             transform: translateX(-50%);
+            object-position: bottom;
+            z-index: 2;
+            @include for-640-px {
+                width: 165.38px;
+                height: 229px;
+                position: relative;
+            }
+        }
+        .benefit {
+            padding: 10px;
+            width: max-content;
+            background: #ffffff;
+            opacity: 0.2;
+            box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.1);
+            border-radius: 24px;
+            position: absolute;
+            z-index: 1;
+            @include for-1000-px {
+                padding: 5px;
+            }
+            @include for-640-px {
+                padding: 3px;
+            }
+            span {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 40px;
+                line-height: 49px;
+                color: #159800;
+                @include for-1000-px {
+                    font-size: 21.3617px;
+                    line-height: 26px;
+                }
+                @include for-640-px {
+                    font-size: 14.5056px;
+                    line-height: 18px;
+                }
+            }
+            &-1 {
+                left: -4.06px;
+                top: 55.32px;
+                transform: rotate(-21.37deg);
+                @include for-640-px {
+                    left: calc(50% - 120px);
+                    top: 15px;
+                }
+            }
+            &-2 {
+                left: 200px;
+                top: 40px;
+                transform: rotate(12.63deg);
+                @include for-1000-px {
+                    left: 150px;
+                    top: 35px;
+                }
+                @include for-640-px {
+                    left: calc(50% - 20px);
+                    top: 15px;
+                }
+            }
+            &-3 {
+                right: -50px;
+                top: 50px;
+                transform: rotate(15.46deg);
+                @include for-1000-px {
+                    right: 0;
+                }
+                @include for-640-px {
+                    top: 25px;
+                    left: calc(50% + 80px);
+                }
+            }
+            &-4 {
+                left: -30px;
+                top: 369.1px;
+                transform: rotate(9.17deg);
+                @include for-1000-px {
+                    top: 200px;
+                    left: 0;
+                }
+                @include for-640-px {
+                    top: 150px;
+                    left: calc(50% - 140px);
+                }
+            }
+            &-5 {
+                right: 0px;
+                top: 214.7px;
+                transform: rotate(12.63deg);
+                @include for-1000-px {
+                    top: 150px;
+                }
+                @include for-640-px {
+                    left: calc(50% + 50px);
+                    top: 80px;
+                }
+            }
+            &-6 {
+                right: 0px;
+                bottom: 300px;
+                transform: rotate(-14.46deg);
+                @include for-1000-px {
+                    bottom: 110px;
+                }
+                @include for-640-px {
+                    right: calc(50% - 120px);
+                }
+            }
+            &-7 {
+                left: 6.46px;
+                bottom: 90px;
+                transform: rotate(-22.29deg);
+                @include for-640-px {
+                    left: calc(50% - 120px);
+                    bottom: 30px;
+                }
+            }
+            &-8 {
+                right: -50px;
+                bottom: 120px;
+                transform: rotate(9.17deg);
+                @include for-1000-px {
+                    right: 0;
+                    bottom: 50px;
+                }
+                @include for-640-px {
+                    right: calc(50% - 140px);
+                }
+            }
+            &-9 {
+                display: none;
+                transform: rotate(-21.37deg);
+                @include for-640-px {
+                    display: block;
+                    left: calc(50% - 140px);
+                    top: 65px;
+                }
+            }
         }
     }
     .wrapper {
+        padding-left: 25px;
         width: 50%;
+        position: relative;
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include for-640-px {
+            width: 100%;
+            padding-left: 0;
+        }
+        .api-text {
+            padding-right: 65px;
+            @include for-1000-px {
+                padding-right: 0px;
+            }
+        }
     }
 }
