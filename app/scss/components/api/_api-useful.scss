@@ -1,0 +1,108 @@
+.api-useful {
+    padding: 40px 0;
+    z-index: 1;
+    position: relative;
+    background: #ffffff;
+
+    @include for-1000-px {
+        padding: 30px 0;
+    }
+    @include for-640-px {
+        padding: 10px 0 20px;
+        margin-top: -70px;
+        border: 1px solid #e1e1e1;
+        border-radius: 8px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .api-gradient {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(360deg, #e9e9e9 0%, rgba(238, 234, 234, 0) 71.82%);
+        z-index: -1;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+
+        @include for-640-px {
+            flex-direction: column;
+            gap: 10px;
+        }
+        .wrapper {
+            padding-bottom: 40px;
+            @include for-1000-px {
+                padding-bottom: 10px;
+            }
+            @include for-640-px {
+                padding-bottom: 0;
+            }
+            .api-title {
+                z-index: 1;
+            }
+            .api-text {
+                padding-right: 75px;
+                @include for-1000-px {
+                    padding-right: 20px;
+                }
+                @include for-640-px {
+                    padding-right: 0px;
+                }
+            }
+        }
+    }
+    .images {
+        width: 534px;
+        height: 476px;
+        position: relative;
+        flex-shrink: 0;
+        @include for-1000-px {
+            width: 353px;
+            height: 326px;
+        }
+        @include for-640-px {
+            width: 280px;
+            height: 219px;
+        }
+        .widget-img {
+            width: 470.74px;
+            height: 354.96px;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            z-index: 1;
+            object-fit: cover;
+            @include for-1000-px {
+                width: 323px;
+                height: 243px;
+            }
+            @include for-640-px {
+                width: 256px;
+                height: 193px;
+            }
+        }
+        .graph-img {
+            width: 271px;
+            height: 220.08px;
+            object-fit: cover;
+            top: 0;
+            right: 0;
+            position: absolute;
+            z-index: 0;
+            @include for-1000-px {
+                width: 186px;
+                height: 151px;
+            }
+            @include for-640-px {
+                width: 148px;
+                height: 120px;
+            }
+        }
+    }
+}

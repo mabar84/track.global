@@ -1,0 +1,26 @@
+.api-orders {
+    background: #fdf6f6;
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .images {
+        width: 50%;
+        height: 407px;
+        background: red;
+        position: relative;
+        overflow: hidden;
+        .iphone-img {
+            width: 243px;
+            height: 336px;
+            flex-shrink: 0;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .wrapper {
+        width: 50%;
+    }
+}

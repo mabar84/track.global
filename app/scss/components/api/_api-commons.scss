@@ -1,0 +1,44 @@
+.api-subtitle {
+    // font-family: Montserrat-Black, sans-serif;
+    // font-family: "Montserrat";
+    margin-bottom: 16px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 49px;
+    color: #e24949;
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    @include for-1000-px {
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 12px;
+    }
+    @include for-640-px {
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+    }
+}
+.api-text {
+    // font-family: "Montserrat";
+    font-style: normal;
+    font-size: 24px;
+    line-height: 32px;
+    @include for-1000-px {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    @include for-640-px {
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+    }
+}
+.api-subtext {
+    // font-family: "Montserrat";
+    font-weight: 600;
+    @include for-640-px {
+        color: #e24949;
+    }
+}
