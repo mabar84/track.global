@@ -391,8 +391,36 @@
       text-align: center;
     }
   }
+  &__cross-links {
+    display: flex;
+    flex-wrap: wrap;
+    @include for-470-px {
+      text-align: center;
+    }
+  }
 
   &__search-link {
+    font-size: 12px;
+    line-height: 15px;
+    color: #ffffff;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+    margin-bottom: 8px;
+
+    &:not(:last-child) {
+      margin-right: 14px;
+    }
+
+    &:hover {
+      color: $accent;
+    }
+
+    @include for-470-px {
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+  &__cross-link {
     font-size: 12px;
     line-height: 15px;
     color: #ffffff;
@@ -440,4 +468,8 @@
 .tracking-widget__top--transparent {
   background: none;
   padding-bottom: 0;
+}
+
+.tracking-widget__top--app-settings {
+  display: block;
 }

@@ -1,0 +1,44 @@
+.site-widget {
+  padding-top: 20px;
+  margin-top: 0 !important;
+  padding-bottom: 60px;
+}
+
+.site-widget__breadcrumbs{
+  margin-bottom: 20px;
+  @include for-1025-px {
+    margin-bottom: 16px;
+  }
+}
+
+.site-widget__title {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  @include for-1025-px {
+    margin-bottom: 15px;
+  }
+  @include for-725-px  {
+    margin-bottom: 0;
+  }
+}
+
+.site-widget__content {
+  overflow-y: scroll;
+  max-height: 200px;
+}
+
+.site-widget__button {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  color: #ffffff;
+  background-color: #0d6efd;
+  border: 1px solid #0d6efd;
+  border-radius: 0.375rem;;
+  transition: all 0.15s ease-in-out;
+}

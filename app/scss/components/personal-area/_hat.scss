@@ -26,6 +26,8 @@
         font-size: 12px;
         line-height: 15px;
         color: #000000;
+        max-width:100px;
+        word-break: break-all;
         & span {
             cursor: pointer;
             &:hover {
@@ -42,6 +44,22 @@
         color: rgba(0, 0, 0, 0.6);
     }
 }
+.circle {
+    width: 36px;
+    height: 36px;
+    background-color: #e24949;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.letter {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
 .hat {
     @include for-1000-px {
         padding: 20px 15px 15px;
@@ -49,12 +67,12 @@
         left: 0px;
         right: 0;
         background: #ffffff;
-        top: 80px;
+        top: 70px;
         display: flex;
         justify-content: space-between;
     }
     @include for-725-px {
-        top: 50px;
+        top: 40px;
     }
     & img {
         width: 36px;

@@ -2,12 +2,13 @@
     // margin-top: 0px;
     overflow: hidden;
     @include for-1000-px {
-        margin-top: 80px;
+        margin-top: 70px;
     }
     @include for-725-px {
         // margin-top: 124px;
     }
     @include for-640-px {
+        margin-top: 30px;
         // margin-top: 117px;
     }
     .filter {
@@ -182,6 +183,12 @@
                     @include for-1170-px {
                         font-size: 14px;
                         line-height: 17px;
+                    }
+                    @include for-640-px {
+                        word-break:break-all;
+                        max-height:50px;
+                        max-width:150px;
+                        font-size:12px !important;
                     }
                 }
                 .service-value {

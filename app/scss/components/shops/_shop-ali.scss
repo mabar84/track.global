@@ -99,7 +99,7 @@
   .top__title {
     font-size: 35px;
     line-height: 43px;
-    margin-bottom: 30px;
+    margin-bottom: 8px !important;
     &.cashbe {
       margin-bottom: 8px;
       @include for-640-px {
