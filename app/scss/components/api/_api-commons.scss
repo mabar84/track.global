@@ -1,3 +1,22 @@
+.api-title {
+    font-family: Montserrat-Black, sans-serif;
+
+    margin-bottom: 20px;
+    color: #e24949;
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 73px;
+    text-transform: uppercase;
+    @include for-1000-px {
+        font-size: 40px;
+        line-height: 54px;
+    }
+    @include for-640-px {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 12px;
+    }
+}
 .api-subtitle {
     // font-family: Montserrat-Black, sans-serif;
     // font-family: "Montserrat";

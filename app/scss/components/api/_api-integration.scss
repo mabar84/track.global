@@ -3,17 +3,56 @@
     @include for-1000-px {
         padding: 30px 10px 32px 0;
     }
+    @include for-640-px {
+        padding: 10px;
+        background: #ffffff;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #e1e1e1;
+        box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
     .container {
         display: flex;
         align-items: center;
         gap: 25px;
+        @include for-640-px {
+            flex-direction: column;
+            gap: 9px;
+        }
+        .wrapper {
+            @include for-640-px {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                order: 1;
+            }
+        }
         .images {
             padding-right: 20px;
             flex-shrink: 0;
             position: relative;
+            @include for-640-px {
+                padding-right: 0;
+            }
+        }
+        .api-subtitle {
+            @include for-640-px {
+                font-size: 16px;
+                margin-bottom: 4px;
+            }
         }
         .api-text {
             margin-bottom: 16px;
+            @include for-640-px {
+                margin-bottom: 10px;
+            }
+        }
+        .api-button {
+            @include for-640-px {
+                margin: 0 auto;
+            }
         }
         .integration-img {
             width: 39.6vw;
@@ -22,15 +61,10 @@
                 width: 49vw;
                 height: 34.2vw;
             }
-        }
-        .arrow-img {
-            position: absolute;
-            left: 31vw;
-            bottom: 10vw;
-            @include for-1000-px {
-                width: 11.7vw;
-                height: 11.7vw;
-                left: 35.5vw;
+            @include for-640-px {
+                width: calc(100% - 24px);
+                height: auto;
+                margin: 0 auto;
             }
         }
         .dots-img {
@@ -43,6 +77,13 @@
                 width: 39vw;
                 height: 13.3vw;
                 left: -8.2vw;
+                bottom: 5.5vw;
+            }
+            @include for-640-px {
+                width: 48.1vw;
+                height: 17.2vw;
+                left: -4vw;
+                bottom: 12vw;
             }
         }
         .api-insert {
@@ -57,8 +98,18 @@
             position: absolute;
             left: 23vw;
             bottom: 14.3vw;
-            position: relative;
-            overflow: visible;
+            @include for-1000-px {
+                padding: 11px 22px;
+                font-size: 18px;
+                left: 26vw;
+                bottom: 17vw;
+            }
+            @include for-640-px {
+                padding: 7px 13px;
+                font-size: 11px;
+                left: 39vw;
+                bottom: 27vw;
+            }
             &::after {
                 content: "";
                 background-image: url("../images/api/arrow.svg");
@@ -68,13 +119,18 @@
                 position: absolute;
                 right: -45px;
                 bottom: -55px;
-            }
-            @include for-1000-px {
-                padding: 11px 21px;
-                font-size: 18.055px;
-                font-weight: 500;
-                left: 26vw;
-                bottom: 15vw;
+                @include for-1000-px {
+                    width: 90px;
+                    height: 90px;
+                    right: -40px;
+                    bottom: -35px;
+                }
+                @include for-640-px {
+                    width: 56px;
+                    height: 56px;
+                    right: -20px;
+                    bottom: -15px;
+                }
             }
         }
     }
