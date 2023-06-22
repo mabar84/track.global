@@ -1,0 +1,81 @@
+.api-integration {
+    padding: 82px 20px 82px 0;
+    @include for-1000-px {
+        padding: 30px 10px 32px 0;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        .images {
+            padding-right: 20px;
+            flex-shrink: 0;
+            position: relative;
+        }
+        .api-text {
+            margin-bottom: 16px;
+        }
+        .integration-img {
+            width: 39.6vw;
+            height: 27.7vw;
+            @include for-1000-px {
+                width: 49vw;
+                height: 34.2vw;
+            }
+        }
+        .arrow-img {
+            position: absolute;
+            left: 31vw;
+            bottom: 10vw;
+            @include for-1000-px {
+                width: 11.7vw;
+                height: 11.7vw;
+                left: 35.5vw;
+            }
+        }
+        .dots-img {
+            width: 30.8vw;
+            height: 12.3vw;
+            position: absolute;
+            left: -6.3vw;
+            bottom: 3.5vw;
+            @include for-1000-px {
+                width: 39vw;
+                height: 13.3vw;
+                left: -8.2vw;
+            }
+        }
+        .api-insert {
+            width: max-content;
+            padding: 14px 29px;
+            border-radius: 7.272px;
+            background: #7d7d7d;
+            box-shadow: 0px 7.272346496582031px 7.272346496582031px 0px rgba(0, 0, 0, 0.25);
+            color: #fff;
+            font-size: 24.367px;
+            font-weight: 500;
+            position: absolute;
+            left: 23vw;
+            bottom: 14.3vw;
+            position: relative;
+            overflow: visible;
+            &::after {
+                content: "";
+                background-image: url("../images/api/arrow.svg");
+                background-size: cover;
+                width: 122px;
+                height: 122px;
+                position: absolute;
+                right: -45px;
+                bottom: -55px;
+            }
+            @include for-1000-px {
+                padding: 11px 21px;
+                font-size: 18.055px;
+                font-weight: 500;
+                left: 26vw;
+                bottom: 15vw;
+            }
+        }
+    }
+}
