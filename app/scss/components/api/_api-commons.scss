@@ -1,6 +1,5 @@
 .api-title {
     font-family: Montserrat-Black, sans-serif;
-
     margin-bottom: 20px;
     color: #e24949;
     font-size: 60px;
@@ -55,14 +54,13 @@
     }
 }
 .api-subtext {
-    // font-family: "Montserrat";
     font-weight: 600;
     @include for-640-px {
         color: #e24949;
     }
 }
 .api-button {
-    padding: 16px 24px;
+    padding: 15px 24px;
     text-align: center;
     font-size: 16px;
     font-weight: 700;
