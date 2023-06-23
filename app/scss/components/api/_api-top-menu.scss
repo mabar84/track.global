@@ -1,0 +1,82 @@
+.header.api-header {
+    .header__menu-item {
+        position: relative;
+        display: block;
+        cursor: pointer;
+        @include for-1000-px {
+            width: 100%;
+            margin-right: 0;
+            text-align: center;
+        }
+        .header__menu-item-link {
+            &::before {
+                @include for-1000-px {
+                    top: -5px;
+                }
+            }
+        }
+        &.active {
+            .header__menu-item-link {
+                text-shadow: #000 1px 0 1px;
+                @include for-1000-px {
+                    text-shadow: none;
+                    font-weight: 600;
+                }
+            }
+            .header__menu-submenu {
+                display: block;
+            }
+        }
+        .header__menu-submenu {
+            border-radius: 4px;
+            border: 1px solid #e6e6e6;
+            background: #fff;
+            white-space: nowrap;
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+            z-index: 1;
+            display: none;
+            @include for-1000-px {
+                margin-top: 10px;
+                border-radius: 4px;
+                border: 1px solid #e6e6e6;
+                background: #fff;
+                position: sticky;
+            }
+            .header__menu-submenu-link {
+                padding: 16px;
+                color: #000;
+                font-size: 14px;
+                display: inline-block;
+                width: 100%;
+                &:hover {
+                    background: rgba(209, 181, 181, 0.1);
+                }
+            }
+        }
+    }
+}
+.home .top.api-top {
+    max-height: 248px;
+    overflow: hidden;
+    background: linear-gradient(360deg, #cbcbcb 0%, rgba(238, 234, 234, 0) 52.25%);
+    .top__inner::before {
+        width: 570px;
+        bottom: 30px;
+        left: -60px;
+        background-size: cover;
+        @include for-1170-px {
+            bottom: 0;
+            left: -10px;
+            width: 400px;
+        }
+    }
+    .top__title {
+        margin-top: 40px;
+        color: #e24949;
+        font-size: 36px;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+}
