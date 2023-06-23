@@ -1,0 +1,27 @@
+.home .top.page-404 {
+    background: none;
+    margin-bottom: 60px;
+    .top__inner {
+        &::before {
+            background-image: url("../images/404/box404.svg");
+            width: 644px;
+            height: 607px;
+            left: -90px;
+            bottom: -125px;
+        }
+        .top__content {
+            margin-bottom: 0;
+            .top__title {
+                margin-bottom: 20px;
+                font-size: 40px;
+                text-transform: none;
+            }
+            .top__text {
+                margin-bottom: 10px;
+                color: #000;
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+    }
+}
