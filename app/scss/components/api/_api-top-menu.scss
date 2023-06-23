@@ -58,25 +58,93 @@
     }
 }
 .home .top.api-top {
-    max-height: 248px;
+    height: 240px;
     overflow: hidden;
     background: linear-gradient(360deg, #cbcbcb 0%, rgba(238, 234, 234, 0) 52.25%);
-    .top__inner::before {
-        width: 570px;
-        bottom: 30px;
-        left: -60px;
-        background-size: cover;
-        @include for-1170-px {
-            bottom: 0;
-            left: -10px;
-            width: 400px;
+    @include for-1000-px {
+        height: 265px;
+    }
+    @include for-640-px {
+        padding-top: 0;
+    }
+    .top__content {
+        width: auto;
+        margin-left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include for-725-px {
+            min-height: auto;
+        }
+        @include for-640-px {
+            flex-direction: column;
+            gap: 35px;
+        }
+        .promo-pc {
+            object-fit: contain;
+            object-position: top;
+            width: 575px;
+            height: auto;
+            margin-left: -50px;
+            @include for-1000-px {
+                display: none;
+            }
+        }
+        .promo-tablet {
+            display: none;
+            margin-left: -15px;
+            @include for-1000-px {
+                display: block;
+            }
+            @include for-640-px {
+                display: none;
+            }
+        }
+        .promo-mobile {
+            display: none;
+            @include for-640-px {
+                display: block;
+                height: 200px;
+                width: 286px;
+                order: 1;
+                // width: calc(100vw - 34px);
+                object-fit: contain;
+                object-position: top;
+            }
+            @include for-440-px {
+                width: 220px;
+            }
         }
     }
+    .top__inner::before {
+        display: none;
+    }
     .top__title {
-        margin-top: 40px;
+        padding-right: 60px;
+        margin-top: -30px;
+        margin-bottom: 0;
         color: #e24949;
         font-size: 36px;
         font-weight: 900;
         text-transform: uppercase;
+        @include for-1170-px {
+            padding-right: 0px;
+        }
+        @include for-1000-px {
+            margin-top: -30px;
+            font-size: 30px;
+            line-height: 37px;
+        }
+        @include for-725-px {
+            text-align: left;
+        }
+        @include for-640-px {
+            margin-top: 0;
+            padding-right: 10px;
+            padding-left: 10px;
+            text-align: center;
+            font-size: 18px;
+            line-height: 24px;
+        }
     }
 }
