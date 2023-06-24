@@ -1,26 +1,75 @@
 .home .top.page-404 {
     background: none;
     margin-bottom: 60px;
+    @include for-1000-px {
+        margin-bottom: 20px;
+    }
+    @include for-640-px {
+        padding-top: 0;
+    }
     .top__inner {
         &::before {
             background-image: url("../images/404/box404.svg");
             width: 644px;
             height: 607px;
             left: -90px;
-            bottom: -125px;
+            bottom: -140px;
+            @include for-1000-px {
+                width: 372px;
+                height: 351px;
+                left: -35px;
+                bottom: 30px;
+            }
+            @include for-725-px {
+                display: block;
+                width: 283px;
+                height: 267px;
+                left: 50%;
+                bottom: auto;
+                top: -45px;
+                transform: translateX(-50%);
+            }
+            @include for-640-px {
+                top: -60px;
+            }
         }
         .top__content {
             margin-bottom: 0;
+            @include for-725-px {
+                padding-top: 200px;
+            }
+            @include for-640-px {
+                padding-top: 180px;
+            }
             .top__title {
                 margin-bottom: 20px;
                 font-size: 40px;
+                line-height: 110%;
                 text-transform: none;
+                @include for-1000-px {
+                    font-size: 30px;
+                }
+                @include for-725-px {
+                    margin-top: 0;
+                }
+                @include for-640-px {
+                    margin-bottom: 10px;
+                    font-size: 18px;
+                }
             }
             .top__text {
                 margin-bottom: 10px;
                 color: #000;
                 font-size: 14px;
+                line-height: 110%;
                 font-weight: 600;
+                display: block;
+                @include for-1000-px {
+                    font-size: 14px;
+                }
+                @include for-725-px {
+                    text-align: left;
+                }
             }
         }
     }
