@@ -54,6 +54,36 @@ apiSettingsItems.forEach((item) => {
   });
 });
 
+// modals popups
+//close modal
+const body = document.querySelector("body");
+
+const apiModalWrappers = document.querySelectorAll(".api-modal-wrapper");
+
+apiModalWrappers.forEach((el) => {
+  const modal = el.querySelector(".api-modal");
+  modal.addEventListener("click", (e) => {
+    if (e.target.dataset.after === "true") {
+      el.classList.add("hidden");
+      body.style.overflow = "inherit";
+      // body.style.position = "static";
+    }
+  });
+});
+
+//plugins cms
+const apiModalPlugins = document.querySelector(".api-modal-plugins");
+const apiPlugins = document.querySelector(".api-plugins");
+
+apiPlugins.addEventListener("click", (e) => {
+  if (e.target.classList.contains("card")) {
+    e.preventDefault;
+    apiModalPlugins.classList.remove("hidden");
+    body.style.overflow = "hidden";
+    // body.style.position = "fixed";
+  }
+});
+
 // clear inputs
 const apiInputWrappers = document.querySelectorAll(".api-input-wrapper");
 

@@ -83,15 +83,25 @@
         </nav>
       </div>
     </header>
-
-    <div class="api-modal">
-      <p class="modal-title">Оставьте свой email</p>
-      <p class="modal-text">В ближайшее время мы предоставим вам информацию о подключении партнерской программы.</p>
-      <div class="api-input-wrapper" data-after="true">
-        <input type="text" class="api-input" type="text" placeholder="Оставьте своей Email" />
+    <div class="api-modal-wrapper api-modal-partner hidden">
+      <div class="api-modal" data-after="true">
+        <p class="api-modal-title">Оставьте свой email</p>
+        <p class="api-modal-text">В ближайшее время мы предоставим вам информацию о подключении партнерской программы.</p>
+        <div class="api-input-wrapper" data-after="true">
+          <input type="text" class="api-input" type="text" placeholder="Оставьте своей Email" />
+        </div>
+        <button class="api-button">Оставить Email</button>
       </div>
-
-      <button class="api-button">Оставить Email</button>
+    </div>
+    <div class="api-modal-wrapper api-modal-plugins hidden">
+      <div class="api-modal" data-after="true">
+        <p class="api-modal-title">На данный момент плагины находятся в разработке, пожалуйста оставьте свой email.</p>
+        <p class="api-modal-text">Мы сообщим вам, как только плагины станут доступны.</p>
+        <div class="api-input-wrapper" data-after="true">
+          <input type="text" class="api-input" type="text" placeholder="Оставьте своей Email" />
+        </div>
+        <button class="api-button">Оставить Email</button>
+      </div>
     </div>
 
     <main class="main">
@@ -206,7 +216,7 @@
 
           <div class="container">
             <div class="api-settings-wrapper">
-              <div class="api-input-wrapper">
+              <div class="api-input-wrapper" data-after="true">
                 <input type="text" class="api-input" type="text" placeholder="Ссылка на работающее отслеживание" />
               </div>
               <button class="api-button">отследить</button>
