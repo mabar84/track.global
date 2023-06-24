@@ -1,14 +1,13 @@
 //api-header-menu
-const menu = document.querySelector(".header__menu");
-console.log(1234);
+const headerNav = document.querySelector(".header__nav");
+// const menu = document.querySelector(".header__menu");
 
-const menuItems = menu.querySelectorAll(".header__menu-item");
+const menuItems = headerNav.querySelectorAll(".header__menu-item");
 const allSubmenu = document.querySelectorAll(".header__menu-submenu");
 
 // show/close menu-additional
 if (window.innerWidth > 1000) {
   menuItems.forEach((el) => {
-    console.log(1001);
     el.addEventListener("mouseenter", () => {
       const submenu = el.querySelector(".header__menu-submenu");
 
@@ -18,9 +17,14 @@ if (window.innerWidth > 1000) {
       el.classList.add("active");
     });
   });
+
+  headerNav.addEventListener("mouseleave", () => {
+    menuItems.forEach((sm) => {
+      sm.classList.remove("active");
+    });
+  });
 } else {
   menuItems.forEach((el) => {
-    console.log(999);
     el.addEventListener("click", () => {
       if (el.classList.contains("active")) {
         el.classList.remove("active");
