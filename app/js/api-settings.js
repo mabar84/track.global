@@ -41,18 +41,64 @@ if (window.innerWidth > 1000) {
     });
   });
 }
+// api-settings-form
+const apiSettingsForm = document.querySelector(".api-settings-form");
+// const apiSettingsItems = document.querySelectorAll(".api-settings-item");
+const apiSettingsItems = apiSettingsForm.querySelectorAll(".api-settings-item");
 
-const apiSettingsItems = document.querySelectorAll(".api-settings-item");
+// apiSettingsForm.addEventListener('click', function(event) {
+// const apiSettingsItems = apiSettingsForm.querySelectorAll(".api-settings-item");
+// const targetElement=event.target;
 
-apiSettingsItems.forEach((item) => {
-  const itemSelected = item.querySelector(".item-selected");
-  const selectItems = item.querySelector(".select-items");
+// do (i)
+// })
 
-  // console.log(itemSelected);
-  itemSelected.addEventListener("click", () => {
-    item.classList.toggle("active");
-  });
+apiSettingsForm.addEventListener("click", (e) => {
+  // console.log(e.target);
+  const targetElement = e.target;
+  if (targetElement.classList.contains("item-selected")) {
+    console.log(targetElement);
+
+    targetElement.closest(".api-settings-item").classList.add("active");
+  }
+
+  if (targetElement.classList.contains("select-item")) {
+    const item = targetElement.closest(".api-settings-item");
+    const itemSelected = item.querySelector(".item-selected");
+
+    item.classList.remove("active");
+
+    itemSelected.textContent = targetElement.textContent;
+  }
 });
+
+// apiSettingsItems.forEach((item) => {
+//   const itemSelected = item.querySelector(".item-selected");
+//   const selectItems = item.querySelector(".select-items");
+
+//   itemSelected.addEventListener("click", () => {
+//     item.classList.add("active");
+
+//     let targetElement = event.target;
+
+//     do {
+//       if (event.target == item) {
+//         return;
+//       }
+//       targetElement = targetElement.parentNode;
+//     } while (targetElement);
+//     item.classList.remove("active");
+
+//     // apiSettingsForm.addEventListener("click", (e) => {
+//     //   if (e.target.classList.contains("select-item")) {
+//     //     console.log(e.target.textContent);
+//     //   } else {
+//     //     console.log(e.target);
+//     //     // item.classList.remove("active");
+//     //   }
+//     // });
+//   });
+// });
 
 // modals popups
 //close modal
