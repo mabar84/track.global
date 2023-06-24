@@ -54,6 +54,18 @@ apiSettingsItems.forEach((item) => {
   });
 });
 
+// clear inputs
+const apiInputWrappers = document.querySelectorAll(".api-input-wrapper");
+
+apiInputWrappers.forEach((el) => {
+  el.addEventListener("click", (e) => {
+    const input = el.querySelector(".api-input");
+    if (e.target.dataset.after === "true") {
+      input.value = "";
+    }
+  });
+});
+
 //custom-selects
 
 // function setTrackIframeCode() {

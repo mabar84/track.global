@@ -12,32 +12,6 @@
         display: flex;
         gap: 20px;
         margin-bottom: 20px;
-        .api-input-wrapper {
-            position: relative;
-            width: 100%;
-            &::after {
-                content: "";
-                background-image: url("../images/api/close-gray.svg");
-                width: 16px;
-                height: 16px;
-                position: absolute;
-                right: 16px;
-                top: 16px;
-            }
-            .api-input {
-                width: 100%;
-                height: 50px;
-                padding: 21px 48px 21px 16px;
-                outline: none;
-                border-radius: 3px;
-                border: 1px solid #e6e6e6;
-                background: #fff;
-                &::placeholder {
-                    color: #c4c4c4;
-                    font-size: 14px;
-                }
-            }
-        }
     }
     .api-subtext {
         color: #000;

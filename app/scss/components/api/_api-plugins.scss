@@ -15,6 +15,7 @@
             align-items: center;
         }
         .card {
+            cursor: pointer;
             width: 365px;
             padding: 20px 24px 30px 24px;
             border-radius: 8px;
@@ -28,6 +29,9 @@
             @include for-640-px {
                 width: 100%;
                 padding: 10px 10px 16px 10px;
+            }
+            &:hover {
+                opacity: 0.8;
             }
             .card-img {
                 width: 124px;
