@@ -2,6 +2,9 @@
     padding: 40px;
     background: #fdf6f6;
     margin-bottom: 40px;
+    @include for-1000-px {
+        padding: 30px 20px;
+    }
     .container {
         max-width: 1140px;
         padding: 0;

@@ -1,7 +1,5 @@
 //api-header-menu
 const headerNav = document.querySelector(".header__nav");
-// const menu = document.querySelector(".header__menu");
-
 const menuItems = headerNav.querySelectorAll(".header__menu-item");
 const allSubmenu = document.querySelectorAll(".header__menu-submenu");
 
@@ -49,6 +47,10 @@ const rangeWidth = document.getElementById("rangeWidth");
 const rangeHeight = document.getElementById("rangeHeight");
 const rangeFontSize = document.getElementById("rangeFontSize");
 const scene = document.querySelector(".scene");
+const withCashbe = document.querySelector(".scene-with-cashbe");
+const withoutCashbe = document.querySelector(".scene-without-cashbe");
+const inputWidget = document.querySelector(".api-settings-input-widget");
+
 let allSettings = {};
 
 rangeWidth.addEventListener("change", () => {
@@ -87,6 +89,11 @@ saveSettings.addEventListener("click", () => {
   allSettings["font-size"] = rangeFontSize.value;
   delete allSettings.partner;
   console.log(allSettings);
+
+  withCashbe.classList.add("hidden");
+  withoutCashbe.classList.add("hidden");
+  withCashbe.width = allSettings.width;
+  withoutCashbe.width = allSettings.width;
 });
 
 // modals popups
@@ -151,8 +158,6 @@ apiModalWrappers.forEach((el) => {
 });
 
 //cashbe
-const withCashbe = document.querySelector(".scene-with-cashbe");
-const withoutCashbe = document.querySelector(".scene-without-cashbe");
 
 const traceButton = document.getElementById("trace-button");
 traceButton.addEventListener("click", () => {

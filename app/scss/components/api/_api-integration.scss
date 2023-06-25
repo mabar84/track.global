@@ -1,6 +1,6 @@
 .api-integration {
     padding: 82px 20px 82px 0;
-    @include for-1000-px {
+    @include for-1170-px {
         padding: 30px 10px 32px 0;
     }
     @include for-640-px {
@@ -73,7 +73,7 @@
             position: absolute;
             left: -6.3vw;
             bottom: 3.5vw;
-            @include for-1000-px {
+            @include for-1170-px {
                 width: 39vw;
                 height: 13.3vw;
                 left: -8.2vw;
@@ -98,7 +98,7 @@
             position: absolute;
             left: 23vw;
             bottom: 14.3vw;
-            @include for-1000-px {
+            @include for-1170-px {
                 padding: 11px 22px;
                 font-size: 18px;
                 left: 26vw;
@@ -119,7 +119,7 @@
                 position: absolute;
                 right: -45px;
                 bottom: -55px;
-                @include for-1000-px {
+                @include for-1170-px {
                     width: 90px;
                     height: 90px;
                     right: -40px;
