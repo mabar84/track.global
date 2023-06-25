@@ -44,18 +44,27 @@ if (window.innerWidth > 1000) {
 // api-settings-form
 const apiSettingsForm = document.querySelector(".api-settings-form");
 const apiSettingsItems = apiSettingsForm.querySelectorAll(".api-settings-item");
+const saveSettings = document.getElementById("save-settings");
+const rangeWidth = document.getElementById("rangeWidth");
+const rangeHeight = document.getElementById("rangeHeight");
+const rangeFontSize = document.getElementById("rangeFontSize");
+const scene = document.querySelector(".scene");
+let allSettings = {};
+
+rangeWidth.addEventListener("change", () => {
+  console.log(rangeWidth.value);
+});
 
 apiSettingsForm?.addEventListener("click", (e) => {
   const targetElement = e.target;
   if (targetElement.classList.contains("item-selected")) {
-    console.log(targetElement);
     targetElement.closest(".api-settings-item").classList.add("active");
   }
 
   if (targetElement.classList.contains("select-item")) {
     const item = targetElement.closest(".api-settings-item");
     const itemSelected = item.querySelector(".item-selected");
-    console.log(item.dataset.name);
+
     item.classList.remove("active");
     const selectItems = item.querySelectorAll(".select-item");
     selectItems.forEach((el) => {
@@ -66,6 +75,18 @@ apiSettingsForm?.addEventListener("click", (e) => {
 
     itemSelected.textContent = targetElement.textContent;
   }
+});
+
+saveSettings.addEventListener("click", () => {
+  apiSettingsItems.forEach((item) => {
+    const itemSelected = item.querySelector(".item-selected");
+    allSettings[item.dataset.name] = itemSelected?.textContent;
+  });
+  allSettings["width"] = rangeWidth.value;
+  allSettings["height"] = rangeHeight.value;
+  allSettings["font-size"] = rangeFontSize.value;
+  delete allSettings.partner;
+  console.log(allSettings);
 });
 
 //checkbox connect

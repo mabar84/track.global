@@ -18,7 +18,7 @@
         font-size: 12px;
         line-height: 20px;
         font-weight: normal;
-        margin-bottom: 12px;
+        margin-bottom: 16px;
         .api-link {
             color: #e24949;
             font-size: 14px;
@@ -202,6 +202,15 @@
                 border: 1px solid #dedede;
                 background: #fff;
             }
+        }
+    }
+
+    .scene {
+        margin: -5px auto 20px;
+        display: flex;
+        justify-content: center;
+        &.hidden {
+            display: none;
         }
     }
 }
