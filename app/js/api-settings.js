@@ -89,26 +89,19 @@ saveSettings.addEventListener("click", () => {
   console.log(allSettings);
 });
 
-//checkbox connect
-const connect = document.getElementById("connect");
-connect.addEventListener("change", () => {
-  console.log(connect.checked);
-});
-
 // modals popups
-//close modal
 const body = document.querySelector("body");
-
 const apiModalWrappers = document.querySelectorAll(".api-modal-wrapper");
 
-apiModalWrappers.forEach((el) => {
-  const modal = el.querySelector(".api-modal");
-  modal.addEventListener("click", (e) => {
-    if (e.target.dataset.after === "true") {
-      el.classList.add("hidden");
-      body.style.overflow = "inherit";
-    }
-  });
+// modal partner
+const apiModalPartner = document.querySelector(".api-modal-partner");
+const connect = document.getElementById("connect");
+
+connect.addEventListener("change", () => {
+  if (connect.checked) {
+    apiModalPartner.classList.remove("hidden");
+    body.style.overflow = "hidden";
+  }
 });
 
 //plugins cms
@@ -120,6 +113,55 @@ apiPlugins.addEventListener("click", (e) => {
     e.preventDefault;
     apiModalPlugins.classList.remove("hidden");
     body.style.overflow = "hidden";
+  }
+});
+
+// modal
+apiModalWrappers.forEach((el) => {
+  const modal = el.querySelector(".api-modal");
+  const modalInput = el.querySelector(".api-input");
+  const modalButton = el.querySelector(".api-button");
+  const modalClose = el.querySelector(".api-modal-close");
+
+  //activation modal-button
+  modalInput.addEventListener("input", () => {
+    if (modalInput.value.toLowerCase().indexOf("@") >= 0 && modalInput.value.toLowerCase().indexOf(".") >= 0) {
+      modalButton.classList.remove("disabled");
+    } else {
+      modalButton.classList.add("disabled");
+    }
+  });
+
+  modalButton.addEventListener("click", () => {
+    console.log(modalInput.id, modalInput.value);
+    allSettings[modalInput.id] = modalInput.value;
+    el.classList.add("hidden");
+    body.style.overflow = "inherit";
+  });
+
+  // close modal
+  modalClose.addEventListener("click", (e) => {
+    el.classList.add("hidden");
+    body.style.overflow = "inherit";
+
+    if (!allSettings["partner-email"]) {
+      connect.checked = false;
+    }
+  });
+});
+
+//cashbe
+const withCashbe = document.querySelector(".scene-with-cashbe");
+const withoutCashbe = document.querySelector(".scene-without-cashbe");
+
+const traceButton = document.getElementById("trace-button");
+traceButton.addEventListener("click", () => {
+  // console.log(allSettings["partner-email"]);
+  // console.log(connect.checked);
+  if (connect.checked && allSettings["partner-email"]) {
+    withCashbe.classList.remove("hidden");
+  } else {
+    withoutCashbe.classList.remove("hidden");
   }
 });
 
@@ -196,4 +238,26 @@ apiInputWrappers.forEach((el) => {
 //   $("#track_button_code").on("click", function () {
 //     copyTextarea();
 //   });
+// });
+
+//animation //show progress bar
+// const traceButton = document.getElementById("trace-button");
+// const progress = document.querySelector(".widgetProgressMain");
+// const submitButton = progress.querySelector(".hidden-submit-button");
+// traceButton.addEventListener("click", () => {
+//   console.log(progress);
+//   console.log(submitButton);
+//   progress.classList.add("top__progress-line-bg--active");
+//   submitButton.classList.add("top__search-btn--active");
+
+//   setAnimate(progress, "start", submitButton);
+//   getDeliveryData().then((data) => {
+//     setAnimate(progress, "end", submitButton);
+//   });
+//   setTimeout(() => {}, 1500);
+
+//   setTimeout(() => {
+//     console.log("замедление 1500мс");
+//     parcelWidget.classList.toggle("show-when-parcel-clicked");
+//   }, 1500);
 // });

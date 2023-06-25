@@ -84,23 +84,25 @@
       </div>
     </header>
     <div class="api-modal-wrapper api-modal-partner hidden">
-      <div class="api-modal" data-after="true">
+      <div class="api-modal">
+        <img class="api-modal-close" src="images/api/close.svg" alt="x" />
         <p class="api-modal-title">Оставьте свой email</p>
         <p class="api-modal-text">В ближайшее время мы предоставим вам информацию о подключении партнерской программы.</p>
         <div class="api-input-wrapper" data-after="true">
-          <input type="text" class="api-input" type="text" placeholder="Оставьте своей Email" />
+          <input id="partner-email" type="text" class="api-input" type="text" placeholder="Оставьте своей Email" />
         </div>
-        <button class="api-button">Оставить Email</button>
+        <button class="api-button disabled">Оставить Email</button>
       </div>
     </div>
     <div class="api-modal-wrapper api-modal-plugins hidden">
-      <div class="api-modal" data-after="true">
+      <div class="api-modal">
+        <img class="api-modal-close" src="images/api/close.svg" alt="x" />
         <p class="api-modal-title">На данный момент плагины находятся в разработке, пожалуйста оставьте свой email.</p>
         <p class="api-modal-text">Мы сообщим вам, как только плагины станут доступны.</p>
         <div class="api-input-wrapper" data-after="true">
-          <input type="text" class="api-input" type="text" placeholder="Оставьте своей Email" />
+          <input id="plugins-email" type="text" class="api-input" type="text" placeholder="Оставьте своей Email" />
         </div>
-        <button class="api-button">Оставить Email</button>
+        <button class="api-button disabled">Оставить Email</button>
       </div>
     </div>
 
@@ -219,7 +221,7 @@
               <div class="api-input-wrapper" data-after="true">
                 <input type="text" class="api-input" type="text" placeholder="Ссылка на работающее отслеживание" />
               </div>
-              <button class="api-button">отследить</button>
+              <button id="trace-button" class="api-button">отследить</button>
             </div>
 
             <div class="api-subtext">
@@ -227,8 +229,14 @@
               <a class="api-link" href="https://track.global/"> track.global </a>
             </div>
 
-            <div class="scene hidden">
-              <iframe class="scene" src="widgetContentMain.html" width="1140" height="1000" frameborder="0"></iframe>
+            <div class="top__progress-line-bg widgetProgressMain">
+              <div class="top__progress-line"></div>
+              <button class="hidden-submit-button"></button>
+            </div>
+
+            <div class="scene">
+              <iframe class="scene-with-cashbe hidden" src="widgetContentMain.html" width="1140" height="1000" frameborder="0"></iframe>
+              <iframe class="scene-without-cashbe hidden" src="widgetContentMainWithoutCashbe.html" width="1140" height="1000" frameborder="0"></iframe>
             </div>
 
             <form action="" method="post" class="api-settings-form">
