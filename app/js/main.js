@@ -333,7 +333,11 @@ rangeColor("rangeWidth");
 canc__range("rangeWidth", "calcWidth");
 rangeColor("rangeHeight");
 canc__range("rangeHeight", "calcHeight");
+rangeColor("rangeFontSize");
+// изменения ниже
+canc__range("rangeFontSize", "calcFontSize");
 rangeColor("rangeFrameHeight");
+// изменения выше
 canc__range("rangeFrameHeight", "calcFrameHeight");
 
 const copyTx = () => {

@@ -230,9 +230,8 @@
               <h3 class="form-title">Настройки</h3>
 
               <div class="api-settings-items">
-                <div class="api-settings-item">
+                <div class="api-settings-item" data-name="carrier">
                   <p class="item-title">Перевозчик</p>
-
                   <div class="relative-container">
                     <div class="item-selected">Почта России</div>
                     <div class="select-items">
@@ -241,27 +240,129 @@
                     </div>
                   </div>
                 </div>
-                <div class="api-settings-item">
-                  <p class="item-title">Перевозчик2</p>
-
+                <div class="api-settings-item" data-name="font">
+                  <p class="item-title">Шрифт</p>
                   <div class="relative-container">
-                    <div class="item-selected">П</div>
+                    <div class="item-selected">Montserrat</div>
                     <div class="select-items">
-                      <div class="select-item">Почта России3</div>
-                      <div class="select-item">Гермес4</div>
+                      <div class="select-item">Montserrat</div>
+                      <div class="select-item">Arial</div>
+                      <div class="select-item">Times New Roman</div>
                     </div>
                   </div>
                 </div>
-                <div class="api-settings-item">
-                  <p class="item-title">Перевозчик2</p>
-
+                <div class="api-settings-item" data-name="language">
+                  <p class="item-title">Язык</p>
                   <div class="relative-container">
-                    <div class="item-selected">П</div>
+                    <div class="item-selected">Русский</div>
                     <div class="select-items">
-                      <div class="select-item">Почта России3</div>
-                      <div class="select-item">Гермес4</div>
+                      <div class="select-item">Русский</div>
+                      <div class="select-item">English</div>
+                      <div class="select-item">Deutch</div>
                     </div>
                   </div>
+                </div>
+                <div class="api-settings-item" data-name="typeface">
+                  <p class="item-title">Гарнитура</p>
+                  <div class="relative-container">
+                    <div class="item-selected">Regular</div>
+                    <div class="select-items">
+                      <div class="select-item">Regular</div>
+                      <div class="select-item">Semibold</div>
+                      <div class="select-item">Bold</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="api-settings-item" data-name="width">
+                  <p class="item-title">Ширина</p>
+                  <div class="range-content">
+                    <div class="range-symbol">
+                      <input type="text" id="calcWidth" value="1140" placeholder="1140" />
+                      <span>Px</span>
+                    </div>
+                    <div class="range-slider">
+                      <input type="range" id="rangeWidth" min="320" max="1140" step="20" value="1140" name="WidgetUser[width]" />
+                      <div class="range-hint"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="api-settings-item" data-name="font-size">
+                  <p class="item-title">Кегль</p>
+                  <div class="range-content">
+                    <div class="range-symbol">
+                      <input type="text" id="calcFontSize" value="16" placeholder="16" />
+                      <span>Px</span>
+                    </div>
+                    <div class="range-slider">
+                      <input type="range" id="rangeFontSize" min="4" max="72" step="1" value="16" name="settings_font-size" />
+                      <div class="range-hint"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="api-settings-item" data-name="height">
+                  <p class="item-title">Высота</p>
+                  <div class="range-content">
+                    <div class="range-symbol">
+                      <input type="text" id="calcHeight" value="40" placeholder="40" />
+                      <span>Px</span>
+                    </div>
+                    <div class="range-slider">
+                      <input type="range" id="rangeHeight" min="40" max="200" step="5" value="40" name="settings_height" />
+                      <div class="range-hint"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="api-settings-item" data-name="type">
+                  <p class="item-title">Тип</p>
+                  <div class="relative-container">
+                    <div class="item-selected">Со сдвигом контента</div>
+                    <div class="select-items">
+                      <div class="select-item">Со сдвигом контента</div>
+                      <div class="select-item">Поверх контента</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="api-settings-item" data-name="partner">
+                  <p class="item-title">Партнерская программа</p>
+                  <div class="checkbox-wrapper">
+                    <input type="checkbox" class="custom-checkbox" id="connect" name="connect" />
+                    <label class="connect" for="connect">Подключить партнерскую программа Cashbe</label>
+                  </div>
+                </div>
+                <div class="api-settings-item color" data-name="color">
+                  <p class="item-title">Цвет</p>
+                  <div class="relative-container">
+                    <div class="item-selected">
+                      <div class="colored red"></div>
+                    </div>
+                    <div class="select-items">
+                      <div class="select-item">
+                        <div class="colored red"></div>
+                      </div>
+                      <div class="select-item">
+                        <div class="colored yellow"></div>
+                      </div>
+                      <div class="select-item">
+                        <div class="colored black"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" class="api-button">Сохранить настройки</button>
+
+              <div class="get-code">
+                <h3 class="form-title">Получить код</h3>
+                <p class="form-text">Скопируйте приведенный ниже код и вставьте его на свою страницу между тегами &lt;body&gt; и &lt;body&gt;.</p>
+
+                <button type="button" class="api-button">Копировать</button>
+
+                <div class="result">
+                  &lt;iframe src='https://track.global/iframe?wuid=0&init_params=eyJoZWlnaHQiOiI1MHB4In0=' id='track-widget' frameborder='0'
+                  width='1140'&gt;&lt;/iframe&gt; &lt;script&gt;const frame = document.querySelector('iframe#track-widget');window.onmessage = (e) =&gt; {const
+                  size = e.data;if (size.height) {const heightToSet = size.height &gt; 80 ? size.height : 80;frame.style.height = heightToSet + 10 +
+                  'px';}};&lt;/script&gt;
                 </div>
               </div>
             </form>
