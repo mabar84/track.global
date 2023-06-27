@@ -761,9 +761,13 @@
     </div>
     <script>
       const closeButton = document.querySelector(".tracking-widget__inner-btn-close");
+      const mainHtml = document.querySelector("html");
+      console.log(mainHtml);
+
       closeButton?.addEventListener("click", () => {
         mainWidget = document.getElementById("widgetContentMain");
         mainWidget.style.display = "none";
+        mainHtml.style.height = 0;
       });
     </script>
   </body>

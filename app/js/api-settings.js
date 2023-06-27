@@ -50,6 +50,7 @@ const scene = document.querySelector(".scene");
 const withCashbe = document.querySelector(".scene-with-cashbe");
 const withoutCashbe = document.querySelector(".scene-without-cashbe");
 const inputWidget = document.querySelector(".api-settings-input-widget");
+const responsiveContainer = document.querySelector(".responsive-container");
 
 let allSettings = {};
 
@@ -60,7 +61,7 @@ rangeHeight.addEventListener("input", () => {
 
 rangeWidth.addEventListener("input", () => {
   // console.log(rangeWidth.value);
-  inputWidget.style.width = rangeWidth.value + "px";
+  responsiveContainer.style.width = rangeWidth.value + "px";
   withCashbe.width = rangeWidth.value;
   withoutCashbe.width = rangeWidth.value;
 });
