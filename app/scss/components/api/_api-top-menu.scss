@@ -111,14 +111,14 @@
             display: none;
             @include for-640-px {
                 display: block;
-                height: 200px;
-                width: 286px;
+                width: 420px;
+                height: auto;
                 order: 1;
-                object-fit: contain;
+                object-fit: cover;
                 object-position: top;
             }
             @include for-440-px {
-                width: 220px;
+                width: calc(100% - 36px);
             }
         }
     }

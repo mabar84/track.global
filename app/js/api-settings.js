@@ -49,8 +49,6 @@ const rangeFontSize = document.getElementById("rangeFontSize");
 const scene = document.querySelector(".scene");
 const bigWidget = document.querySelector(".big-widget");
 const itemWithCashbe = bigWidget?.querySelector(".tracking-widget__list-item-cashbe");
-// const withCashbe = document.querySelector(".scene-with-cashbe");
-// const withoutCashbe = document.querySelector(".scene-without-cashbe");
 const inputWidget = document.querySelector(".api-settings-input-widget");
 const responsiveContainer = document.querySelector(".responsive-container");
 const closeButton = document.querySelector(".tracking-widget__inner-btn-close");
@@ -65,7 +63,6 @@ rangeHeight?.addEventListener("input", () => {
 rangeWidth?.addEventListener("input", () => {
   responsiveContainer.style.width = rangeWidth.value + "px";
   bigWidget.width = rangeWidth.value;
-  // withoutCashbe.width = rangeWidth.value;
   if (rangeWidth.value < 1026) {
     bigWidget.classList.add("big-widget_mobile");
   } else {
@@ -107,9 +104,7 @@ saveSettings?.addEventListener("click", () => {
   console.log(allSettings);
 
   bigWidget.classList.add("hidden");
-  // withoutCashbe.classList.add("hidden");
   bigWidget.width = allSettings.width;
-  // withoutCashbe.width = allSettings.width;
 });
 
 //close widget mobile
@@ -193,7 +188,6 @@ traceButton?.addEventListener("click", () => {
 
 // clear inputs
 const apiInputWrappers = document.querySelectorAll(".api-input-wrapper");
-
 apiInputWrappers?.forEach((el) => {
   el.addEventListener("click", (e) => {
     const input = el.querySelector(".api-input");
