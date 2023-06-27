@@ -296,11 +296,48 @@
     }
     .scene {
         width: 100%;
-        // margin: -5px auto 20px;
-        // display: flex;
-        // justify-content: center;
         .hidden {
             display: none;
+        }
+        .big-widget {
+            .tracking-widget__list-item-cashbe {
+                &.hidden {
+                    display: none;
+                }
+            }
+        }
+        .big-widget_mobile {
+            .tracking-widget__inner {
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+            }
+            .cashbe13 {
+                background: yellow;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                &.hidden {
+                    display: none;
+                }
+                .left {
+                    width: 36%;
+                    gap: 24px;
+                    flex-direction: column;
+                    gap: 10px;
+                    text-align: center;
+                    align-items: center;
+                }
+            }
+            .right {
+                width: 61%;
+                gap: 24px;
+                flex-direction: column;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                text-align: center;
+            }
         }
     }
 }

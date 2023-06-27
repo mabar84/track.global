@@ -41,29 +41,36 @@ if (window.innerWidth > 1000) {
 }
 // api-settings-form
 const apiSettingsForm = document.querySelector(".api-settings-form");
-const apiSettingsItems = apiSettingsForm.querySelectorAll(".api-settings-item");
+const apiSettingsItems = apiSettingsForm?.querySelectorAll(".api-settings-item");
 const saveSettings = document.getElementById("save-settings");
 const rangeWidth = document.getElementById("rangeWidth");
 const rangeHeight = document.getElementById("rangeHeight");
 const rangeFontSize = document.getElementById("rangeFontSize");
 const scene = document.querySelector(".scene");
-const withCashbe = document.querySelector(".scene-with-cashbe");
-const withoutCashbe = document.querySelector(".scene-without-cashbe");
+const bigWidget = document.querySelector(".big-widget");
+const itemWithCashbe = bigWidget?.querySelector(".tracking-widget__list-item-cashbe");
+// const withCashbe = document.querySelector(".scene-with-cashbe");
+// const withoutCashbe = document.querySelector(".scene-without-cashbe");
 const inputWidget = document.querySelector(".api-settings-input-widget");
 const responsiveContainer = document.querySelector(".responsive-container");
+const closeButton = document.querySelector(".tracking-widget__inner-btn-close");
+const closeButtonCashbe = document.querySelector(".tracking-widget__inner-btn-close-cashbe");
 
 let allSettings = {};
 
-rangeHeight.addEventListener("input", () => {
-  // console.log(rangeWidth.value);
+rangeHeight?.addEventListener("input", () => {
   inputWidget.style.height = rangeHeight.value + "px";
 });
 
-rangeWidth.addEventListener("input", () => {
-  // console.log(rangeWidth.value);
+rangeWidth?.addEventListener("input", () => {
   responsiveContainer.style.width = rangeWidth.value + "px";
-  withCashbe.width = rangeWidth.value;
-  withoutCashbe.width = rangeWidth.value;
+  bigWidget.width = rangeWidth.value;
+  // withoutCashbe.width = rangeWidth.value;
+  if (rangeWidth.value < 1026) {
+    bigWidget.classList.add("big-widget_mobile");
+  } else {
+    bigWidget.classList.remove("big-widget_mobile");
+  }
 });
 
 apiSettingsForm?.addEventListener("click", (e) => {
@@ -88,7 +95,7 @@ apiSettingsForm?.addEventListener("click", (e) => {
   }
 });
 
-saveSettings.addEventListener("click", () => {
+saveSettings?.addEventListener("click", () => {
   apiSettingsItems.forEach((item) => {
     const itemSelected = item.querySelector(".item-selected");
     allSettings[item.dataset.name] = itemSelected?.textContent;
@@ -99,10 +106,15 @@ saveSettings.addEventListener("click", () => {
   delete allSettings.partner;
   console.log(allSettings);
 
-  withCashbe.classList.add("hidden");
-  withoutCashbe.classList.add("hidden");
-  withCashbe.width = allSettings.width;
-  withoutCashbe.width = allSettings.width;
+  bigWidget.classList.add("hidden");
+  // withoutCashbe.classList.add("hidden");
+  bigWidget.width = allSettings.width;
+  // withoutCashbe.width = allSettings.width;
+});
+
+//close widget mobile
+closeButton?.addEventListener("click", () => {
+  bigWidget.classList.add("hidden");
 });
 
 // modals popups
@@ -113,7 +125,7 @@ const apiModalWrappers = document.querySelectorAll(".api-modal-wrapper");
 const apiModalPartner = document.querySelector(".api-modal-partner");
 const connect = document.getElementById("connect");
 
-connect.addEventListener("change", () => {
+connect?.addEventListener("change", () => {
   if (connect.checked) {
     apiModalPartner.classList.remove("hidden");
     body.style.overflow = "hidden";
@@ -124,7 +136,7 @@ connect.addEventListener("change", () => {
 const apiModalPlugins = document.querySelector(".api-modal-plugins");
 const apiPlugins = document.querySelector(".api-plugins");
 
-apiPlugins.addEventListener("click", (e) => {
+apiPlugins?.addEventListener("click", (e) => {
   if (e.target.classList.contains("card")) {
     e.preventDefault;
     apiModalPlugins.classList.remove("hidden");
@@ -133,14 +145,14 @@ apiPlugins.addEventListener("click", (e) => {
 });
 
 // modal
-apiModalWrappers.forEach((el) => {
+apiModalWrappers?.forEach((el) => {
   const modal = el.querySelector(".api-modal");
   const modalInput = el.querySelector(".api-input");
   const modalButton = el.querySelector(".api-button");
   const modalClose = el.querySelector(".api-modal-close");
 
   //activation modal-button
-  modalInput.addEventListener("input", () => {
+  modalInput?.addEventListener("input", () => {
     if (modalInput.value.toLowerCase().indexOf("@") >= 0 && modalInput.value.toLowerCase().indexOf(".") >= 0) {
       modalButton.classList.remove("disabled");
     } else {
@@ -148,7 +160,7 @@ apiModalWrappers.forEach((el) => {
     }
   });
 
-  modalButton.addEventListener("click", () => {
+  modalButton?.addEventListener("click", () => {
     console.log(modalInput.id, modalInput.value);
     allSettings[modalInput.id] = modalInput.value;
     el.classList.add("hidden");
@@ -156,7 +168,7 @@ apiModalWrappers.forEach((el) => {
   });
 
   // close modal
-  modalClose.addEventListener("click", (e) => {
+  modalClose?.addEventListener("click", (e) => {
     el.classList.add("hidden");
     body.style.overflow = "inherit";
 
@@ -169,20 +181,20 @@ apiModalWrappers.forEach((el) => {
 //cashbe
 
 const traceButton = document.getElementById("trace-button");
-traceButton.addEventListener("click", () => {
-  // console.log(allSettings["partner-email"]);
-  // console.log(connect.checked);
+traceButton?.addEventListener("click", () => {
   if (connect.checked && allSettings["partner-email"]) {
-    withCashbe.classList.remove("hidden");
+    bigWidget.classList.remove("hidden");
+    itemWithCashbe.classList.remove("hidden");
   } else {
-    withoutCashbe.classList.remove("hidden");
+    bigWidget.classList.remove("hidden");
+    itemWithCashbe.classList.add("hidden");
   }
 });
 
 // clear inputs
 const apiInputWrappers = document.querySelectorAll(".api-input-wrapper");
 
-apiInputWrappers.forEach((el) => {
+apiInputWrappers?.forEach((el) => {
   el.addEventListener("click", (e) => {
     const input = el.querySelector(".api-input");
     if (e.target.dataset.after === "true") {
@@ -190,88 +202,3 @@ apiInputWrappers.forEach((el) => {
     }
   });
 });
-
-//custom-selects
-
-// function setTrackIframeCode() {
-//   const code = $("#track_code_value").val();
-//   const wuid = $("#wuid").val();
-//   let width = $("#calcWidth").val();
-//   const height = $("#calcFrameHeight").val();
-
-//   const initParams = btoa(JSON.stringify({ height: height + "px" }));
-//   const frameCode = code.replace("#width", width).replace("#initparams", initParams).replace("#wuid", wuid);
-//   $("#track_tx_code").text(frameCode);
-
-//   const maxWidth = window.innerWidth - 35;
-//   if (width > maxWidth) {
-//     width = maxWidth;
-//   }
-
-//   $("#tracking-widget").css({ width: width + "px" });
-//   $(".tracking-widget-form").css({ width: width + "px" });
-//   $(".top__search-btn").css({ height: height + "px" });
-//   $(".tracking-widget__input").css({ height: height + "px" });
-// }
-
-// function copyTextarea() {
-//   var textarea = document.getElementById("track_tx_code");
-//   textarea.select();
-//   document.execCommand("copy");
-// }
-
-// $(function () {
-//   setTrackIframeCode();
-//   setSession("no_banner", 1);
-//   $(document).on("click", "#check-ajax", function (e) {
-//     e.preventDefault();
-//     setTimeout(function () {
-//       track = $("#track-code").val();
-//       $.get(
-//         "/ajax-track",
-//         {
-//           track: track,
-//           client_id: 0,
-//           short_notfound: 1,
-//         },
-//         function (html) {
-//           $("#widgetContentMain").html(html);
-//         }
-//       );
-//     }, 300);
-//   });
-
-//   $("input[type=range]").on("input", function () {
-//     setTrackIframeCode();
-//   });
-
-//   $("input[type=radio]").on("input", function () {
-//     setTrackIframeCode();
-//   });
-
-//   $("#track_button_code").on("click", function () {
-//     copyTextarea();
-//   });
-// });
-
-//animation //show progress bar
-// const traceButton = document.getElementById("trace-button");
-// const progress = document.querySelector(".widgetProgressMain");
-// const submitButton = progress.querySelector(".hidden-submit-button");
-// traceButton.addEventListener("click", () => {
-//   console.log(progress);
-//   console.log(submitButton);
-//   progress.classList.add("top__progress-line-bg--active");
-//   submitButton.classList.add("top__search-btn--active");
-
-//   setAnimate(progress, "start", submitButton);
-//   getDeliveryData().then((data) => {
-//     setAnimate(progress, "end", submitButton);
-//   });
-//   setTimeout(() => {}, 1500);
-
-//   setTimeout(() => {
-//     console.log("замедление 1500мс");
-//     parcelWidget.classList.toggle("show-when-parcel-clicked");
-//   }, 1500);
-// });
