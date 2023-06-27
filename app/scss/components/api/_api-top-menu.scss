@@ -3,8 +3,12 @@
         position: relative;
         display: block;
         cursor: pointer;
+        padding-top: 10px;
+        padding-bottom: 10px;
         @include for-1000-px {
-            width: 100%;
+            // width: 100%;
+            padding-top: 0;
+            padding-bottom: 0;
             margin-right: 0;
             text-align: center;
         }
@@ -39,10 +43,9 @@
             display: none;
             @include for-1000-px {
                 margin-top: 10px;
-                border-radius: 4px;
-                border: 1px solid #e6e6e6;
-                background: #fff;
+                // border: none;
                 position: sticky;
+                width: 100vw;
             }
             .header__menu-submenu-link {
                 padding: 16px;
@@ -55,6 +58,10 @@
                 }
             }
         }
+    }
+    .header__lang {
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
 .home .top.api-top {

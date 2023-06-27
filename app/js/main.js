@@ -561,6 +561,7 @@ $(function (e) {
     let short_enabled = btn.dataset.short;
     const close = form.querySelector(".tracking-widget__btn-close");
     const closeContentBtn = document.querySelector(".tracking-widget__inner-btn-close");
+
     let heading;
     let user_id;
     let no_banner = document.querySelector(".no-any-banner");

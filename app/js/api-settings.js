@@ -53,12 +53,12 @@ const inputWidget = document.querySelector(".api-settings-input-widget");
 
 let allSettings = {};
 
-rangeHeight.addEventListener("change", () => {
+rangeHeight.addEventListener("input", () => {
   // console.log(rangeWidth.value);
   inputWidget.style.height = rangeHeight.value + "px";
 });
 
-rangeWidth.addEventListener("change", () => {
+rangeWidth.addEventListener("input", () => {
   // console.log(rangeWidth.value);
   inputWidget.style.width = rangeWidth.value + "px";
   withCashbe.width = rangeWidth.value;
