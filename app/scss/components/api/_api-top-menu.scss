@@ -1,4 +1,5 @@
 .header.api-header {
+    z-index: 11;
     .header__menu-item {
         position: relative;
         display: block;
@@ -6,7 +7,6 @@
         padding-top: 10px;
         padding-bottom: 10px;
         @include for-1000-px {
-            // width: 100%;
             padding-top: 0;
             padding-bottom: 0;
             margin-right: 0;
