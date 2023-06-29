@@ -64,6 +64,11 @@ rangeWidth?.addEventListener("input", () => {
   responsiveContainer.style.width = rangeWidth.value + "px";
   bigWidget.width = rangeWidth.value;
   if (rangeWidth.value < 1026) {
+    bigWidget.classList.add("big-widget_tablet");
+  } else {
+    bigWidget.classList.remove("big-widget_tablet");
+  }
+  if (rangeWidth.value < 500) {
     bigWidget.classList.add("big-widget_mobile");
   } else {
     bigWidget.classList.remove("big-widget_mobile");

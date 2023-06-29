@@ -313,38 +313,70 @@
                     display: none;
                 }
             }
-        }
-        .big-widget_mobile {
-            .tracking-widget__inner {
-                display: flex;
-                flex-direction: column;
-                overflow: hidden;
-            }
-            .cashbe13 {
-                background: yellow;
-                width: 100%;
-                flex-direction: column;
-                align-items: center;
-                &.hidden {
-                    display: none;
-                }
-                .left {
-                    width: 36%;
-                    gap: 24px;
+            &.big-widget_tablet {
+                .tracking-widget__inner {
+                    display: flex;
                     flex-direction: column;
-                    gap: 10px;
-                    text-align: center;
-                    align-items: center;
+                    overflow: hidden;
                 }
             }
-            .right {
-                width: 61%;
-                gap: 24px;
-                flex-direction: column;
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
-                text-align: center;
+            &.big-widget_mobile {
+                .tracking-widget__content {
+                    .tracking-widget__list {
+                        &:before {
+                            left: 14px;
+                            bottom: 60px;
+                            top: -20px;
+                        }
+                        .tracking-widget__list-item {
+                            display: flex;
+                            -webkit-box-orient: vertical;
+                            -webkit-box-direction: normal;
+                            -ms-flex-direction: column;
+                            flex-direction: column;
+                            .tracking-widget__list-date {
+                                position: absolute;
+                                left: 81px;
+                                -webkit-box-orient: horizontal;
+                                -webkit-box-direction: normal;
+                                -ms-flex-direction: row;
+                                flex-direction: row;
+                                width: auto;
+                                padding-right: 0;
+                                &:after {
+                                    left: -81px;
+                                    top: 0;
+                                }
+                                .tracking-widget__date {
+                                    margin-right: 10px;
+                                    display: block;
+                                    font-size: 14px;
+                                    line-height: 17px;
+                                }
+                            }
+                            .tracking-widget__list-content {
+                                padding-left: 40px;
+                                .tracking-widget__list-img {
+                                    width: 30px;
+                                    height: 30px;
+                                }
+                                .tracking-widget__list-img svg {
+                                    width: 30px;
+                                    height: 30px;
+                                }
+                                .tracking-widget__list-box {
+                                    margin-top: 30px;
+                                    .tracking-widget__list-text {
+                                        display: block;
+                                        margin-bottom: 5px;
+                                        font-size: 14px;
+                                        line-height: 17px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
