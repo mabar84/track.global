@@ -40,6 +40,14 @@
                 font-size: 12px;
             }
         }
+        &.api-settings-input-widget-mobile {
+            gap: 10px;
+            .api-button {
+                padding-right: 10px;
+                padding-left: 10px;
+                font-size: 12px;
+            }
+        }
     }
     .api-subtext {
         color: #000;

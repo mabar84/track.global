@@ -68,6 +68,11 @@ rangeWidth?.addEventListener("input", () => {
   } else {
     bigWidget.classList.remove("big-widget_mobile");
   }
+  if (rangeWidth.value < 441) {
+    inputWidget.classList.add("api-settings-input-widget-mobile");
+  } else {
+    inputWidget.classList.remove("api-settings-input-widget-mobile");
+  }
 });
 
 apiSettingsForm?.addEventListener("click", (e) => {
@@ -179,10 +184,10 @@ const traceButton = document.getElementById("trace-button");
 traceButton?.addEventListener("click", () => {
   if (connect.checked && allSettings["partner-email"]) {
     bigWidget.classList.remove("hidden");
-    itemWithCashbe.classList.remove("hidden");
+    // itemWithCashbe.classList.remove("hidden");
   } else {
     bigWidget.classList.remove("hidden");
-    itemWithCashbe.classList.add("hidden");
+    // itemWithCashbe.classList.add("hidden");
   }
 });
 
