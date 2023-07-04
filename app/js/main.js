@@ -474,6 +474,7 @@ const changeSettings = () => {
 const setAnimate = (progress, func, btn) => {
   console.log(progress);
   console.log(btn);
+  console.log("yo");
   let count = 0;
   const progresPercent = progress.querySelector(".top__progress-line");
 

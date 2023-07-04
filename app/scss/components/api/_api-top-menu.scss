@@ -12,6 +12,12 @@
             margin-right: 0;
             text-align: center;
         }
+        &:not(:last-child) {
+            margin-right: 30px;
+            @include for-1000-px {
+                margin-right: 0;
+            }
+        }
         .header__menu-item-link {
             &::before {
                 @include for-1000-px {
@@ -63,6 +69,11 @@
         padding-top: 10px;
         padding-bottom: 10px;
     }
+    .through-insert__mobile-hidden {
+        @include for-440-px {
+            margin-right: -60px;
+        }
+    }
 }
 .home .top.api-top {
     height: 240px;
@@ -80,12 +91,16 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include for-1000-px {
+            padding-top: 35px;
+        }
         @include for-725-px {
             min-height: auto;
         }
         @include for-640-px {
             flex-direction: column;
             gap: 35px;
+            padding-top: 25px;
         }
         .promo-pc {
             object-fit: contain;
@@ -110,6 +125,7 @@
         .promo-mobile {
             display: none;
             @include for-640-px {
+                margin-top: -30px;
                 display: block;
                 width: 420px;
                 height: auto;
@@ -137,7 +153,7 @@
             padding-right: 0px;
         }
         @include for-1000-px {
-            margin-top: -30px;
+            margin-top: -70px;
             font-size: 30px;
             line-height: 37px;
         }

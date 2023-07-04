@@ -184,3 +184,25 @@ apiInputWrappers?.forEach((el) => {
     }
   });
 });
+
+const btn = document.querySelector(".top__search-btn");
+
+btn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  heading = document.querySelector("h1");
+  user_id = document.querySelector("#user_id");
+  if (heading) {
+    heading = heading.innerText;
+    document.cookie = "heading=" + encodeURIComponent(heading) + "; path=/";
+    setSession("heading", heading);
+  } else {
+    document.cookie = "heading=" + encodeURIComponent(document.title) + "; path=/";
+    setSession("heading", document.title);
+  }
+  if (user_id) {
+    setSession("user_id", user_id.value);
+  }
+
+  btn.classList.add("top__search-btn--active");
+});

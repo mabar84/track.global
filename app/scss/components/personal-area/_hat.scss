@@ -1,7 +1,10 @@
 .user {
     display: flex;
     align-items: center;
-    margin-right: 30px;
+    margin-right: 10px;
+    @include for-1000-px {
+        margin-right: 0;
+    }
     .wrapper {
         background: transparent;
         width: max-content;
@@ -26,7 +29,7 @@
         font-size: 12px;
         line-height: 15px;
         color: #000000;
-        max-width:100px;
+        max-width: 115px;
         word-break: break-all;
         & span {
             cursor: pointer;
@@ -62,12 +65,12 @@
 }
 .hat {
     @include for-1000-px {
-        padding: 20px 15px 15px;
+        padding: 20px 15px 0;
         position: absolute;
         left: 0px;
         right: 0;
         background: #ffffff;
-        top: 70px;
+        top: 60px;
         display: flex;
         justify-content: space-between;
     }
