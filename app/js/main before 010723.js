@@ -143,32 +143,15 @@ if (
   document.querySelector(".poshta-reviews__box-star")
 ) {
   $(function () {
-    let ratingDb = $("#rating").text();
     $(".services-pochta__star").rateYo({
       starWidth: "20px",
       normalFill: "#d6d6d6",
       ratedFill: "#E24949",
       spacing: "2px",
       fullStar: true,
-      rating: ratingDb,
       onSet: function (rating, rateYoInstance) {
         rating = Math.ceil(rating);
-        let type = this.dataset.type;
-        let serviceId = this.dataset.id;
-        const csrfToken = $('meta[name="csrf-token"]').attr("content");
-        // Send AJAX request
-        $.ajax({
-          type: "POST",
-          url: "/service/refresh-rating", // Replace with the actual URL for your AJAX endpoint
-          data: { rating: rating, type: type, id: serviceId, "_csrf-frontend": csrfToken },
-          success: function (response) {
-            $("#rating-count").html(response);
-          },
-          error: function (xhr, status, error) {
-            // Handle the error
-            console.error("AJAX request failed");
-          },
-        });
+        $("#rating_input").val(rating);
       },
     });
 
@@ -350,8 +333,10 @@ rangeColor("rangeWidth");
 canc__range("rangeWidth", "calcWidth");
 rangeColor("rangeHeight");
 canc__range("rangeHeight", "calcHeight");
+// изменения ниже
 rangeColor("rangeFontSize");
 canc__range("rangeFontSize", "calcFontSize");
+// изменения выше
 rangeColor("rangeFrameHeight");
 canc__range("rangeFrameHeight", "calcFrameHeight");
 
@@ -472,8 +457,6 @@ const changeSettings = () => {
 };
 
 const setAnimate = (progress, func, btn) => {
-  console.log(progress);
-  console.log(btn);
   let count = 0;
   const progresPercent = progress.querySelector(".top__progress-line");
 
@@ -578,6 +561,7 @@ $(function (e) {
     let short_enabled = btn.dataset.short;
     const close = form.querySelector(".tracking-widget__btn-close");
     const closeContentBtn = document.querySelector(".tracking-widget__inner-btn-close");
+
     let heading;
     let user_id;
     let no_banner = document.querySelector(".no-any-banner");
@@ -1304,54 +1288,4 @@ function bannerCheck() {
       bannerAside.classList.add("hide");
     }
   }
-}
-
-let blueButton = document.querySelector(".toshopping");
-if (blueButton) {
-  let block = document.querySelector(".big-cashbe");
-  block.addEventListener("click", () => {
-    window.open(blueButton.href);
-  });
-}
-
-//api-header-menu
-const headerNav = document.querySelector(".header__nav");
-const menuItems = headerNav.querySelectorAll(".header__menu-item");
-const allSubmenu = document.querySelectorAll(".header__menu-submenu");
-
-// show/close menu-additional
-if (window.innerWidth > 1000) {
-  menuItems.forEach((el) => {
-    el.addEventListener("mouseenter", () => {
-      const submenu = el.querySelector(".header__menu-submenu");
-
-      menuItems.forEach((sm) => {
-        sm.classList.remove("active");
-      });
-      el.classList.add("active");
-    });
-  });
-
-  headerNav.addEventListener("mouseleave", () => {
-    menuItems.forEach((sm) => {
-      sm.classList.remove("active");
-    });
-  });
-} else {
-  menuItems.forEach((el) => {
-    el.addEventListener("click", () => {
-      if (el.classList.contains("active")) {
-        el.classList.remove("active");
-      } else {
-        const submenu = el.querySelector(".header__menu-submenu");
-        el.classList.toggle("active");
-
-        menuItems.forEach((sm) => {
-          sm.classList.remove("active");
-        });
-
-        el.classList.add("active");
-      }
-    });
-  });
 }

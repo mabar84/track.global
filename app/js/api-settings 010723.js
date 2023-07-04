@@ -1,4 +1,44 @@
+//api-header-menu
+const headerNav = document.querySelector(".header__nav");
+const menuItems = headerNav.querySelectorAll(".header__menu-item");
+const allSubmenu = document.querySelectorAll(".header__menu-submenu");
 
+// show/close menu-additional
+if (window.innerWidth > 1000) {
+  menuItems.forEach((el) => {
+    el.addEventListener("mouseenter", () => {
+      const submenu = el.querySelector(".header__menu-submenu");
+
+      menuItems.forEach((sm) => {
+        sm.classList.remove("active");
+      });
+      el.classList.add("active");
+    });
+  });
+
+  headerNav.addEventListener("mouseleave", () => {
+    menuItems.forEach((sm) => {
+      sm.classList.remove("active");
+    });
+  });
+} else {
+  menuItems.forEach((el) => {
+    el.addEventListener("click", () => {
+      if (el.classList.contains("active")) {
+        el.classList.remove("active");
+      } else {
+        const submenu = el.querySelector(".header__menu-submenu");
+        el.classList.toggle("active");
+
+        menuItems.forEach((sm) => {
+          sm.classList.remove("active");
+        });
+
+        el.classList.add("active");
+      }
+    });
+  });
+}
 // api-settings-form
 const apiSettingsForm = document.querySelector(".api-settings-form");
 const apiSettingsItems = apiSettingsForm?.querySelectorAll(".api-settings-item");
@@ -147,20 +187,6 @@ apiModalWrappers?.forEach((el) => {
 
 const traceButton = document.getElementById("trace-button");
 traceButton?.addEventListener("click", () => {
-  const progress = document.querySelector('#widgetProgressMain');
-  const btn = document.querySelector('#trace-button');
-  setSession('no_banner', 1);
-  setAnimate(progress, 'start', btn);
-  setTimeout(function (){
-    track = $('#track-code').val()
-    $.get('/ajax-track', {
-      track: track,
-      client_id: 0,
-    }, function (html) {
-      $('#widgetContentMain').html(html);
-      setAnimate(progress, 'end', btn);
-    });
-  }, 300);
   if (connect.checked && allSettings["partner-email"]) {
     bigWidget.classList.remove("hidden");
     // itemWithCashbe.classList.remove("hidden");
