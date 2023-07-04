@@ -8,15 +8,13 @@
         padding-top: 0;
     }
     .top__inner {
-        // position: static;
         &::before {
             background-image: url("../images/404/box404.svg");
-            width: 622px;
-            height: 418px;
-            left: 0;
+            width: 562px;
+            height: 378px;
+            left: -14px;
             top: 10px;
             position: absolute;
-            display: none;
             @include for-1000-px {
                 width: 372px;
                 height: 351px;
@@ -29,11 +27,8 @@
                 height: 267px;
                 left: 50%;
                 bottom: auto;
-                top: -45px;
+                top: -25px;
                 transform: translateX(-50%);
-            }
-            @include for-640-px {
-                top: -60px;
             }
         }
         .top__content {
