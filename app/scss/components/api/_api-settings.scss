@@ -19,6 +19,11 @@
     }
     .responsive-container {
         margin: 0 auto;
+        position: relative;
+        .top__progress-line-bg {
+            bottom: 0px;
+            position: relative;
+        }
     }
     .api-settings-input-widget {
         height: 50px;

@@ -8,12 +8,15 @@
         padding-top: 0;
     }
     .top__inner {
+        // position: static;
         &::before {
             background-image: url("../images/404/box404.svg");
-            width: 644px;
-            height: 607px;
-            left: -90px;
-            bottom: -140px;
+            width: 622px;
+            height: 418px;
+            left: 0;
+            top: 10px;
+            position: absolute;
+            display: none;
             @include for-1000-px {
                 width: 372px;
                 height: 351px;

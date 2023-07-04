@@ -1,4 +1,3 @@
-
 // api-settings-form
 const apiSettingsForm = document.querySelector(".api-settings-form");
 const apiSettingsItems = apiSettingsForm?.querySelectorAll(".api-settings-item");
@@ -147,19 +146,24 @@ apiModalWrappers?.forEach((el) => {
 
 const traceButton = document.getElementById("trace-button");
 traceButton?.addEventListener("click", () => {
-  const progress = document.querySelector('#widgetProgressMain');
-  const btn = document.querySelector('#trace-button');
-  setSession('no_banner', 1);
-  setAnimate(progress, 'start', btn);
-  setTimeout(function (){
-    track = $('#track-code').val()
-    $.get('/ajax-track', {
-      track: track,
-      client_id: 0,
-    }, function (html) {
-      $('#widgetContentMain').html(html);
-      setAnimate(progress, 'end', btn);
-    });
+  const progress = document.querySelector("#widgetProgressMain");
+  progress.style.display = "block";
+  const btn = document.querySelector("#trace-button");
+  setSession("no_banner", 1);
+  setAnimate(progress, "start", btn);
+  setTimeout(function () {
+    track = $("#track-code").val();
+    $.get(
+      "/ajax-track",
+      {
+        track: track,
+        client_id: 0,
+      },
+      function (html) {
+        $("#widgetProgressMain").html(html);
+        setAnimate(progress, "end", btn);
+      }
+    );
   }, 300);
   if (connect.checked && allSettings["partner-email"]) {
     bigWidget.classList.remove("hidden");
