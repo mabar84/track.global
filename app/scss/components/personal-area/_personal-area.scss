@@ -7,6 +7,10 @@
                 margin-right: 15px;
                 margin-left: 15px;
             }
+            @include for-1170-px {
+                margin-right: 0;
+                margin-left: 0;
+            }
             &-item {
                 padding-right: 20px;
                 padding-left: 20px;
@@ -23,7 +27,7 @@
         }
         &.z2 {
             padding-bottom: 23px;
-            z-index: 2;
+            z-index: 11;
             background: #fff;
             @include for-1170-px {
                 padding-bottom: 50px;
@@ -141,6 +145,7 @@
 }
 
 .switch-header-parcel.active {
+    // z-index: 101;
     span {
         &:nth-child(1) {
             transform: rotate(45deg);
@@ -159,7 +164,14 @@
     top: 0;
     left: 0;
     right: 0;
+    .header__nav {
+        background: #fbfbfb;
+    }
     @include for-1000-px {
         position: static;
+    }
+    &.parcel {
+        // padding-top: 70px;
+        z-index: 11;
     }
 }
