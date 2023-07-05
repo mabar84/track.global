@@ -172,49 +172,203 @@
         }
     }
 }
+// .big-cashbe {
+//     margin: 30px auto;
+//     @include for-1025-px {
+//         margin: 0 auto 20px;
+//     }
+//     @include for-640-px {
+//         margin: 0px auto 10px;
+//     }
+//     .content {
+//         padding: 20px 0;
+//         margin: 0 auto;
+//         display: flex;
+//         justify-content: center;
+//         gap: 40px;
+//         @include for-1025-px {
+//             padding: 10px 0;
+//             gap: 16px;
+//         }
+//         @include for-769-px {
+//             flex-direction: column;
+//             align-items: center;
+//         }
+//         @include for-640-px {
+//             padding-top: 0;
+//             gap: 10px;
+//         }
+//         .left {
+//             display: flex;
+//             align-items: center;
+//             gap: 16px;
+//             @include for-1025-px {
+//                 gap: 14px;
+//             }
+//             @include for-640-px {
+//                 gap: 5px;
+//             }
+//         }
+//         .logo {
+//             width: 162px;
+//             height: 33px;
+//             @include for-1025-px {
+//                 width: 162px;
+//                 height: 33px;
+//             }
+//             @include for-640-px {
+//                 width: 76px;
+//                 height: 16px;
+//             }
+//         }
+//         .sign {
+//             font-style: normal;
+//             font-weight: 600;
+//             font-size: 30px;
+//             line-height: 37px;
+//             text-align: right;
+//             color: #e24949;
+//             opacity: 0.9;
+//             @include for-640-px {
+//                 font-size: 16px;
+//                 line-height: 20px;
+//             }
+//         }
+//         .text {
+//             font-style: normal;
+//             font-weight: 600;
+//             font-size: 20px;
+//             line-height: 24px;
+//             color: #e24949;
+//             opacity: 0.9;
+//             @include for-640-px {
+//                 font-size: 12px;
+//                 line-height: 15px;
+//             }
+//         }
+//         .subtext {
+//             font-style: normal;
+//             font-weight: 400;
+//             font-size: 14px;
+//             line-height: 17px;
+//             display: flex;
+//             align-items: center;
+//             color: #979797;
+//             @include for-640-px {
+//                 font-size: 10px;
+//                 line-height: 12px;
+//             }
+//         }
+//         .toshopping {
+//             width: 173px;
+//             height: 44px;
+//             padding: 12px 28px;
+//             background: #ffffff;
+//             border: 1px solid #e7262e;
+//             border-radius: 8px;
+//             font-style: normal;
+//             font-weight: 500;
+//             font-size: 16px;
+//             line-height: 20px;
+//             color: #e7262e;
+//             opacity: 0.9;
+//             transition: 0.3s;
+//             text-align: center;
+//             @include for-640-px {
+//                 width: calc(100vw - 30px);
+//             }
+//             &:hover {
+//                 background: #e7262e;
+//                 color: #ffffff;
+//                 opacity: 0.9;
+//             }
+//         }
+//     }
+// }
 .big-cashbe {
-    margin: 30px auto;
-    @include for-1025-px {
-        margin: 0 auto 20px;
+    height: 106px;
+    margin: 30px -15px;
+
+    margin-left: -15px;
+    border: 2px dashed #e24949;
+    border-radius: 3px;
+    background: #fbfbfb;
+    @include for-1170-px {
+        height: 76px;
+        // margin: 0 auto 20px;
     }
-    @include for-640-px {
-        margin: 0px auto 10px;
+    @include for-767-px {
+        padding: 0;
+        height: max-content;
+        margin: 0px -10px 10px;
     }
+    @include for-440-px {
+        padding: 10px 0 0;
+    }
+
     .content {
-        padding: 20px 0;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-        @include for-1025-px {
-            padding: 10px 0;
-            gap: 16px;
+        display: grid;
+        grid-template-columns: 190px 1fr 270px;
+        grid-template-areas: "girl formula toshopping";
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 30px;
+        @include for-1170-px {
+            grid-template-columns: 90px max-content 140px;
+            padding: 0 20px 0 0;
         }
-        @include for-769-px {
-            flex-direction: column;
-            align-items: center;
+        @include for-767-px {
+            padding: 0;
+            grid-template-columns: max-content 1fr;
+            grid-template-areas:
+                "girl formula"
+                "girl toshopping";
         }
-        @include for-640-px {
-            padding-top: 0;
-            gap: 10px;
+        @include for-440-px {
+            grid-template-columns: 90px 206px;
+            grid-template-areas:
+                "formula formula"
+                "girl toshopping";
         }
-        .left {
+        .formula {
+            grid-area: formula;
             display: flex;
+            gap: 20px;
             align-items: center;
-            gap: 16px;
+            justify-content: space-between;
             @include for-1025-px {
-                gap: 14px;
+                gap: 8px;
             }
-            @include for-640-px {
-                gap: 5px;
+            @include for-767-px {
+                gap: 4px;
+                width: max-content;
+                margin: 0 auto;
+            }
+        }
+        .girl {
+            grid-area: girl;
+            height: 102px;
+            width: 150px;
+            object-fit: cover;
+            @include for-1170-px {
+                height: 72px;
+                width: 90px;
+            }
+            @include for-767-px {
+                width: 120px;
+                height: 102px;
+            }
+            @include for-440-px {
+                width: 90px;
+                height: 60px;
             }
         }
         .logo {
-            width: 162px;
-            height: 33px;
-            @include for-1025-px {
-                width: 162px;
-                height: 33px;
+            width: 214px;
+            height: 44px;
+            @include for-1170-px {
+                width: 148px;
+                height: 30px;
             }
             @include for-640-px {
                 width: 76px;
@@ -224,11 +378,14 @@
         .sign {
             font-style: normal;
             font-weight: 600;
-            font-size: 30px;
-            line-height: 37px;
+            font-size: 40px;
+            line-height: 46px;
             text-align: right;
             color: #e24949;
-            opacity: 0.9;
+            @include for-1025-px {
+                font-size: 30px;
+                line-height: 34px;
+            }
             @include for-640-px {
                 font-size: 16px;
                 line-height: 20px;
@@ -237,11 +394,16 @@
         .text {
             font-style: normal;
             font-weight: 600;
-            font-size: 20px;
-            line-height: 24px;
+            font-size: 24px;
+            line-height: 29px;
             color: #e24949;
-            opacity: 0.9;
+            white-space: nowrap;
+            @include for-1025-px {
+                font-size: 18px;
+                line-height: 22px;
+            }
             @include for-640-px {
+                opacity: 0.9;
                 font-size: 12px;
                 line-height: 15px;
             }
@@ -253,34 +415,53 @@
             line-height: 17px;
             display: flex;
             align-items: center;
-            color: #979797;
+            color: #23315d;
+            white-space: nowrap;
+            @include for-1025-px {
+                font-size: 12px;
+                line-height: 15px;
+            }
             @include for-640-px {
-                font-size: 10px;
-                line-height: 12px;
+                font-size: 9px;
+                line-height: 11px;
             }
         }
         .toshopping {
-            width: 173px;
+            grid-area: toshopping;
+            justify-self: end;
             height: 44px;
+            width: max-content;
             padding: 12px 28px;
             background: #ffffff;
-            border: 1px solid #e7262e;
+            color: #ffffff;
             border-radius: 8px;
             font-style: normal;
             font-weight: 500;
-            font-size: 16px;
-            line-height: 20px;
-            color: #e7262e;
+            font-size: 18px;
+            line-height: 22px;
             opacity: 0.9;
             transition: 0.3s;
             text-align: center;
-            @include for-640-px {
-                width: calc(100vw - 30px);
+            background: #23315d;
+            border: 1px solid #23315d;
+            border-radius: 8px;
+            @include for-1025-px {
+                padding: 8px 18px;
+                height: 33px;
+                font-size: 14px;
+                line-height: 17px;
+            }
+            @include for-767-px {
+                min-width: 206px;
+                justify-self: center;
+            }
+            @include for-440-px {
+                margin-right: 10px;
             }
             &:hover {
-                background: #e7262e;
-                color: #ffffff;
-                opacity: 0.9;
+                border: 1px solid #23315d;
+                background: #ffffff;
+                color: #23315d;
             }
         }
     }

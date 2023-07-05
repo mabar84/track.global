@@ -145,7 +145,6 @@
 }
 
 .switch-header-parcel.active {
-    // z-index: 101;
     span {
         &:nth-child(1) {
             transform: rotate(45deg);
@@ -164,14 +163,10 @@
     top: 0;
     left: 0;
     right: 0;
-    .header__nav {
-        // background: #fbfbfb;
-    }
     @include for-1000-px {
         position: static;
     }
     &.parcel {
-        // padding-top: 70px;
         z-index: 11;
     }
 }
