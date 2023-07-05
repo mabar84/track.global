@@ -69,6 +69,11 @@
         padding-top: 10px;
         padding-bottom: 10px;
     }
+    .through-insert {
+        @include for-1170-px {
+            margin-right: 45px;
+        }
+    }
     .through-insert__mobile-hidden {
         @include for-440-px {
             margin-right: -60px;
@@ -144,11 +149,10 @@
     .top__inner::before {
         display: none;
     }
-    .top__title {
+    .home .top__title {
         padding-right: 60px;
         margin-top: -30px;
         margin-bottom: 0;
-        color: #e24949;
         font-size: 36px;
         font-weight: 900;
         text-transform: uppercase;
@@ -156,9 +160,10 @@
             padding-right: 0px;
         }
         @include for-1000-px {
-            margin-top: -70px;
+            // margin-top: -70px;
             font-size: 30px;
             line-height: 37px;
+            background: red;
         }
         @include for-725-px {
             text-align: left;
@@ -171,5 +176,10 @@
             font-size: 18px;
             line-height: 24px;
         }
+    }
+}
+.home .top__title {
+    @include for-1000-px {
+        margin-top: 30px;
     }
 }
