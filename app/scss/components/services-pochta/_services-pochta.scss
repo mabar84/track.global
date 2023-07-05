@@ -11,7 +11,7 @@
 
     &::before,
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       background-repeat: no-repeat;
@@ -26,7 +26,7 @@
 
     &::before {
       left: 20px;
-      background-image: url('../images/services-pochta/bg-one.png');
+      background-image: url("../images/services-pochta/bg-one.png");
 
       @include for-1170-px {
         left: -60px;
@@ -39,7 +39,7 @@
       }
 
       @include for-640-px {
-        background-image: url('../images/services-pochta/bg-one-mob.svg');
+        background-image: url("../images/services-pochta/bg-one-mob.svg");
         width: 127px;
         height: 146px;
         top: 5px;
@@ -53,7 +53,7 @@
 
     &::after {
       right: 20px;
-      background-image: url('../images/services-pochta/bg-two.png');
+      background-image: url("../images/services-pochta/bg-two.png");
       height: 190px;
 
       @include for-915-px {
@@ -67,7 +67,7 @@
       }
 
       @include for-640-px {
-        background-image: url('../images/country/top-box-mob.svg');
+        background-image: url("../images/country/top-box-mob.svg");
         height: 117px;
         width: 120px;
         bottom: 29px;
@@ -84,7 +84,8 @@
       padding: 46px 0 40px;
     }
 
-    @include for-769-px {}
+    @include for-769-px {
+    }
 
     @include for-640-px {
       padding: 20px 0 0 0;
@@ -179,7 +180,7 @@
   }
 
   &__top {
-    border: 1px solid #E6E6E6;
+    border: 1px solid #e6e6e6;
     border-radius: 3px;
     padding: 15px 30px;
     display: flex;
@@ -245,7 +246,7 @@
     line-height: 17px;
     color: $accent;
     text-decoration: underline;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 
     &:hover {
       font-size: 16px;
@@ -337,8 +338,6 @@
         flex-direction: column;
         align-items: flex-start;
       }
-
-
     }
   }
 
@@ -360,7 +359,6 @@
     color: #979797;
     display: block;
     margin-bottom: 16px;
-
 
     span {
       display: block;
@@ -424,7 +422,7 @@
   }
 
   &__info {
-    border: 1px solid #E6E6E6;
+    border: 1px solid #e6e6e6;
     border-radius: 3px;
     padding: 30px;
     margin-bottom: 30px;
@@ -450,6 +448,10 @@
       font-size: 30px;
       line-height: 34px;
       margin-bottom: 20px;
+      @include for-340-px {
+        font-size: 28px;
+        line-height: 30px;
+      }
     }
 
     h3:not([class]) {
@@ -619,7 +621,7 @@
     font-size: 20px;
     line-height: 24px;
     text-decoration: underline;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
     &:hover {
       color: $accent;
@@ -653,7 +655,7 @@
   }
 
   &__form {
-    background-color: #FBFBFB;
+    background-color: #fbfbfb;
     padding: 26px 0 36px;
 
     @include for-470-px {
@@ -726,7 +728,7 @@
     pointer-events: none;
   }
 
-  .services-pochta__star.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group.jq-ry-normal-group svg {
+  .services-pochta__star.jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group.jq-ry-normal-group svg {
     fill: #ffffff;
     stroke: $accent;
     stroke-width: 15;
@@ -737,7 +739,7 @@
     }
   }
 
-  .services-pochta__star.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group.jq-ry-rated-group svg {
+  .services-pochta__star.jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group.jq-ry-rated-group svg {
     fill: $accent;
     stroke: $accent;
     stroke-width: 15;
@@ -748,20 +750,19 @@
     }
   }
 
-  .services-pochta__top-box-star.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group.jq-ry-normal-group svg {
+  .services-pochta__top-box-star.jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group.jq-ry-normal-group svg {
     @include for-470-px {
       width: 15px;
       height: 15px;
     }
   }
 
-  .services-pochta__top-box-star.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group.jq-ry-rated-group svg {
+  .services-pochta__top-box-star.jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group.jq-ry-rated-group svg {
     @include for-470-px {
       width: 15px;
       height: 15px;
     }
   }
-
 
   &__box-label {
     display: flex;
@@ -800,9 +801,9 @@
     padding: 20px;
     font-size: 14px;
     line-height: 17px;
-    border: 1px solid #E6E6E6;
+    border: 1px solid #e6e6e6;
     border-radius: 3px;
-    outline: #E6E6E6;
+    outline: #e6e6e6;
 
     &::placeholder {
       color: #c4c4c4;
@@ -829,7 +830,7 @@
     color: #ffffff;
     background-color: $accent;
     text-transform: uppercase;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
     &:hover {
       box-shadow: 0 0 20px $accent, 0 0 40px $accent;
