@@ -160,7 +160,7 @@
             padding-right: 0px;
         }
         @include for-1000-px {
-            // margin-top: -70px;
+            margin-top: 30px;
             font-size: 30px;
             line-height: 37px;
             background: red;
@@ -178,8 +178,11 @@
         }
     }
 }
-.home .top__title {
+.top__title-api.top__title {
     @include for-1000-px {
         margin-top: 30px;
+    }
+    @include for-640-px {
+        margin-top: 0;
     }
 }
