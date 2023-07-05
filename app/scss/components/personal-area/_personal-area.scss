@@ -27,7 +27,7 @@
         }
         &.z2 {
             padding-bottom: 23px;
-            z-index: 11;
+            z-index: 12;
             background: #fff;
             @include for-1170-px {
                 padding-bottom: 50px;
@@ -165,7 +165,7 @@
     left: 0;
     right: 0;
     .header__nav {
-        background: #fbfbfb;
+        // background: #fbfbfb;
     }
     @include for-1000-px {
         position: static;
