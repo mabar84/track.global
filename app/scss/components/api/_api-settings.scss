@@ -48,8 +48,10 @@
         &.api-settings-input-widget-mobile {
             gap: 10px;
             .api-button {
-                padding-right: 10px;
-                padding-left: 10px;
+                width: max-content;
+                min-width: 140px;
+                padding-right: 5px;
+                padding-left: 5px;
                 font-size: 12px;
             }
         }
@@ -60,6 +62,7 @@
         line-height: 20px;
         font-weight: normal;
         margin-bottom: 16px;
+        background: #fdf6f6;
         @include for-725-px {
             margin-bottom: 0;
         }
