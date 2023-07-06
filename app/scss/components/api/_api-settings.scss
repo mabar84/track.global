@@ -31,7 +31,7 @@
         justify-content: space-between;
         display: flex;
         gap: 20px;
-        margin-bottom: 6px;
+        background: #fdf6f6;
         .api-input-wrapper {
             height: 100%;
         }
@@ -57,6 +57,7 @@
         }
     }
     .api-subtext {
+        padding-top: 6px;
         color: #000;
         font-size: 12px;
         line-height: 20px;
