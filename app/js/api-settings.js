@@ -167,6 +167,14 @@ traceButton?.addEventListener("click", () => {
       }
     );
   }, 300);
+  if (allSettings["type"] === "Поверх контента") {
+    bigWidget.classList.add("over-content");
+    scene.classList.add("collapsed");
+  } else {
+    bigWidget.classList.remove("over-content");
+    scene.classList.remove("collapsed");
+  }
+
   if (connect.checked && allSettings["partner-email"]) {
     bigWidget.classList.remove("hidden");
     // itemWithCashbe.classList.remove("hidden");

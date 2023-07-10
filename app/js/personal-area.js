@@ -47,48 +47,48 @@ document.getElementById("registration-modal")?.addEventListener("click", (e) => 
 
 // modal errors
 // modalRegistration
-const modalRegistration = document.getElementById("modal-registration-form");
-const modalRegistrationInputs = modalRegistration.querySelectorAll("input");
-const modalRegistrationButton = modalRegistration.querySelector(".first");
+// const modalRegistration = document.getElementById("modal-registration-form");
+// const modalRegistrationInputs = modalRegistration.querySelectorAll("input");
+// const modalRegistrationButton = modalRegistration.querySelector(".first");
 
-modalRegistrationButton.addEventListener("click", () => {
-  let areFieldsFilled = true;
-  modalRegistrationInputs.forEach((input) => {
-    if (!input.value) {
-      input.classList.add("error");
-      areFieldsFilled = false;
-    }
-    input.addEventListener("input", () => {
-      input.classList.remove("error");
-    });
-  });
-  if (areFieldsFilled) {
-    ahModalHide("modal-registration-form");
-    console.log("Зарегистрировать");
-  }
-});
+// modalRegistrationButton.addEventListener("click", () => {
+//   let areFieldsFilled = true;
+//   modalRegistrationInputs.forEach((input) => {
+//     if (!input.value) {
+//       input.classList.add("error");
+//       areFieldsFilled = false;
+//     }
+//     input.addEventListener("input", () => {
+//       input.classList.remove("error");
+//     });
+//   });
+//   if (areFieldsFilled) {
+//     ahModalHide("modal-registration-form");
+//     console.log("Зарегистрировать");
+//   }
+// });
 
 // modalAuthorization
-const modalAuthorization = document.getElementById("modal-authorization-form");
-const modalAuthorizationInputs = modalAuthorization.querySelectorAll("input");
-const modalAuthorizationButton = modalAuthorization.querySelector(".first");
+// const modalAuthorization = document.getElementById("modal-authorization-form");
+// const modalAuthorizationInputs = modalAuthorization.querySelectorAll("input");
+// const modalAuthorizationButton = modalAuthorization.querySelector(".first");
 
-modalAuthorizationButton.addEventListener("click", () => {
-  let areFieldsFilled = true;
-  modalAuthorizationInputs.forEach((input) => {
-    if (!input.value) {
-      input.classList.add("error");
-      areFieldsFilled = false;
-    }
-    input.addEventListener("input", () => {
-      input.classList.remove("error");
-    });
-  });
-  if (areFieldsFilled) {
-    ahModalHide("modal-authorization-form");
-    console.log("Войдите");
-  }
-});
+// modalAuthorizationButton.addEventListener("click", () => {
+//   let areFieldsFilled = true;
+//   modalAuthorizationInputs.forEach((input) => {
+//     if (!input.value) {
+//       input.classList.add("error");
+//       areFieldsFilled = false;
+//     }
+//     input.addEventListener("input", () => {
+//       input.classList.remove("error");
+//     });
+//   });
+//   if (areFieldsFilled) {
+//     ahModalHide("modal-authorization-form");
+//     console.log("Войдите");
+//   }
+// });
 
 // modalAddParcel
 const modalAddParcel = document.getElementById("modal-add-parcel-form");

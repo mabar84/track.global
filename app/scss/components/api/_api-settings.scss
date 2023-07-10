@@ -332,6 +332,7 @@
             }
             .tracking-widget__inner {
                 margin-top: 0;
+                margin-bottom: 0;
             }
             .tracking-widget__aside-box {
                 padding-right: 20px;
@@ -413,6 +414,10 @@
                 overflow-y: scroll;
                 box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
                 z-index: 1;
+                @include for-470-px {
+                    left: -10px;
+                    box-shadow: none;
+                }
             }
         }
     }
