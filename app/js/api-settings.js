@@ -58,6 +58,8 @@ apiSettingsForm?.addEventListener("click", (e) => {
     targetElement.style.order = "-1";
 
     itemSelected.textContent = targetElement.textContent;
+    allSettings[item.dataset.name] = itemSelected.textContent;
+    console.log(allSettings);
   }
 });
 

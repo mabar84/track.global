@@ -129,6 +129,7 @@
                 height: 120px;
                 flex-shrink: 0;
                 background: #d9d9d9;
+                transition: 0.3s;
                 @include for-1000-px {
                     width: 170px;
                     height: 80px;
@@ -136,6 +137,9 @@
                 @include for-640-px {
                     width: 140px;
                     height: 80px;
+                }
+                &:hover {
+                    opacity: 0.8;
                 }
             }
         }
