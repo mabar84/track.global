@@ -1,4 +1,7 @@
 .landing {
+    .api-integration {
+        padding-right: 0;
+    }
     .api-subtext {
         @include for-640-px {
             color: #000;
@@ -35,7 +38,7 @@
             }
         }
         &.api-price {
-            padding: 40px 85px 40px 55px;
+            // padding: 40px 85px 40px 55px;
             @include for-1200-px {
                 padding: 40px 0;
             }
@@ -115,7 +118,7 @@
         }
         .cards {
             display: flex;
-            gap: 23px;
+            gap: 20px;
             flex-wrap: wrap;
             @include for-1200-px {
                 gap: 16px;
