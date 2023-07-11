@@ -1,0 +1,24 @@
+.account-services {
+    .title-wrapper {
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        .title {
+            text-align: left;
+            margin-bottom: 0;
+        }
+        .api-button {
+            height: min-content;
+            text-transform: none;
+        }
+    }
+    .account-search {
+        margin-bottom: 30px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
