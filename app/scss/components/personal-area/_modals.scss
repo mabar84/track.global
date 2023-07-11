@@ -12,6 +12,7 @@
             color: #000000;
         }
         &-subtitle {
+            margin-top: 12px;
             margin-bottom: 10px;
             text-align: left;
             font-style: normal;
@@ -63,7 +64,9 @@
                 background: #e24949;
                 &:hover {
                     transition: 0.3s;
-                    box-shadow: 0 0 20px #e24949, 0 0 40px #e24949;
+                    box-shadow:
+                        0 0 20px #e24949,
+                        0 0 40px #e24949;
                 }
             }
             .second {
@@ -84,7 +87,9 @@
                     background: #e24949;
                     color: #ffffff;
                     transition: 0.3s;
-                    box-shadow: 0 0 20px #e24949, 0 0 40px #e24949;
+                    box-shadow:
+                        0 0 20px #e24949,
+                        0 0 40px #e24949;
                 }
             }
         }
