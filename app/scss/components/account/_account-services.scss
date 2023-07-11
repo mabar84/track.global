@@ -4,6 +4,10 @@
         background: #fff;
         overflow: hidden;
         box-shadow: 0px 4px 20px 0px rgba(23, 23, 80, 0.05);
+        @include for-725-px {
+            box-shadow: none;
+            overflow: visible;
+        }
     }
     .title-wrapper {
         margin-bottom: 40px;
@@ -15,7 +19,7 @@
             text-align: left;
             margin-bottom: 0;
         }
-        .api-button {
+        .account-button {
             height: min-content;
             text-transform: none;
         }
@@ -26,6 +30,12 @@
         gap: 10px;
         align-items: center;
         justify-content: space-between;
+        @include for-440-px {
+            flex-direction: column;
+            .account-button {
+                width: 100%;
+            }
+        }
     }
     .account-services-header {
         padding: 16px 20px;
@@ -39,6 +49,13 @@
         font-style: normal;
         font-weight: 600;
         line-height: normal;
+        @include for-1000-px {
+            font-size: 14px;
+            grid-template-columns: 250px 1fr;
+        }
+        @include for-725-px {
+            display: none;
+        }
         .account-services-title {
             grid-area: title;
         }
@@ -52,8 +69,25 @@
         border-bottom: 1px solid #f3f3f3;
         display: grid;
         grid-template-columns: 400px 1fr;
-        grid-template-areas: "carrier status2 delete";
+        grid-template-areas: "carrier status delete";
         color: #000;
+        @include for-1000-px {
+            padding: 10px 20px;
+            grid-template-columns: 250px 1fr;
+        }
+        @include for-725-px {
+            padding: 10px 10px;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            grid-template-areas:
+                "carrier status"
+                "delete status";
+            margin-bottom: 10px;
+            border-radius: 8px;
+            background: #fff;
+            border-bottom: none;
+            box-shadow: 0px 4px 20px 0px rgba(23, 23, 80, 0.05);
+        }
         &:last-child {
             border-bottom: none;
         }
@@ -65,6 +99,14 @@
                 width: 60px;
                 height: 60px;
                 margin-right: 20px;
+                @include for-1000-px {
+                    margin-right: 10px;
+                }
+                @include for-725-px {
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 8px;
+                }
             }
             p {
                 color: #000;
@@ -72,18 +114,36 @@
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
+                @include for-1000-px {
+                    font-size: 14px;
+                }
+                @include for-725-px {
+                    font-size: 12px;
+                }
             }
         }
         .item-status {
             display: flex;
             align-items: center;
             gap: 20px;
-            grid-area: status2;
+            grid-area: status;
+            @include for-725-px {
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+            }
             p {
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 600;
                 line-height: normal;
+                @include for-1000-px {
+                    font-size: 14px;
+                }
+                @include for-725-px {
+                    font-size: 12px;
+                    text-align: right;
+                }
                 .enabled {
                     display: none;
                     color: #2dbb2a;
@@ -94,8 +154,70 @@
             }
             .account-button {
                 border-radius: 4px;
+                @include for-1000-px {
+                    padding: 4px 6px;
+                    height: 23px;
+                    font-size: 12px;
+                }
+                @include for-725-px {
+                    padding: 2px 6px;
+                    height: 17px;
+                    font-size: 10px;
+                }
             }
-            &.enabled {
+        }
+        .item-delete {
+            width: max-content;
+            height: 40px;
+            display: inline-flex;
+            padding: 8px 10px;
+            justify-content: flex-end;
+            align-items: center;
+            border-radius: 4px;
+            background: #f4f4f4;
+            grid-area: delete;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover {
+                opacity: 0.8;
+            }
+            align-self: center;
+            @include for-1000-px {
+                padding: 4px 6px;
+                height: 23px;
+            }
+            @include for-725-px {
+                padding: 2px 6px;
+                height: 17px;
+                font-size: 10px;
+            }
+            img {
+                width: 24px;
+                height: 24px;
+                margin-right: 10px;
+                @include for-1000-px {
+                    width: 12px;
+                    height: 12px;
+                    margin-right: 4px;
+                }
+                @include for-725-px {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+            p {
+                color: rgba(0, 0, 0, 0.5);
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                @include for-1000-px {
+                    font-size: 12px;
+                }
+            }
+        }
+        &.enabled {
+            .item-status {
                 .account-button {
                     display: none;
                 }
@@ -109,31 +231,8 @@
                 }
             }
         }
-        .item-delete {
-            display: inline-flex;
-            padding: 8px 10px;
-            justify-content: flex-end;
-            align-items: center;
-            gap: 10px;
-            border-radius: 4px;
-            background: #f4f4f4;
-            grid-area: delete;
-            cursor: pointer;
-            transition: 0.3s;
-            &:hover {
-                opacity: 0.8;
-            }
-            img {
-                width: 24px;
-                height: 24px;
-            }
-            p {
-                color: rgba(0, 0, 0, 0.5);
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-            }
+        &.item-hidden {
+            display: none;
         }
     }
 }

@@ -70,20 +70,19 @@
     }
 }
 .subtabs-buttons {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
     white-space: nowrap;
     display: flex;
     gap: 24px;
     overflow-x: auto;
     white-space: nowrap;
     flex-wrap: nowrap;
-    @include for-1170-px {
-        margin-bottom: 12px;
-    }
     @include for-1000-px {
-        padding-top: 5px;
-        padding-bottom: 5px;
-        margin-bottom: 7px;
+        gap: 20px;
+    }
+    @include for-725-px {
+        gap: 8px;
+        margin-bottom: 10px;
     }
     .item {
         font-weight: 600;
@@ -130,12 +129,12 @@
             }
         }
         @include for-1170-px {
-            margin-right: 20px;
+            // margin-right: 20px;
             font-size: 16px;
             line-height: 20px;
         }
         @include for-725-px {
-            margin-right: 8px;
+            // margin-right: 8px;
             font-size: 12px;
             line-height: 15px;
         }

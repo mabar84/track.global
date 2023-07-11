@@ -93,10 +93,10 @@
             <button class="account-button">Добавить</button>
           </div>
 
-          <div class="account-subtabs-container">
+          <div class="">
             <div class="subtabs-buttons">
-              <button class="subtabs-button item active" for="my-services">Мои службы</button>
-              <button class="subtabs-button item" for="need-activation-services">Службы, требующие активации</button>
+              <button id="my-services-button" class="item active">Мои службы</button>
+              <button id="need-activation-services-button" class="item">Службы, требующие активации</button>
             </div>
 
             <div class="account-search">
@@ -111,13 +111,13 @@
               <div class="account-services-status">Статус</div>
             </div>
 
-            <div class="subtabs-content my-services">
-              <div class="account-services-item">
+            <div id="my-services" class="my-services">
+              <div class="account-services-item enabled">
                 <div class="item-carrier">
                   <img src="images/account/pr.png" alt="icon" />
                   <p>Почта России</p>
                 </div>
-                <div class="item-status enabled">
+                <div class="item-status">
                   <p>
                     <span class="enabled">Подключено</span>
                     <span class="disabled">Подключите ваш аккаунт</span>
@@ -129,7 +129,7 @@
                   <p>Удалить</p>
                 </button>
               </div>
-              <div class="account-services-item">
+              <div class="account-services-item enabled">
                 <div class="item-carrier">
                   <img src="images/account/cdek.png" alt="icon" />
                   <p>СДЭК</p>
@@ -146,8 +146,41 @@
                   <p>Удалить</p>
                 </button>
               </div>
+              <div class="account-services-item">
+                <div class="item-carrier">
+                  <img src="images/account/ep.png" alt="icon" />
+                  <p>ePacket</p>
+                </div>
+                <div class="item-status">
+                  <p>
+                    <span class="enabled">Подключено</span>
+                    <span class="disabled">Подключите ваш аккаунт</span>
+                  </p>
+                  <div class="account-button">Подключить</div>
+                </div>
+                <button class="item-delete">
+                  <img src="images/account/trash.svg" alt="icon" />
+                  <p>Удалить</p>
+                </button>
+              </div>
+              <div class="account-services-item enabled">
+                <div class="item-carrier">
+                  <img src="images/account/pe.png" alt="icon" />
+                  <p>Pony Express</p>
+                </div>
+                <div class="item-status">
+                  <p>
+                    <span class="enabled">Подключено</span>
+                    <span class="disabled">Подключите ваш аккаунт</span>
+                  </p>
+                  <div class="account-button">Подключить</div>
+                </div>
+                <button class="item-delete">
+                  <img src="images/account/trash.svg" alt="icon" />
+                  <p>Удалить</p>
+                </button>
+              </div>
             </div>
-            <div class="subtabs-content need-activation-services tabs-content-hidden">2</div>
           </div>
         </section>
 
