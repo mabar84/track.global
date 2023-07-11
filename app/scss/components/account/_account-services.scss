@@ -1,4 +1,10 @@
 .account-services {
+    .my-services {
+        border-radius: 0 0 8px 8px;
+        background: #fff;
+        overflow: hidden;
+        box-shadow: 0px 4px 20px 0px rgba(23, 23, 80, 0.05);
+    }
     .title-wrapper {
         margin-bottom: 40px;
         display: flex;
@@ -20,5 +26,114 @@
         gap: 10px;
         align-items: center;
         justify-content: space-between;
+    }
+    .account-services-header {
+        padding: 16px 20px;
+        border-radius: 8px 8px 0px 0px;
+        background: #f4f4f4;
+        display: grid;
+        grid-template-columns: 400px 1fr;
+        grid-template-areas: "title status";
+        color: #000;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        .account-services-title {
+            grid-area: title;
+        }
+        .account-services-status {
+            grid-area: status;
+        }
+    }
+    .account-services-item {
+        padding: 16px 20px;
+        background: #fff;
+        border-bottom: 1px solid #f3f3f3;
+        display: grid;
+        grid-template-columns: 400px 1fr;
+        grid-template-areas: "carrier status2 delete";
+        color: #000;
+        &:last-child {
+            border-bottom: none;
+        }
+        .item-carrier {
+            display: flex;
+            align-items: center;
+            grid-area: carrier;
+            img {
+                width: 60px;
+                height: 60px;
+                margin-right: 20px;
+            }
+            p {
+                color: #000;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
+        .item-status {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            grid-area: status2;
+            p {
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                .enabled {
+                    display: none;
+                    color: #2dbb2a;
+                }
+                .disabled {
+                    color: #e24949;
+                }
+            }
+            .account-button {
+                border-radius: 4px;
+            }
+            &.enabled {
+                .account-button {
+                    display: none;
+                }
+                p {
+                    .enabled {
+                        display: block;
+                    }
+                    .disabled {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .item-delete {
+            display: inline-flex;
+            padding: 8px 10px;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+            border-radius: 4px;
+            background: #f4f4f4;
+            grid-area: delete;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover {
+                opacity: 0.8;
+            }
+            img {
+                width: 24px;
+                height: 24px;
+            }
+            p {
+                color: rgba(0, 0, 0, 0.5);
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
     }
 }
