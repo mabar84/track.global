@@ -1,0 +1,73 @@
+.account-nav {
+    padding: 20px 0 25px;
+    background: #fbfbfb;
+    ul {
+        display: flex;
+        gap: 24px;
+        justify-content: flex-end;
+        .item {
+            list-style: none;
+            color: #000;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-decoration-line: underline;
+            cursor: pointer;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background-color: rgba(0, 0, 0, 0);
+                -webkit-transform: scaleX(0);
+                -ms-transform: scaleX(0);
+                transform: scaleX(0);
+                -webkit-transform-origin: left;
+                -ms-transform-origin: left;
+                transform-origin: left;
+                -webkit-transition: all 0.25s ease;
+                -o-transition: all 0.25s ease;
+                transition: all 0.25s ease;
+            }
+            &:hover {
+                text-decoration-line: none;
+                &::before {
+                    background-color: #e24949;
+                    -webkit-transform: scaleX(1);
+                    -ms-transform: scaleX(1);
+                    transform: scaleX(1);
+
+                    // display: none;
+                }
+            }
+            &.active {
+                color: #e24949;
+                // border-bottom: 2px solid #e24949;
+                text-decoration-line: none;
+
+                @include for-1170-px {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+                @include for-725-px {
+                    font-size: 12px;
+                    line-height: 15px;
+                }
+            }
+            @include for-1170-px {
+                margin-right: 20px;
+                font-size: 16px;
+                line-height: 20px;
+            }
+            @include for-725-px {
+                margin-right: 8px;
+                font-size: 12px;
+                line-height: 15px;
+            }
+        }
+    }
+}
