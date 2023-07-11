@@ -54,7 +54,9 @@
                 background: #e24949;
                 &:hover {
                     transition: 0.3s;
-                    box-shadow: 0 0 20px #e24949, 0 0 40px #e24949;
+                    box-shadow:
+                        0 0 20px #e24949,
+                        0 0 40px #e24949;
                 }
             }
             .subtext {
@@ -88,7 +90,9 @@
         }
     }
 }
-.show-when-parcel-clicked{display:none}
+.show-when-parcel-clicked {
+    display: none;
+}
 .tracking-widget.show-when-parcel-clicked {
     display: none;
 }
@@ -152,6 +156,9 @@
         right: 20px;
         bottom: 88px;
         border-radius: 77px;
-        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2);
+        box-shadow:
+            0px 6px 10px rgba(0, 0, 0, 0.14),
+            0px 1px 18px rgba(0, 0, 0, 0.12),
+            0px 3px 5px rgba(0, 0, 0, 0.2);
     }
 }
