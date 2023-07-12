@@ -94,6 +94,9 @@
         &:last-child {
             border-bottom: none;
         }
+        &.filter-hidden {
+            display: none;
+        }
         .item-carrier {
             display: flex;
             align-items: center;

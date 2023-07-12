@@ -79,23 +79,17 @@ if (carriersInput) {
   const items = myServices.querySelectorAll(".item-carrier p");
   const searchButton = document.getElementById("carriers-search-button");
 
-  items.forEach((item) => {
-    console.log(item.textContent);
-  });
-
   function filterListCarriers() {
     let filter = carriersInput.value.toUpperCase();
-    console.log(items);
 
     for (let i = 0; i < items.length; i++) {
       let text = items[i].textContent.toUpperCase();
       let parent = items[i].closest(".account-services-item");
-      console.log(parent);
 
       if (text.indexOf(filter) > -1) {
-        parent.style.display = "grid";
+        parent.classList.remove("filter-hidden");
       } else {
-        parent.style.display = "none";
+        parent.classList.add("filter-hidden");
       }
     }
   }
