@@ -72,23 +72,32 @@ myServicesButton?.addEventListener("click", () => {
   myServicesButton.classList.add("active");
 });
 
-// search filter
-const inputEsse = document.getElementById("esse-search_input");
+// search carriers filter
+const carriersInput = document.getElementById("carriers-input");
+if (carriersInput) {
+  const myServices = document.getElementById("my-services");
+  const items = myServices.querySelectorAll(".item-carrier p");
+  const searchButton = document.getElementById("carriers-search-button");
 
-if (inputEsse) {
-  function filterListEsse() {
-    let items = document.querySelectorAll(".part-content a");
-    let filter = inputEsse.value.toUpperCase();
+  items.forEach((item) => {
+    console.log(item.textContent);
+  });
+
+  function filterListCarriers() {
+    let filter = carriersInput.value.toUpperCase();
+    console.log(items);
 
     for (let i = 0; i < items.length; i++) {
-      let text = items[i].childNodes[1].innerText.toUpperCase();
+      let text = items[i].textContent.toUpperCase();
+      let parent = items[i].closest(".account-services-item");
+      console.log(parent);
 
       if (text.indexOf(filter) > -1) {
-        items[i].style.display = "";
+        parent.style.display = "grid";
       } else {
-        items[i].style.display = "none";
+        parent.style.display = "none";
       }
     }
   }
-  inputEsse.addEventListener("input", filterListEsse);
+  searchButton.addEventListener("click", filterListCarriers);
 }

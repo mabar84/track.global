@@ -1,0 +1,33 @@
+.account-popup {
+    width: 510px;
+    height: 500px;
+    padding: 30px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    .account-popup-title {
+        margin-bottom: 12px;
+        color: #000;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .account-popup-items {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    .account-input-wrapper {
+        margin-bottom: 30px;
+    }
+    .account-button {
+        width: max-content;
+        margin: 0 auto;
+    }
+    &.popup-hidden {
+        display: none;
+    }
+}

@@ -10,12 +10,78 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/jquery.rateyo.js"></script>
-    <script src="js/main.min.js" defer></script>
-    <script src="js/account.js" defer></script>
+    <script src="js/main.js" defer></script>
     <script src="js/api-settings.js" defer></script>
+    <script src="js/account.js" defer></script>
   </head>
 
   <body>
+    <!-- popups and modals wrapper  class="personal-area" for styles  -->
+    <div class="personal-area">
+      <div id="modal-authorization-form" class="modal modal-authorization modal-problem ah-modal">
+        <div class="ah-modal__container">
+          <div class="ah-modal__content">
+            <h3 class="modal-title">Авторизация</h3>
+            <div class="modal-body">
+              <form action="#" class="mt-30a" id="authorization-form">
+                <p class="modal-subtitle article">E-mail</p>
+                <input type="text" class="input" placeholder="example@mail.ru" />
+
+                <p class="modal-subtitle article">Пароль</p>
+                <input type="text" class="input" placeholder="example@mail.ru" />
+
+                <p class="modal-subtitle article">URL магазина</p>
+                <input type="text" class="input" placeholder="example@mail.ru" />
+
+                <div class="mt-30a buttons">
+                  <a href="#" class="account-button first">Войти</a>
+                  <a id="registration-modal" href="#" class="account-button second">Регистрация</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal-registration-form" class="modal modal-registration modal-problem ah-modal">
+        <div class="ah-modal__container">
+          <div class="ah-modal__content">
+            <h3 class="modal-title">Регистрация</h3>
+            <div class="modal-body">
+              <form action="#" class="mt-30a" id="authorization-form">
+                <p class="modal-subtitle article">E-mail</p>
+                <input type="text" class="input" placeholder="example@mail.ru" />
+
+                <p class="modal-subtitle article">Пароль</p>
+                <input type="text" class="input" placeholder="example@mail.ru" />
+
+                <p class="modal-subtitle article">Повторите пароль</p>
+                <input type="text" class="input" placeholder="example@mail.ru" />
+
+                <p class="modal-subtitle article">URL магазина</p>
+                <input type="text" class="input" placeholder="example@mail.ru" />
+
+                <div class="mt-30a buttons">
+                  <a href="#" class="account-button first">Зарегистрироваться</a>
+                  <a id="authorization-modal" href="#" class="account-button second">Войти</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="courier-services" class="account-popup popup-courier-services popup-hidden">
+        <p class="account-popup-title">С какими курьескими службами вы работаете?</p>
+        <div class="account-popup-items">
+          <div class="account-popup-item">35</div>
+        </div>
+        <div class="account-input-wrapper" data-after="true">
+          <input type="text" class="account-input" type="text" placeholder="поиск по службам" />
+        </div>
+        <div class="account-button">Дальше</div>
+      </div>
+    </div>
+
     <header class="header header-personal-area">
       <div class="container">
         <nav class="header__nav">
@@ -86,23 +152,22 @@
         </div>
       </div>
 
-      <section class="account-services tabs-content tabs-content-hidden container">
+      <section class="account-services tabs-content container">
         <div class="title-wrapper">
           <h2 class="account-title title">Подключенные перевозчики</h2>
           <button class="account-button">Добавить</button>
         </div>
 
         <div class="subtabs-buttons">
-          <button id="my-services-button" class="item active">Отслеживание отправлений</button>
-          <button id="need-activation-services-button" class="item">Расчет стоимости отправлений</button>
-          <button id="need-activation-services-button" class="item">Карта пунктов выдачи</button>
+          <button id="my-services-button" class="item active">Мои службы</button>
+          <button id="need-activation-services-button" class="item">Службы, требующие активации</button>
         </div>
 
         <div class="account-search">
           <div class="account-input-wrapper" data-after="true">
-            <input type="text" class="account-input" type="text" placeholder="поиск по службам" />
+            <input id="carriers-input" type="text" class="account-input" type="text" placeholder="поиск по службам" />
           </div>
-          <button class="account-button">Поиск</button>
+          <button id="carriers-search-button" class="account-button">Поиск</button>
         </div>
 
         <div class="account-services-header">
@@ -182,7 +247,7 @@
         </div>
       </section>
 
-      <section class="account-widgets tabs-content">
+      <section class="account-widgets tabs-content tabs-content-hidden">
         <div class="container">
           <h2 class="account-title title">Виджеты для вашего сайта</h2>
 

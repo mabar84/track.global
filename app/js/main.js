@@ -1259,6 +1259,9 @@ if (modalRegistration) {
       const csrfToken = $('meta[name="csrf-token"]').attr("content");
       formData.append("_csrf-frontend", csrfToken);
       userRegister(formData);
+
+      // show popup 'courier services'
+      document.getElementById("courier-services")?.classList.remove("popup-hidden");
     }
   });
 }
