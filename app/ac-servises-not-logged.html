@@ -162,7 +162,7 @@
         <div id="courier-services-next-button" class="account-button">Дальше</div>
       </div>
 
-      <div id="interesting-function" class="account-popup popup-interesting-function">
+      <div id="interesting-function" class="account-popup popup-interesting-function popup-hidden">
         <p class="account-popup-title">Какие функции вам интересны?</p>
         <div class="account-popup-items">
           <div class="account-popup-item">
@@ -173,9 +173,60 @@
               </div>
             </label>
           </div>
+          <div class="account-popup-item">
+            <input checked type="checkbox" class="custom-checkbox" id="f2" />
+            <label class="account-popup-label" for="f2">
+              <div class="wrapper">
+                <p>Расчет стоимости отправлений</p>
+              </div>
+            </label>
+          </div>
+          <div class="account-popup-item">
+            <input checked type="checkbox" class="custom-checkbox" id="f3" />
+            <label class="account-popup-label" for="f3">
+              <div class="wrapper">
+                <p>Карта с пунктами выдачи заказов</p>
+              </div>
+            </label>
+          </div>
+          <div class="account-popup-item">
+            <input checked type="checkbox" class="custom-checkbox" id="f4" />
+            <label class="account-popup-label" for="f4">
+              <div class="wrapper">
+                <p>Email, SMS, Push уведомления получателей</p>
+              </div>
+            </label>
+          </div>
+          <div class="account-popup-item">
+            <input checked type="checkbox" class="custom-checkbox" id="f5" />
+            <label class="account-popup-label" for="f5">
+              <div class="wrapper">
+                <p>Печать лейблов</p>
+              </div>
+            </label>
+          </div>
         </div>
 
         <div id="interesting-function-next-button" class="account-button">Дальше</div>
+      </div>
+
+      <div id="connect-account" class="popup-connect-account account-popup">
+        <p class="account-popup-title">Подключить аккаунт</p>
+
+        <p class="connect-account-text">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+          1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also
+          the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+          Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+
+        <div class="wrapper">
+          <img src="images/account/pr.png" alt="icon" />
+          <p>Почта России</p>
+        </div>
+
+        <input type="text" class="connect-account-input" placeholder="API key" />
+        <div id="connect-account-button" class="account-button">Подключить</div>
       </div>
     </div>
 

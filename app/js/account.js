@@ -96,7 +96,20 @@ if (carriersInput) {
   searchButton.addEventListener("click", filterListCarriers);
 }
 
-// show-courier-services-button
+// show popups courier-services-button
 document.getElementById("show-courier-services-button")?.addEventListener("click", () => {
   document.getElementById("courier-services").classList.remove("popup-hidden");
+});
+document.getElementById("courier-services-next-button")?.addEventListener("click", () => {
+  document.getElementById("courier-services").classList.add("popup-hidden");
+  document.getElementById("interesting-function").classList.remove("popup-hidden");
+});
+document.getElementById("interesting-function-next-button")?.addEventListener("click", () => {
+  document.getElementById("interesting-function").classList.add("popup-hidden");
+  document.getElementById("connect-account").classList.remove("popup-hidden");
+});
+document.getElementById("connect-account-button")?.addEventListener("click", () => {
+  document.getElementById("connect-account").classList.add("popup-hidden");
+
+  console.log("Подключение аккаунта");
 });
