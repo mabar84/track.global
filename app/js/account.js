@@ -95,3 +95,8 @@ if (carriersInput) {
   }
   searchButton.addEventListener("click", filterListCarriers);
 }
+
+// show-courier-services-button
+document.getElementById("show-courier-services-button")?.addEventListener("click", () => {
+  document.getElementById("courier-services").classList.remove("popup-hidden");
+});

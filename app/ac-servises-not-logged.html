@@ -73,12 +73,109 @@
       <div id="courier-services" class="account-popup popup-courier-services popup-hidden">
         <p class="account-popup-title">С какими курьескими службами вы работаете?</p>
         <div class="account-popup-items">
-          <div class="account-popup-item">35</div>
+          <div class="account-popup-item">
+            <input checked type="checkbox" class="custom-checkbox" id="carrier1" />
+            <label class="account-popup-label" for="carrier1">
+              <div class="wrapper">
+                <img src="images/account/pe.png" alt="icon" />
+                <p>Pony express</p>
+              </div>
+            </label>
+          </div>
+
+          <div class="account-popup-item">
+            <input checked type="checkbox" class="custom-checkbox" id="carrier2" />
+            <label class="account-popup-label" for="carrier2">
+              <div class="wrapper">
+                <img src="images/account/pr.png" alt="icon" />
+                <p>Почта России</p>
+              </div>
+            </label>
+          </div>
+          <div class="account-popup-item">
+            <input checked type="checkbox" class="custom-checkbox" id="carrier3" />
+            <label class="account-popup-label" for="carrier3">
+              <div class="wrapper">
+                <img src="images/account/cdek.png" alt="icon" />
+                <p>СДЭК</p>
+              </div>
+            </label>
+          </div>
+          <div class="account-popup-item">
+            <input checked type="checkbox" class="custom-checkbox" id="carrier4" />
+            <label class="account-popup-label" for="carrier4">
+              <div class="wrapper">
+                <img src="images/account/china-post.png" alt="icon" />
+                <p>China Post</p>
+              </div>
+            </label>
+          </div>
+          <div class="account-popup-item">
+            <input checked type="checkbox" class="custom-checkbox" id="carrier5" />
+            <label class="account-popup-label" for="carrier5">
+              <div class="wrapper">
+                <img src="images/account/ep.png" alt="icon" />
+                <p>ePacket</p>
+              </div>
+            </label>
+          </div>
+          <div class="account-popup-item">
+            <input checked type="checkbox" class="custom-checkbox" id="carrier6" />
+            <label class="account-popup-label" for="carrier6">
+              <div class="wrapper">
+                <img src="images/account/se.jpg" alt="icon" />
+                <p>4PX</p>
+              </div>
+            </label>
+          </div>
+          <div class="account-popup-item">
+            <input checked type="checkbox" class="custom-checkbox" id="carrier7" />
+            <label class="account-popup-label" for="carrier7">
+              <div class="wrapper">
+                <img src="images/account/flytExpress.png" alt="icon" />
+                <p>Flyt Express</p>
+              </div>
+            </label>
+          </div>
+          <div class="account-popup-item">
+            <input checked type="checkbox" class="custom-checkbox" id="carrier8" />
+            <label class="account-popup-label" for="carrier8">
+              <div class="wrapper">
+                <img src="images/account/postNl.png" alt="icon" />
+                <p>Post NL</p>
+              </div>
+            </label>
+          </div>
+          <div class="account-popup-item">
+            <input checked type="checkbox" class="custom-checkbox" id="carrier9" />
+            <label class="account-popup-label" for="carrier9">
+              <div class="wrapper">
+                <img src="images/account/bPost.png" alt="icon" />
+                <p>Bpost</p>
+              </div>
+            </label>
+          </div>
         </div>
         <div class="account-input-wrapper" data-after="true">
           <input type="text" class="account-input" type="text" placeholder="поиск по службам" />
         </div>
-        <div class="account-button">Дальше</div>
+        <div id="courier-services-next-button" class="account-button">Дальше</div>
+      </div>
+
+      <div id="interesting-function" class="account-popup popup-interesting-function">
+        <p class="account-popup-title">Какие функции вам интересны?</p>
+        <div class="account-popup-items">
+          <div class="account-popup-item">
+            <input checked type="checkbox" class="custom-checkbox" id="f1" />
+            <label class="account-popup-label" for="f1">
+              <div class="wrapper">
+                <p>Отслеживание отправлений</p>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div id="interesting-function-next-button" class="account-button">Дальше</div>
       </div>
     </div>
 
@@ -155,7 +252,7 @@
       <section class="account-services tabs-content container">
         <div class="title-wrapper">
           <h2 class="account-title title">Подключенные перевозчики</h2>
-          <button class="account-button">Добавить</button>
+          <button id="show-courier-services-button" class="account-button">Добавить</button>
         </div>
 
         <div class="subtabs-buttons">
@@ -1145,11 +1242,8 @@
                   </div>
                 </div>
                 <div class="api-settings-item" data-name="partner">
-                  <p class="item-title">Партнерская программа</p>
-                  <div class="checkbox-wrapper">
-                    <input type="checkbox" class="custom-checkbox" id="connect" name="connect" />
-                    <label class="connect" for="connect">Подключить партнерскую программа Cashbe</label>
-                  </div>
+                  <input type="checkbox" class="custom-checkbox" id="connect" name="connect" />
+                  <label class="connect" for="connect">Подключить партнерскую программа Cashbe</label>
                 </div>
                 <div class="api-settings-item color" data-name="color">
                   <p class="item-title">Цвет</p>

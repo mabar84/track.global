@@ -30,6 +30,7 @@
     background: #e24949;
     position: relative;
     transition: 0.1s;
+    cursor: pointer;
     &::after {
         content: "";
         position: absolute;
