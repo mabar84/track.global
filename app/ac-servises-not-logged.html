@@ -299,103 +299,105 @@
       <div class="account-nav">
         <div class="wrapper container">
           <button class="tabs-button item" for="account-services">Службы</button>
-          <button class="tabs-button item active" for="account-widgets">Виджеты</button>
-          <button class="tabs-button item" for="account-data">Мой Аккаунт</button>
+          <button class="tabs-button item" for="account-widgets">Виджеты</button>
+          <button class="tabs-button item active" for="account-data">Мой Аккаунт</button>
           <button class="tabs-button item" for="account-exit">Выход</button>
         </div>
       </div>
 
-      <section class="account-services tabs-content container">
-        <div class="title-wrapper">
-          <h2 class="account-title title">Подключенные перевозчики</h2>
-          <button id="show-courier-services-button" class="account-button">Добавить</button>
-        </div>
-
-        <div class="subtabs-buttons">
-          <button id="my-services-button" class="item active">Мои службы</button>
-          <button id="need-activation-services-button" class="item">Службы, требующие активации</button>
-        </div>
-
-        <div class="account-search">
-          <div class="account-input-wrapper" data-after="true">
-            <input id="carriers-input" type="text" class="account-input" type="text" placeholder="поиск по службам" />
+      <section class="account-services tabs-content tabs-content-hidden">
+        <div class="container">
+          <div class="title-wrapper">
+            <h2 class="account-title title">Подключенные перевозчики</h2>
+            <button id="show-courier-services-button" class="account-button">Добавить</button>
           </div>
-          <button id="carriers-search-button" class="account-button">Поиск</button>
-        </div>
 
-        <div class="account-services-header">
-          <div class="account-services-title">Название</div>
-          <div class="account-services-status">Статус</div>
-        </div>
+          <div class="subtabs-buttons">
+            <button id="my-services-button" class="item active">Мои службы</button>
+            <button id="need-activation-services-button" class="item">Службы, требующие активации</button>
+          </div>
 
-        <div id="my-services" class="my-services">
-          <div class="account-services-item enabled">
-            <div class="item-carrier">
-              <img src="images/account/pr.png" alt="icon" />
-              <p>Почта России</p>
+          <div class="account-search">
+            <div class="account-input-wrapper" data-after="true">
+              <input id="carriers-input" type="text" class="account-input" type="text" placeholder="поиск по службам" />
             </div>
-            <div class="item-status">
-              <p>
-                <span class="enabled">Подключено</span>
-                <span class="disabled">Подключите ваш аккаунт</span>
-              </p>
-              <div class="account-button">Подключить</div>
-            </div>
-            <button class="item-delete">
-              <img src="images/account/trash.svg" alt="icon" />
-              <p>Удалить</p>
-            </button>
+            <button id="carriers-search-button" class="account-button">Поиск</button>
           </div>
-          <div class="account-services-item enabled">
-            <div class="item-carrier">
-              <img src="images/account/cdek.png" alt="icon" />
-              <p>СДЭК</p>
-            </div>
-            <div class="item-status">
-              <p>
-                <span class="enabled">Подключено</span>
-                <span class="disabled">Подключите ваш аккаунт</span>
-              </p>
-              <div class="account-button">Подключить</div>
-            </div>
-            <button class="item-delete">
-              <img src="images/account/trash.svg" alt="icon" />
-              <p>Удалить</p>
-            </button>
+
+          <div class="account-services-header">
+            <div class="account-services-title">Название</div>
+            <div class="account-services-status">Статус</div>
           </div>
-          <div class="account-services-item">
-            <div class="item-carrier">
-              <img src="images/account/ep.png" alt="icon" />
-              <p>ePacket</p>
+
+          <div id="my-services" class="my-services">
+            <div class="account-services-item enabled">
+              <div class="item-carrier">
+                <img src="images/account/pr.png" alt="icon" />
+                <p>Почта России</p>
+              </div>
+              <div class="item-status">
+                <p>
+                  <span class="enabled">Подключено</span>
+                  <span class="disabled">Подключите ваш аккаунт</span>
+                </p>
+                <div class="account-button">Подключить</div>
+              </div>
+              <button class="item-delete">
+                <img src="images/account/trash.svg" alt="icon" />
+                <p>Удалить</p>
+              </button>
             </div>
-            <div class="item-status">
-              <p>
-                <span class="enabled">Подключено</span>
-                <span class="disabled">Подключите ваш аккаунт</span>
-              </p>
-              <div class="account-button">Подключить</div>
+            <div class="account-services-item enabled">
+              <div class="item-carrier">
+                <img src="images/account/cdek.png" alt="icon" />
+                <p>СДЭК</p>
+              </div>
+              <div class="item-status">
+                <p>
+                  <span class="enabled">Подключено</span>
+                  <span class="disabled">Подключите ваш аккаунт</span>
+                </p>
+                <div class="account-button">Подключить</div>
+              </div>
+              <button class="item-delete">
+                <img src="images/account/trash.svg" alt="icon" />
+                <p>Удалить</p>
+              </button>
             </div>
-            <button class="item-delete">
-              <img src="images/account/trash.svg" alt="icon" />
-              <p>Удалить</p>
-            </button>
-          </div>
-          <div class="account-services-item enabled">
-            <div class="item-carrier">
-              <img src="images/account/pe.png" alt="icon" />
-              <p>Pony Express</p>
+            <div class="account-services-item">
+              <div class="item-carrier">
+                <img src="images/account/ep.png" alt="icon" />
+                <p>ePacket</p>
+              </div>
+              <div class="item-status">
+                <p>
+                  <span class="enabled">Подключено</span>
+                  <span class="disabled">Подключите ваш аккаунт</span>
+                </p>
+                <div class="account-button">Подключить</div>
+              </div>
+              <button class="item-delete">
+                <img src="images/account/trash.svg" alt="icon" />
+                <p>Удалить</p>
+              </button>
             </div>
-            <div class="item-status">
-              <p>
-                <span class="enabled">Подключено</span>
-                <span class="disabled">Подключите ваш аккаунт</span>
-              </p>
-              <div class="account-button">Подключить</div>
+            <div class="account-services-item enabled">
+              <div class="item-carrier">
+                <img src="images/account/pe.png" alt="icon" />
+                <p>Pony Express</p>
+              </div>
+              <div class="item-status">
+                <p>
+                  <span class="enabled">Подключено</span>
+                  <span class="disabled">Подключите ваш аккаунт</span>
+                </p>
+                <div class="account-button">Подключить</div>
+              </div>
+              <button class="item-delete">
+                <img src="images/account/trash.svg" alt="icon" />
+                <p>Удалить</p>
+              </button>
             </div>
-            <button class="item-delete">
-              <img src="images/account/trash.svg" alt="icon" />
-              <p>Удалить</p>
-            </button>
           </div>
         </div>
       </section>
@@ -1342,7 +1344,9 @@ size = e.data;if (size.height) {const heightToSet = size.height &gt; 80 ? size.h
         </div>
       </section>
 
-      <section class="account-data tabs-content tabs-content-hidden">data</section>
+      <section class="account-data tabs-content">
+        <div class="container"></div>
+      </section>
 
       <section class="account-exit tabs-content tabs-content-hidden">exit</section>
     </main>
