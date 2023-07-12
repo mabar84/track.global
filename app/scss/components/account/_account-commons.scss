@@ -1,6 +1,22 @@
 .tabs-content-hidden {
     display: none;
 }
+.account-title {
+    margin-bottom: 0;
+    color: #000;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+    @include for-1000-px {
+        font-size: 24px;
+    }
+    @include for-725-px {
+        text-align: center;
+        font-size: 16px;
+    }
+}
 .account-button {
     height: 40px;
     padding: 10px 20px;

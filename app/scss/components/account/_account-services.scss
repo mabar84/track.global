@@ -10,14 +10,14 @@
         }
     }
     .title-wrapper {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 10px;
-        .title {
-            text-align: left;
-            margin-bottom: 0;
+        @include for-725-px {
+            flex-direction: column;
+            margin-bottom: 20px;
         }
         .account-button {
             height: min-content;

@@ -3,11 +3,24 @@
     padding: 20px 0 25px;
     background: #fbfbfb;
     background: yellow;
+    @include for-1000-px {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        // padding: 55px 0 25px;
+    }
+    @include for-725-px {
+        padding: 10px 0 10px;
+    }
     .wrapper {
         display: flex;
         gap: 24px;
         justify-content: flex-end;
+        @include for-640-px {
+            gap: 5px;
+            justify-content: space-between;
+        }
         .item {
+            margin-right: 0;
             list-style: none;
             color: #000;
             font-size: 14px;
@@ -17,6 +30,9 @@
             text-decoration-line: underline;
             cursor: pointer;
             position: relative;
+            @include for-725-px {
+                font-size: 12px;
+            }
             &::before {
                 content: "";
                 position: absolute;
@@ -59,16 +75,6 @@
                     font-size: 12px;
                     line-height: 15px;
                 }
-            }
-            @include for-1170-px {
-                margin-right: 20px;
-                font-size: 16px;
-                line-height: 20px;
-            }
-            @include for-725-px {
-                margin-right: 8px;
-                font-size: 12px;
-                line-height: 15px;
             }
         }
     }
