@@ -2,7 +2,7 @@
     display: none;
 }
 .account-title {
-    margin-bottom: 0;
+    margin-bottom: 40px;
     color: #000;
     font-size: 35px;
     font-style: normal;
@@ -10,9 +10,11 @@
     line-height: normal;
     text-align: left;
     @include for-1000-px {
+        margin-bottom: 30px;
         font-size: 24px;
     }
     @include for-725-px {
+        margin-bottom: 20px;
         text-align: center;
         font-size: 16px;
     }

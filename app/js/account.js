@@ -1,13 +1,13 @@
 //Таб внутри таба универсальным кодом не отработал, делаем субтабы
 
-const accountTabsContainer = document.querySelector(".account-tabs-container");
-const tabsButtons = accountTabsContainer.querySelectorAll(".tabs-button");
-const tabContentItems = accountTabsContainer.querySelectorAll(".tabs-content ");
+// const accountTabsContainer = document.querySelector(".account-tabs-container");
+const tabsButtons = document.querySelectorAll(".tabs-button");
+const tabContentItems = document.querySelectorAll(".tabs-content ");
 
 tabsButtons.forEach((item) => {
   item.addEventListener("click", () => {
     const filter = item.getAttribute("for");
-    const tabContent = accountTabsContainer.getElementsByClassName(filter);
+    const tabContent = document.getElementsByClassName(filter);
     tabsButtons.forEach((el) => {
       el.classList.remove("active");
     });

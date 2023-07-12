@@ -126,6 +126,10 @@
             @include for-640-px {
                 gap: 10px;
             }
+            @include for-440-px {
+                column-gap: 3px;
+                row-gap: 3px;
+            }
             a {
                 display: block;
                 width: 270px;

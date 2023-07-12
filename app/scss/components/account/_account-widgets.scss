@@ -1,0 +1,7 @@
+.account-widgets {
+    .api-title {
+        @include for-440-px {
+            font-size: 18px;
+        }
+    }
+}

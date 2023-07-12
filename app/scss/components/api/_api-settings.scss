@@ -70,7 +70,7 @@
         font-weight: normal;
         background: #fdf6f6;
         @include for-725-px {
-            padding-bottom: 0;
+            padding-bottom: 10px;
         }
         .api-link {
             color: #e24949;
@@ -326,6 +326,12 @@
             display: none;
         }
         .big-widget {
+            padding-top: 10px;
+            .tracking-widget {
+                @include for-470-px {
+                    padding-top: 0;
+                }
+            }
             .tracking-widget__list-item-cashbe {
                 &.hidden {
                     display: none;
