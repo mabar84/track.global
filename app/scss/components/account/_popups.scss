@@ -199,3 +199,13 @@
         }
     }
 }
+.popup-it-still-in-development {
+    width: 360px;
+    @include for-725-px {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .account-popup-title {
+        text-align: center;
+    }
+}

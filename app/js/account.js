@@ -96,7 +96,7 @@ if (carriersInput) {
   searchButton.addEventListener("click", filterListCarriers);
 }
 
-// show popups courier-services-button
+// show/close popups
 document.getElementById("show-courier-services-button")?.addEventListener("click", () => {
   document.getElementById("courier-services").classList.remove("popup-hidden");
 });
@@ -110,6 +110,14 @@ document.getElementById("interesting-function-next-button")?.addEventListener("c
 });
 document.getElementById("connect-account-button")?.addEventListener("click", () => {
   document.getElementById("connect-account").classList.add("popup-hidden");
-
   console.log("Подключение аккаунта");
+});
+document.getElementById("calculation-button")?.addEventListener("click", () => {
+  document.getElementById("it-still-in-development").classList.remove("popup-hidden");
+});
+document.getElementById("point-map-button")?.addEventListener("click", () => {
+  document.getElementById("it-still-in-development").classList.remove("popup-hidden");
+});
+document.getElementById("it-still-in-development-button")?.addEventListener("click", () => {
+  document.getElementById("it-still-in-development").classList.add("popup-hidden");
 });
