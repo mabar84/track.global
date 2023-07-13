@@ -298,14 +298,14 @@
     <main class="main landing" id="main">
       <div class="account-nav">
         <div class="wrapper container">
-          <button class="tabs-button item" for="account-services">Службы</button>
+          <button class="tabs-button item active" for="account-services">Службы</button>
           <button class="tabs-button item" for="account-widgets">Виджеты</button>
-          <button class="tabs-button item active" for="account-data">Мой Аккаунт</button>
+          <button class="tabs-button item" for="account-data">Мой Аккаунт</button>
           <button class="tabs-button item" for="account-exit">Выход</button>
         </div>
       </div>
 
-      <section class="account-services tabs-content tabs-content-hidden">
+      <section class="account-services tabs-content">
         <div class="container">
           <div class="title-wrapper">
             <h2 class="account-title title">Подключенные перевозчики</h2>
@@ -1344,11 +1344,46 @@ size = e.data;if (size.height) {const heightToSet = size.height &gt; 80 ? size.h
         </div>
       </section>
 
-      <section class="account-data tabs-content">
-        <div class="container"></div>
+      <section class="account-data tabs-content tabs-content-hidden">
+        <div class="container">
+          <h2 class="account-title title">Данные аккаунта</h2>
+
+          <div class="wrapper">
+            <div class="wrapper-left">
+              <div class="text-wrapper">
+                <p class="text-name">E-mail</p>
+                <p class="text-value">store24@gmail.com</p>
+              </div>
+              <div class="text-wrapper">
+                <p class="text-name">URL магазина</p>
+                <p class="text-value">www.store24.com</p>
+              </div>
+            </div>
+
+            <div class="wrapper-right">
+              <p class="text">Сменить пароль</p>
+
+              <input type="text" class="input" placeholder="Старый пароль" />
+              <input type="text" class="input" placeholder="Новый пароль" />
+            </div>
+          </div>
+          <div class="wrapper buttons">
+            <div class="wrapper-left">
+              <button class="account-button delete-button">
+                <img src="images/personal-area/x-circle.svg" alt="x" />
+                <span> Удалить аккаунт</span>
+              </button>
+            </div>
+            <div class="wrapper-right">
+              <button class="account-button">Сохранить пароль</button>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section class="account-exit tabs-content tabs-content-hidden">exit</section>
+      <section class="account-exit tabs-content tabs-content-hidden">
+        <div class="container">exit</div>
+      </section>
     </main>
 
     <footer class="footer footer-personal-area">
