@@ -51,12 +51,12 @@ tabsButtons.forEach((item) => {
 // }
 
 // need-activation-services
-
 const needActivationServicesButton = document.getElementById("need-activation-services-button");
 const myServicesButton = document.getElementById("my-services-button");
+const myServices = document.getElementById("my-services");
 
 needActivationServicesButton?.addEventListener("click", () => {
-  const greenItems = document.getElementById("my-services").querySelectorAll(".account-services-item.enabled");
+  const greenItems = myServices.querySelectorAll(".account-services-item.enabled");
   greenItems.forEach((item) => {
     item.classList.add("item-hidden");
   });
@@ -64,7 +64,7 @@ needActivationServicesButton?.addEventListener("click", () => {
   myServicesButton.classList.remove("active");
 });
 myServicesButton?.addEventListener("click", () => {
-  const greenItems = document.getElementById("my-services").querySelectorAll(".account-services-item.enabled");
+  const greenItems = myServices.querySelectorAll(".account-services-item.enabled");
   greenItems.forEach((item) => {
     item.classList.remove("item-hidden");
   });
@@ -75,7 +75,6 @@ myServicesButton?.addEventListener("click", () => {
 // search carriers filter
 const carriersInput = document.getElementById("carriers-input");
 if (carriersInput) {
-  const myServices = document.getElementById("my-services");
   const items = myServices.querySelectorAll(".item-carrier p");
   const searchButton = document.getElementById("carriers-search-button");
 
@@ -120,4 +119,14 @@ document.getElementById("point-map-button")?.addEventListener("click", () => {
 });
 document.getElementById("it-still-in-development-button")?.addEventListener("click", () => {
   document.getElementById("it-still-in-development").classList.add("popup-hidden");
+});
+
+// delete carrier
+const carrierDeleteButtons = myServices.querySelectorAll(".item-delete");
+console.log(carrierDeleteButtons);
+carrierDeleteButtons.forEach((el) => {
+  el.addEventListener("click", () => {
+    let parent = el.closest(".account-services-item");
+    parent.remove();
+  });
 });
