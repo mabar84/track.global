@@ -60,6 +60,16 @@ apiSettingsForm?.addEventListener("click", (e) => {
     itemSelected.textContent = targetElement.textContent;
     allSettings[item.dataset.name] = itemSelected.textContent;
     console.log(allSettings);
+
+    if (item.dataset.name === "type") {
+      if (allSettings["type"] === "Поверх контента") {
+        bigWidget.classList.add("over-content");
+        scene.classList.add("collapsed");
+      } else {
+        bigWidget.classList.remove("over-content");
+        scene.classList.remove("collapsed");
+      }
+    }
   }
 });
 

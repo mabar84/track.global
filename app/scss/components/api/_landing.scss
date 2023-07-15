@@ -8,6 +8,15 @@
         }
     }
     .api-useful {
+        @include for-640-px {
+            margin-top: -30px;
+        }
+        @include for-470-px {
+            margin-top: -40px;
+        }
+        @include for-440-px {
+            margin-top: -20px;
+        }
         .images {
             .widget-img {
                 width: 471px;
@@ -147,6 +156,11 @@
                 }
                 &:hover {
                     opacity: 0.8;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
             }
         }

@@ -326,7 +326,7 @@
             display: none;
         }
         .big-widget {
-            padding-top: 10px;
+            // padding-top: 10px;
             .tracking-widget {
                 @include for-470-px {
                     padding-top: 0;
@@ -415,14 +415,13 @@
             }
             &.over-content {
                 position: absolute;
-                left: -20px;
-                top: 25px;
-                height: 50vh;
+                left: 0;
+                top: 0;
+                height: 40vh;
                 overflow-y: scroll;
                 box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
                 z-index: 1;
                 @include for-470-px {
-                    left: -10px;
                     box-shadow: none;
                 }
             }

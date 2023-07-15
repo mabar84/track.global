@@ -59,6 +59,9 @@
         &:hover {
             opacity: 0.8;
         }
+        &.filter-hidden {
+            display: none;
+        }
         .account-popup-label {
             position: relative;
             .wrapper {

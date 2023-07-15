@@ -95,6 +95,29 @@ if (carriersInput) {
   searchButton.addEventListener("click", filterListCarriers);
 }
 
+// search onboarding courier services
+const courierServicesPopup = document.getElementById("courier-services");
+if (courierServicesPopup) {
+  const items = courierServicesPopup.querySelectorAll(".account-popup-item p");
+  const input = courierServicesPopup.querySelector(".account-input");
+  console.log(items);
+  function filterListCouriers() {
+    let filter = input.value.toUpperCase();
+
+    for (let i = 0; i < items.length; i++) {
+      let text = items[i].textContent.toUpperCase();
+      let parent = items[i].closest(".account-popup-item");
+
+      if (text.indexOf(filter) > -1) {
+        parent.classList.remove("filter-hidden");
+      } else {
+        parent.classList.add("filter-hidden");
+      }
+    }
+  }
+  input.addEventListener("input", filterListCouriers);
+}
+
 // show/close popups
 document.getElementById("show-courier-services-button")?.addEventListener("click", () => {
   document.getElementById("courier-services").classList.remove("popup-hidden");
@@ -123,7 +146,6 @@ document.getElementById("it-still-in-development-button")?.addEventListener("cli
 
 // delete carrier
 const carrierDeleteButtons = myServices.querySelectorAll(".item-delete");
-console.log(carrierDeleteButtons);
 carrierDeleteButtons.forEach((el) => {
   el.addEventListener("click", () => {
     let parent = el.closest(".account-services-item");

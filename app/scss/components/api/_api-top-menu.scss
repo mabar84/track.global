@@ -135,14 +135,12 @@
             @include for-640-px {
                 margin-top: -30px;
                 display: block;
-                width: 420px;
                 height: auto;
                 order: 1;
-                object-fit: cover;
                 object-position: top;
-            }
-            @include for-440-px {
-                width: calc(100% - 36px);
+                width: 285px;
+                height: 292px;
+                object-fit: contain;
             }
         }
     }
