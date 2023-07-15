@@ -81,10 +81,14 @@
         }
         &.buttons {
             .wrapper-left {
-                order: 1;
+                @include for-725-px {
+                    order: 1;
+                }
             }
             .wrapper-right {
-                order: 0;
+                @include for-725-px {
+                    order: 0;
+                }
             }
             .account-button {
                 width: max-content;

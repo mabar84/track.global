@@ -72,6 +72,14 @@ myServicesButton?.addEventListener("click", () => {
   myServicesButton.classList.add("active");
 });
 
+//show popup 'connect-account'
+const connectAccountButtons = myServices.querySelectorAll(".account-button");
+connectAccountButtons.forEach((el) => {
+  el.addEventListener("click", () => {
+    document.getElementById("connect-account").classList.remove("popup-hidden");
+  });
+});
+
 // search carriers filter
 const carriersInput = document.getElementById("carriers-input");
 if (carriersInput) {
@@ -100,7 +108,6 @@ const courierServicesPopup = document.getElementById("courier-services");
 if (courierServicesPopup) {
   const items = courierServicesPopup.querySelectorAll(".account-popup-item p");
   const input = courierServicesPopup.querySelector(".account-input");
-  console.log(items);
   function filterListCouriers() {
     let filter = input.value.toUpperCase();
 
