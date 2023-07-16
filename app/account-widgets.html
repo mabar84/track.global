@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Track global</title>
+    <title>Account</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
 
     <script src="js/jquery.js"></script>
@@ -15,197 +16,11 @@
   </head>
 
   <body>
+    <!-- popups and modals wrapper  class="personal-area" for styles  -->
     <div class="personal-area">
-      <div id="modal-authorization-form" class="modal modal-authorization modal-problem ah-modal">
-        <div class="ah-modal__container">
-          <div class="ah-modal__content">
-            <h3 class="modal-title">Авторизация</h3>
-            <div class="modal-body">
-              <form action="#" class="mt-30a" id="authorization-form">
-                <p class="modal-subtitle article">E-mail</p>
-                <input type="text" class="input" placeholder="example@mail.ru" />
-
-                <p class="modal-subtitle article">Пароль</p>
-                <input type="text" class="input" placeholder="example@mail.ru" />
-
-                <p class="modal-subtitle article">URL магазина</p>
-                <input type="text" class="input" placeholder="example@mail.ru" />
-
-                <div class="mt-30a buttons">
-                  <a href="#" class="account-button first">Войти</a>
-                  <a id="registration-modal" href="#" class="account-button second">Регистрация</a>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="modal-registration-form" class="modal modal-registration modal-problem ah-modal">
-        <div class="ah-modal__container">
-          <div class="ah-modal__content">
-            <h3 class="modal-title">Регистрация</h3>
-            <div class="modal-body">
-              <form action="#" class="mt-30a" id="authorization-form">
-                <p class="modal-subtitle article">E-mail</p>
-                <input type="text" class="input" placeholder="example@mail.ru" />
-
-                <p class="modal-subtitle article">Пароль</p>
-                <input type="text" class="input" placeholder="example@mail.ru" />
-
-                <p class="modal-subtitle article">Повторите пароль</p>
-                <input type="text" class="input" placeholder="example@mail.ru" />
-
-                <p class="modal-subtitle article">URL магазина</p>
-                <input type="text" class="input" placeholder="example@mail.ru" />
-
-                <div class="mt-30a buttons">
-                  <a href="#" class="account-button first">Зарегистрироваться</a>
-                  <a id="authorization-modal" href="#" class="account-button second">Войти</a>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="courier-services" class="account-popup popup-courier-services popup-hidden">
-        <p class="account-popup-title">С какими курьескими службами вы работаете?</p>
-        <div class="account-popup-items">
-          <div class="account-popup-item">
-            <input checked type="checkbox" class="custom-checkbox" id="carrier1" />
-            <label class="account-popup-label" for="carrier1">
-              <div class="wrapper">
-                <img src="images/account/pe.png" alt="icon" />
-                <p>Pony express</p>
-              </div>
-            </label>
-          </div>
-
-          <div class="account-popup-item">
-            <input checked type="checkbox" class="custom-checkbox" id="carrier2" />
-            <label class="account-popup-label" for="carrier2">
-              <div class="wrapper">
-                <img src="images/account/pr.png" alt="icon" />
-                <p>Почта России</p>
-              </div>
-            </label>
-          </div>
-          <div class="account-popup-item">
-            <input checked type="checkbox" class="custom-checkbox" id="carrier3" />
-            <label class="account-popup-label" for="carrier3">
-              <div class="wrapper">
-                <img src="images/account/cdek.png" alt="icon" />
-                <p>СДЭК</p>
-              </div>
-            </label>
-          </div>
-          <div class="account-popup-item">
-            <input checked type="checkbox" class="custom-checkbox" id="carrier4" />
-            <label class="account-popup-label" for="carrier4">
-              <div class="wrapper">
-                <img src="images/account/china-post.png" alt="icon" />
-                <p>China Post</p>
-              </div>
-            </label>
-          </div>
-          <div class="account-popup-item">
-            <input checked type="checkbox" class="custom-checkbox" id="carrier5" />
-            <label class="account-popup-label" for="carrier5">
-              <div class="wrapper">
-                <img src="images/account/ep.png" alt="icon" />
-                <p>ePacket</p>
-              </div>
-            </label>
-          </div>
-          <div class="account-popup-item">
-            <input checked type="checkbox" class="custom-checkbox" id="carrier6" />
-            <label class="account-popup-label" for="carrier6">
-              <div class="wrapper">
-                <img src="images/account/se.jpg" alt="icon" />
-                <p>4PX</p>
-              </div>
-            </label>
-          </div>
-          <div class="account-popup-item">
-            <input checked type="checkbox" class="custom-checkbox" id="carrier7" />
-            <label class="account-popup-label" for="carrier7">
-              <div class="wrapper">
-                <img src="images/account/flytExpress.png" alt="icon" />
-                <p>Flyt Express</p>
-              </div>
-            </label>
-          </div>
-          <div class="account-popup-item">
-            <input checked type="checkbox" class="custom-checkbox" id="carrier8" />
-            <label class="account-popup-label" for="carrier8">
-              <div class="wrapper">
-                <img src="images/account/postNl.png" alt="icon" />
-                <p>Post NL</p>
-              </div>
-            </label>
-          </div>
-          <div class="account-popup-item">
-            <input checked type="checkbox" class="custom-checkbox" id="carrier9" />
-            <label class="account-popup-label" for="carrier9">
-              <div class="wrapper">
-                <img src="images/account/bPost.png" alt="icon" />
-                <p>Bpost</p>
-              </div>
-            </label>
-          </div>
-        </div>
-        <div class="account-input-wrapper" data-after="true">
-          <input type="text" class="account-input" type="text" placeholder="поиск по службам" />
-        </div>
-        <div id="courier-services-next-button" class="account-button">Дальше</div>
-      </div>
-
-      <div id="interesting-function" class="account-popup popup-interesting-function popup-hidden">
-        <p class="account-popup-title">Какие функции вам интересны?</p>
-        <div class="account-popup-items">
-          <div class="account-popup-item">
-            <input checked type="checkbox" class="custom-checkbox" id="f1" />
-            <label class="account-popup-label" for="f1">
-              <div class="wrapper">
-                <p>Отслеживание отправлений</p>
-              </div>
-            </label>
-          </div>
-          <div class="account-popup-item">
-            <input checked type="checkbox" class="custom-checkbox" id="f2" />
-            <label class="account-popup-label" for="f2">
-              <div class="wrapper">
-                <p>Расчет стоимости отправлений</p>
-              </div>
-            </label>
-          </div>
-          <div class="account-popup-item">
-            <input checked type="checkbox" class="custom-checkbox" id="f3" />
-            <label class="account-popup-label" for="f3">
-              <div class="wrapper">
-                <p>Карта с пунктами выдачи заказов</p>
-              </div>
-            </label>
-          </div>
-          <div class="account-popup-item">
-            <input checked type="checkbox" class="custom-checkbox" id="f4" />
-            <label class="account-popup-label" for="f4">
-              <div class="wrapper">
-                <p>Email, SMS, Push уведомления получателей</p>
-              </div>
-            </label>
-          </div>
-          <div class="account-popup-item">
-            <input checked type="checkbox" class="custom-checkbox" id="f5" />
-            <label class="account-popup-label" for="f5">
-              <div class="wrapper">
-                <p>Печать лейблов</p>
-              </div>
-            </label>
-          </div>
-        </div>
-
-        <div id="interesting-function-next-button" class="account-button">Дальше</div>
+      <div id="it-still-in-development" class="account-popup popup-it-still-in-development popup-hidden">
+        <p class="account-popup-title">Раздел находится в разработке</p>
+        <div id="it-still-in-development-button" class="account-button">ОК</div>
       </div>
     </div>
     <header class="header header-personal-area">
@@ -235,7 +50,7 @@
             </ul>
             <div class="">
               <div class="hat">
-                <div class="user notLogged">
+                <div class="user">
                   <a class="wrapper" href="#">
                     <img src="images/personal-area/user-p.svg" alt="icon" class="user-img" />
                     <div class="">
@@ -244,7 +59,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="user">
+                <div class="user notLogged">
                   <img src="images/personal-area/user.svg" alt="icon" class="user-img" />
                   <div class="">
                     <p class="user-name"><span id="authorization">Вход</span>/<span id="registration">регистрация</span></p>
@@ -267,156 +82,29 @@
         </nav>
       </div>
     </header>
-    <div class="api-modal-wrapper api-modal-partner hidden">
-      <div class="api-modal">
-        <img class="api-modal-close" src="images/api/close.svg" alt="x" />
-        <p class="api-modal-title">Оставьте свой email</p>
-        <p class="api-modal-text">В ближайшее время мы предоставим вам информацию о подключении партнерской программы.</p>
-        <div class="api-input-wrapper" data-after="true">
-          <input id="partner-email" type="text" class="api-input" type="text" placeholder="Оставьте своей Email" />
+
+    <main class="main landing" id="main">
+      <div class="account-nav">
+        <div class="wrapper container">
+          <a href="account-services.html" class="item">Службы</a>
+          <a href="account-widgets.html" class="item active">Виджеты</a>
+          <a href="account-data.html" class="item">Мой Аккаунт</a>
+          <a href="landing.html" class="item">Выход</a>
         </div>
-        <button class="api-button disabled">Оставить Email</button>
       </div>
-    </div>
-    <div class="api-modal-wrapper api-modal-plugins hidden">
-      <div class="api-modal">
-        <img class="api-modal-close" src="images/api/close.svg" alt="x" />
-        <p class="api-modal-title">На данный момент плагины находятся в разработке, пожалуйста оставьте свой email.</p>
-        <p class="api-modal-text">Мы сообщим вам, как только плагины станут доступны.</p>
-        <div class="api-input-wrapper" data-after="true">
-          <input id="plugins-email" type="text" class="api-input" type="text" placeholder="Оставьте своей Email" />
+
+      <section class="account-widgets">
+        <div class="container">
+          <h2 class="account-title title">Виджеты для вашего сайта</h2>
+
+          <div class="subtabs-buttons">
+            <button class="item active">Отслеживание отправлений</button>
+            <button id="calculation-button" class="item">Расчет стоимости отправлений</button>
+            <button id="point-map-button" class="item">Карта пунктов выдачи</button>
+          </div>
         </div>
-        <button class="api-button disabled">Оставить Email</button>
-      </div>
-    </div>
 
-    <main class="main landing">
-      <section class="home">
-        <section class="top api-top">
-          <div class="top__bg">
-            <div class="container">
-              <div class="top__inner">
-                <!-- Изменения ниже-->
-                <div class="top__content">
-                  <img class="promo-pc" src="images/api/promo-pc.png" alt="image" />
-                  <img class="promo-tablet" src="images/api/promo-tablet.png" alt="image" />
-                  <img class="promo-mobile" src="images/api/promo-mobile.png" alt="image" />
-                  <h1 class="top__title top__title-api">бесплантные инструменты для вашего интернет-магазина</h1>
-                </div>
-                <!-- Изменения выше-->
-              </div>
-            </div>
-            <!-- <div class="top__progress-line-bg" id="widgetProgressMain" style="display: block; background: #000">
-              <div class="top__progress-line" id="top__progress-line"></div>
-            </div> -->
-          </div>
-        </section>
-
-        <section class="api-useful">
-          <div class="container">
-            <div class="wrapper">
-              <h3 class="api-subtitle">Интеграция с десятками курьерских служб за&nbsp;15&nbsp;минут</h3>
-              <p class="api-text">
-                <span class="api-subtext">без привлечения разработчиков</span>
-              </p>
-            </div>
-
-            <div class="images">
-              <img class="graph-img" src="images/api/china-parcels.png" alt="picture" />
-              <img class="widget-img" src="images/api/added-carriers.png" alt="picture" />
-            </div>
-          </div>
-          <div class="api-gradient"></div>
-        </section>
-
-        <section class="api-orders">
-          <div class="container">
-            <div class="images">
-              <img class="iphone-img" src="images/api/iphone.png" alt="iphone" />
-            </div>
-            <div class="wrapper">
-              <h3 class="api-subtitle">Отслеживание заказов всех служб на вашем сайте</h3>
-              <p class="api-text">
-                <span class="api-subtext">в одном окне</span>
-              </p>
-            </div>
-          </div>
-          <div class="api-gradient"></div>
-        </section>
-
-        <section class="api-useful api-price">
-          <div class="container">
-            <div class="wrapper">
-              <h3 class="api-subtitle">Расчет стоимости отправления у 15+ служб</h3>
-              <p class="api-text">
-                <span class="api-subtext">в одном окне</span>
-              </p>
-            </div>
-
-            <img class="widget-img_price" src="images/api/price.png" alt="picture" />
-          </div>
-          <div class="api-gradient"></div>
-        </section>
-
-        <section class="api-integration">
-          <div class="container">
-            <div class="wrapper">
-              <h3 class="api-subtitle">Простая интеграция в&nbsp;несколько кликов.</h3>
-              <p class="api-text api-subtext">JS код или плагины для популярных CMS</p>
-              <button class="api-button">подключить</button>
-            </div>
-
-            <div class="images">
-              <img class="integration-img" src="images/api/integration.png" alt="integration" />
-              <img class="dots-img" src="images/api/dots.svg" alt="dots" />
-              <div class="api-insert">Вставить</div>
-            </div>
-          </div>
-        </section>
-
-        <section class="trust">
-          <div class="container">
-            <h2 class="api-title">нам доверяют</h2>
-
-            <div class="cards">
-              <a href="#">
-                <img src="./images/account/amazon.png" alt="logo" />
-              </a>
-              <a href="#">
-                <img src="./images/account/apple.png" alt="logo" />
-              </a>
-              <a href="#">
-                <img src="./images/account/microsoft.jpg" alt="logo" />
-              </a>
-              <a href="#">
-                <img src="./images/account/google.png" alt="logo" />
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <section class="api-press">
-          <div class="container">
-            <h2 class="api-title">Пресса про track.Global</h2>
-
-            <div class="cards">
-              <a href="#">
-                <img class="card-img" src="images/api/tnw.svg" alt="press" />
-              </a>
-              <a href="#">
-                <img class="card-img" src="images/api/forbes.svg" alt="press" />
-              </a>
-              <a href="#">
-                <img class="card-img" src="images/api/tech-in-asia.svg" alt="press" />
-              </a>
-              <a href="#">
-                <img class="card-img" src="images/api/insider.svg" alt="press" />
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <section class="api-settings">
+        <div class="api-settings">
           <div class="container">
             <h1 class="api-title">Пример работы виджета</h1>
           </div>
@@ -1026,24 +714,7 @@
                                   </div>
                                 </div>
                               </li>
-                              <!-- <li class="tracking-widget__list-item tracking-widget__list-item-cashbe">
-                                <div class="cashbe13">
-                                  <div class="left">
-                                    <div class="">
-                                      <p class="amount">+100 ₽</p>
-                                      <p class="subtext">за&nbsp;регистрацию</p>
-                                    </div>
-                                    <img src="images/icons/logo-cashbe.svg" alt="logo" class="logo" />
-                                  </div>
-                                  <div class="right">
-                                    <div class="">
-                                      <p class="text">Кешбэк до 30% за каждую покупку</p>
-                                      <p class="subtext">Возвращайте реальные деньги с&nbsp;каждой онлайн покупки</p>
-                                    </div>
-                                    <a target="_blank" href="#" class="toshopping">За&nbsp;покупками</a>
-                                  </div>
-                                </div>
-                              </li> -->
+
                               <li class="tracking-widget__list-item">
                                 <div class="tracking-widget__list-date">
                                   <span class="tracking-widget__date"> 9 Ноября 2021 </span>
@@ -1320,11 +991,8 @@
                   </div>
                 </div>
                 <div class="api-settings-item" data-name="partner">
-                  <p class="item-title">Партнерская программа</p>
-                  <div class="checkbox-wrapper">
-                    <input type="checkbox" class="custom-checkbox" id="connect" name="connect" />
-                    <label class="connect" for="connect">Подключить партнерскую программа Cashbe</label>
-                  </div>
+                  <input type="checkbox" class="custom-checkbox" id="connect" name="connect" />
+                  <label class="connect" for="connect">Подключить партнерскую программа Cashbe</label>
                 </div>
                 <div class="api-settings-item color" data-name="color">
                   <p class="item-title">Цвет</p>
@@ -1358,40 +1026,17 @@
                 <textarea class="result">
 &lt;iframe src='https://track.global/iframe?wuid=0&init_params=eyJoZWlnaHQiOiI1MHB4In0=' 
 id='track-widget' frameborder='0' width='1140'&gt;&lt;/iframe&gt; &lt;script&gt;const frame = document.querySelector('iframe#track-widget');window.onmessage = (e) =&gt; {const
- size = e.data;if (size.height) {const heightToSet = size.height &gt; 80 ? size.height : 80;frame.style.height = heightToSet + 10 + 'px';}};&lt;/script&gt;
-                </textarea>
+size = e.data;if (size.height) {const heightToSet = size.height &gt; 80 ? size.height : 80;frame.style.height = heightToSet + 10 + 'px';}};&lt;/script&gt;
+    </textarea
+                >
               </div>
             </form>
           </div>
-        </section>
-
-        <section class="api-plugins">
-          <div class="container">
-            <h2 class="api-title">Плагины для CMS</h2>
-
-            <div class="cards">
-              <div class="card">
-                <img class="card-img" src="images/api/cms.png" alt="cms" />
-                <h3 class="card-title">WORDPRESS</h3>
-                <p class="card-text">Описание плагина Описание плагинаОписание плагина</p>
-              </div>
-              <div class="card">
-                <img class="card-img" src="images/api/cms.png" alt="cms" />
-                <h3 class="card-title">CMS</h3>
-                <p class="card-text">Описание плагина Описание плагинаОписание плагина</p>
-              </div>
-              <div class="card">
-                <img class="card-img" src="images/api/cms.png" alt="cms" />
-                <h3 class="card-title">CMS</h3>
-                <p class="card-text">Описание плагина Описание плагинаОписание плагина</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        </div>
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer footer-personal-area">
       <div class="footer-top">
         <div class="container">
           <div class="footer-top__inner">
@@ -1626,5 +1271,8 @@ id='track-widget' frameborder='0' width='1140'&gt;&lt;/iframe&gt; &lt;script&gt;
         </div>
       </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
   </body>
 </html>

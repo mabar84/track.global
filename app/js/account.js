@@ -73,8 +73,8 @@ myServicesButton?.addEventListener("click", () => {
 });
 
 //show popup 'connect-account'
-const connectAccountButtons = myServices.querySelectorAll(".account-button");
-connectAccountButtons.forEach((el) => {
+const connectAccountButtons = myServices?.querySelectorAll(".account-button");
+connectAccountButtons?.forEach((el) => {
   el.addEventListener("click", () => {
     document.getElementById("connect-account").classList.remove("popup-hidden");
   });
@@ -130,12 +130,13 @@ document.getElementById("show-courier-services-button")?.addEventListener("click
   document.getElementById("courier-services").classList.remove("popup-hidden");
 });
 document.getElementById("courier-services-next-button")?.addEventListener("click", () => {
-  document.getElementById("courier-services").classList.add("popup-hidden");
-  document.getElementById("interesting-function").classList.remove("popup-hidden");
+  document.getElementById("courier-services")?.classList.add("popup-hidden");
+  document.getElementById("interesting-function")?.classList.remove("popup-hidden");
 });
 document.getElementById("interesting-function-next-button")?.addEventListener("click", () => {
   document.getElementById("interesting-function").classList.add("popup-hidden");
-  document.getElementById("connect-account").classList.remove("popup-hidden");
+  console.log("Переход на страницу подключенных служб");
+  // document.getElementById("connect-account").classList.remove("popup-hidden");
 });
 document.getElementById("connect-account-button")?.addEventListener("click", () => {
   document.getElementById("connect-account").classList.add("popup-hidden");
@@ -152,8 +153,8 @@ document.getElementById("it-still-in-development-button")?.addEventListener("cli
 });
 
 // delete carrier
-const carrierDeleteButtons = myServices.querySelectorAll(".item-delete");
-carrierDeleteButtons.forEach((el) => {
+const carrierDeleteButtons = myServices?.querySelectorAll(".item-delete");
+carrierDeleteButtons?.forEach((el) => {
   el.addEventListener("click", () => {
     let parent = el.closest(".account-services-item");
     parent.remove();

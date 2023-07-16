@@ -207,7 +207,7 @@ apiInputWrappers?.forEach((el) => {
 
 const btn = document.querySelector(".top__search-btn");
 
-btn.addEventListener("click", (e) => {
+btn?.addEventListener("click", (e) => {
   e.preventDefault();
 
   heading = document.querySelector("h1");
