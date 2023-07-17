@@ -340,6 +340,9 @@
             .tracking-widget__inner {
                 margin-top: 0;
                 margin-bottom: 0;
+                .tracking-widget__inner-btn {
+                    z-index: 111;
+                }
             }
             .tracking-widget__aside-box {
                 padding-right: 20px;
